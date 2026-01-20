@@ -1,0 +1,849 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Tangle-Ops: Quantum Link</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+        body {
+            margin: 0;
+            background-color: #050505; /* Deep Space Black */
+            color: #00ff41; /* Terminal Green */
+            font-family: 'VT323', monospace;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100vh;
+            touch-action: none; /* Prevent browser scrolling */
+        }
+
+        #game-container {
+            position: relative;
+            width: 100%;
+            max-width: 500px;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-left: 1px solid #333;
+            border-right: 1px solid #333;
+        }
+
+        canvas {
+            background-color: #111;
+            border: 2px solid #00ff41;
+            box-shadow: 0 0 10px rgba(0, 255, 65, 0.2);
+        }
+
+        #ui-layer {
+            position: absolute;
+            top: 20px;
+            width: 100%;
+            text-align: center;
+            pointer-events: none;
+        }
+
+        .title {
+            font-size: 24px;
+            text-shadow: 0 0 5px #00ff41;
+            margin-bottom: 5px;
+        }
+
+        .status {
+            font-size: 18px;
+            color: #ff9900;
+            pointer-events: auto;
+        }
+
+        #stage-meta {
+            margin-top: 6px;
+            font-size: 14px;
+            color: #00ff41;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 2px;
+            pointer-events: auto;
+        }
+
+        #move-limit {
+            margin-top: 6px;
+            font-size: 14px;
+            color: #ff9900;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 6px;
+            pointer-events: auto;
+        }
+
+        #move-bar {
+            width: 70%;
+            height: 6px;
+            border: 1px solid #00ff41;
+            background: rgba(0, 0, 0, 0.6);
+        }
+
+        #move-fill {
+            height: 100%;
+            width: 100%;
+            background: #ff9900;
+            transition: width 0.2s ease;
+        }
+
+        #move-fill.danger,
+        #move-text.danger {
+            animation: warningPulse 0.8s steps(2) infinite;
+        }
+
+        #hint-box {
+            margin-top: 8px;
+            font-size: 14px;
+            color: #00ff41;
+            background: rgba(0, 20, 0, 0.7);
+            border: 1px solid #00ff41;
+            padding: 6px 8px;
+            max-width: 90%;
+            display: none;
+            text-align: center;
+            pointer-events: auto;
+        }
+
+        #hint-box.active {
+            display: inline-block;
+        }
+
+        #log-console {
+            width: 90%;
+            height: 100px;
+            background: rgba(0, 20, 0, 0.8);
+            border-top: 1px solid #00ff41;
+            margin-top: 20px;
+            padding: 10px;
+            font-size: 14px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column-reverse; /* New logs at bottom visually, but we prepend */
+            pointer-events: none;
+        }
+
+        #copyright {
+            margin-top: 8px;
+            font-size: 12px;
+            color: #00ff41;
+            opacity: 0.6;
+            text-align: center;
+            pointer-events: none;
+        }
+
+        .log-entry {
+            margin: 2px 0;
+            opacity: 0.8;
+        }
+
+        /* Overlay for "Shorts" Swipe */
+        #next-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.85);
+            display: none; /* Hidden by default */
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 100;
+            pointer-events: none;
+        }
+
+        .swipe-hint {
+            font-size: 24px;
+            animation: blink 1.5s infinite;
+        }
+
+        @keyframes blink {
+            0% { opacity: 0.2; transform: translateY(0); }
+            50% { opacity: 1; transform: translateY(-20px); }
+            100% { opacity: 0.2; transform: translateY(0); }
+        }
+
+        @keyframes warningPulse {
+            0% { opacity: 0.35; }
+            50% { opacity: 1; }
+            100% { opacity: 0.35; }
+        }
+    </style>
+</head>
+<body>
+
+    <div id="game-container">
+        <div id="ui-layer">
+            <div class="title">TANGLE-OPS: PROTOCOL</div>
+            <div class="status" id="status-text">WAITING FOR INPUT...</div>
+            <div id="stage-meta">
+                <div id="stage-text">STAGE -- / --</div>
+                <div id="element-text">ELEMENT --</div>
+            </div>
+            <div id="move-limit">
+                <div id="move-text">MOVES: --</div>
+                <div id="move-bar"><div id="move-fill"></div></div>
+            </div>
+            <div id="hint-box">HINT</div>
+        </div>
+
+        <canvas id="gameCanvas" width="350" height="350"></canvas>
+
+        <div id="log-console">
+            <div class="log-entry">> SYSTEM_INIT... OK</div>
+            <div class="log-entry">> QUANTUM_ENTANGLEMENT... ACTIVE</div>
+        </div>
+
+        <div id="copyright">
+            <div>© Tangle-Studio</div>
+        </div>
+
+        <div id="next-overlay">
+            <div style="font-size: 40px; color:#00ff41; margin-bottom:20px;">LINK ESTABLISHED</div>
+            <div class="swipe-hint">▲ SWIPE UP TO WARP ▲</div>
+        </div>
+    </div>
+
+<script>
+    const canvas = document.getElementById('gameCanvas');
+    const ctx = canvas.getContext('2d');
+    const logConsole = document.getElementById('log-console');
+    const statusText = document.getElementById('status-text');
+    const nextOverlay = document.getElementById('next-overlay');
+    const moveText = document.getElementById('move-text');
+    const moveFill = document.getElementById('move-fill');
+    const hintBox = document.getElementById('hint-box');
+    const stageText = document.getElementById('stage-text');
+    const elementText = document.getElementById('element-text');
+
+    // Game Config
+    let grid = { w: 5, h: 5 };
+    let tileSize = canvas.width / grid.w;
+
+    // State
+    let player = { x: 1, y: 1 };
+    let shadow = { x: 3, y: 3 }; // Entangled particle
+    let goalA = { x: 3, y: 1 };
+    let goalB = { x: 1, y: 3 };
+    let levelActive = true;
+    let levelResult = 'active';
+
+    let levels = [];
+    let useLevelData = false;
+    let currentStageIndex = 0;
+
+    let wallsSet = new Set();
+    let slipsSet = new Set();
+    let portals = [];
+    let forbiddenSet = new Set();
+    let inversionSet = new Set();
+    let sameDirectionNextMove = false;
+    let moveLimit = null;
+    let moveCount = 0;
+    let stageHints = [];
+    let stageHintIndex = 0;
+    let hintTimer = null;
+    let hintPressTimer = null;
+
+    // Input Handling vars
+    let touchStartY = 0;
+    let touchEndY = 0;
+    let touchStartX = 0;
+    let touchEndX = 0;
+
+    function coordKey(x, y) {
+        return `${x},${y}`;
+    }
+
+    function coordsToSet(coords) {
+        const set = new Set();
+        for (const [x, y] of coords) {
+            set.add(coordKey(x, y));
+        }
+        return set;
+    }
+
+    function inBounds(pos) {
+        return pos.x >= 0 && pos.x < grid.w && pos.y >= 0 && pos.y < grid.h;
+    }
+
+    function isBlockedForPlayer(pos) {
+        const key = coordKey(pos.x, pos.y);
+        return wallsSet.has(key) || forbiddenSet.has(key);
+    }
+
+    function isBlockedForShadow(pos) {
+        return wallsSet.has(coordKey(pos.x, pos.y));
+    }
+
+    function applyPortal(pos) {
+        for (const pair of portals) {
+            if (!Array.isArray(pair) || pair.length !== 2) continue;
+            const [a, b] = pair;
+            if (pos.x === a[0] && pos.y === a[1]) {
+                return { pos: { x: b[0], y: b[1] }, used: true };
+            }
+            if (pos.x === b[0] && pos.y === b[1]) {
+                return { pos: { x: a[0], y: a[1] }, used: true };
+            }
+        }
+        return { pos, used: false };
+    }
+
+    function applySlip(pos, dx, dy, blockedFn) {
+        if (!slipsSet.has(coordKey(pos.x, pos.y))) {
+            return pos;
+        }
+        const next = { x: pos.x + dx, y: pos.y + dy };
+        if (!inBounds(next) || blockedFn(next)) {
+            return pos;
+        }
+        return next;
+    }
+
+    function checkInversion(pos) {
+        return inversionSet.has(coordKey(pos.x, pos.y));
+    }
+
+    function initRandomStage() {
+        grid = { w: 5, h: 5 };
+        tileSize = canvas.width / grid.w;
+
+        player = { x: 0, y: 0 };
+        shadow = { x: grid.w - 1, y: grid.h - 1 };
+
+        goalA = { x: Math.floor(Math.random() * grid.w), y: Math.floor(Math.random() * grid.h) };
+        goalB = { x: Math.floor(Math.random() * grid.w), y: Math.floor(Math.random() * grid.h) };
+
+        if (goalA.x === player.x && goalA.y === player.y) goalA.x = Math.min(goalA.x + 1, grid.w - 1);
+        if (goalB.x === shadow.x && goalB.y === shadow.y) goalB.x = Math.max(goalB.x - 1, 0);
+
+        wallsSet = new Set();
+        slipsSet = new Set();
+        portals = [];
+        forbiddenSet = new Set();
+        inversionSet = new Set();
+        sameDirectionNextMove = false;
+        moveLimit = null;
+        moveCount = 0;
+
+        levelActive = true;
+        levelResult = 'active';
+        nextOverlay.style.display = 'none';
+        addLog("WARP COMPLETE. NEW SECTOR.");
+        statusText.innerText = "ALIGN QUANTUM NODES";
+        statusText.style.color = "#ff9900";
+        setStageHints(null);
+        hideHint();
+        updateStageMeta(null);
+        updateMoveLimitUI();
+        draw();
+    }
+
+    function buildHints(stage) {
+        const hints = [];
+        const stageId = stage && stage.id ? stage.id : "";
+        const stageNum = stageId.startsWith("stage-") ? Number(stageId.split("-")[1]) : null;
+
+        if (stageNum !== null && stageNum <= 2) {
+            hints.push("HINT: GREEN MOVES, RED MOVES OPPOSITE.");
+        }
+        if (stage && Array.isArray(stage.portals) && stage.portals.length > 0) {
+            hints.push("HINT: PORTAL CIRCLES WARP TO THE MATCHING CIRCLE.");
+        }
+        if (stage && Array.isArray(stage.slips) && stage.slips.length > 0) {
+            hints.push("HINT: BLUE BOXES SLIDE ONE EXTRA TILE.");
+        }
+        if (stage && Array.isArray(stage.forbidden) && stage.forbidden.length > 0) {
+            hints.push("HINT: ORANGE X BLOCKS THE GREEN UNIT ONLY.");
+        }
+        if (stage && Array.isArray(stage.inversion) && stage.inversion.length > 0) {
+            hints.push("HINT: INVERSION TILE MAKES THE NEXT MOVE SAME-DIRECTION.");
+        }
+        if (stage && stage.moveLimit !== null && stage.moveLimit !== undefined) {
+            hints.push(`HINT: MOVE LIMIT ${stage.moveLimit}. PLAN AHEAD.`);
+        }
+        if (hints.length === 0) {
+            hints.push("HINT: ALIGN BOTH TARGETS BY THINKING IN MIRRORS.");
+        }
+        return hints;
+    }
+
+    function setStageHints(stage) {
+        stageHints = [];
+        stageHintIndex = 0;
+        if (stage) {
+            if (Array.isArray(stage.hints) && stage.hints.length > 0) {
+                stageHints = stage.hints.filter((hint) => typeof hint === "string" && hint.trim().length);
+            } else if (typeof stage.hint === "string" && stage.hint.trim().length) {
+                stageHints = [stage.hint.trim()];
+            }
+        }
+        if (stageHints.length === 0) {
+            stageHints = buildHints(stage);
+        }
+    }
+
+    function showHint() {
+        if (!hintBox) return;
+        if (stageHints.length === 0) {
+            setStageHints(null);
+        }
+        const hint = stageHints[stageHintIndex % stageHints.length];
+        stageHintIndex += 1;
+        hintBox.innerText = hint;
+        hintBox.classList.add('active');
+        if (hintTimer) {
+            clearTimeout(hintTimer);
+        }
+        hintTimer = setTimeout(() => {
+            hideHint();
+        }, 3000);
+    }
+
+    function hideHint() {
+        if (!hintBox) return;
+        hintBox.classList.remove('active');
+    }
+
+    function updateMoveLimitUI() {
+        if (!moveText || !moveFill) return;
+        if (moveLimit === null) {
+            moveText.innerText = "MOVES: ∞";
+            moveText.style.color = "#00ff41";
+            moveText.classList.remove('danger');
+            moveFill.style.width = "100%";
+            moveFill.style.background = "#00ff41";
+            moveFill.classList.remove('danger');
+            return;
+        }
+        const remaining = Math.max(0, moveLimit - moveCount);
+        const percent = moveLimit > 0 ? (remaining / moveLimit) * 100 : 0;
+        const danger = remaining <= Math.max(3, Math.ceil(moveLimit * 0.15));
+        moveText.innerText = `MOVES LEFT: ${remaining}`;
+        moveText.style.color = danger ? "#ff3333" : "#ff9900";
+        moveText.classList.toggle('danger', danger);
+        moveFill.style.width = `${percent}%`;
+        moveFill.style.background = danger ? "#ff3333" : "#ff9900";
+        moveFill.classList.toggle('danger', danger);
+    }
+
+    function updateStageMeta(stage) {
+        if (!stageText || !elementText) return;
+        const total = levels.length || 0;
+        const displayIndex = total ? currentStageIndex + 1 : 0;
+        stageText.innerText = total ? `STAGE ${displayIndex} / ${total}` : "STAGE --";
+        if (stage && stage.element) {
+            const el = stage.element;
+            elementText.innerText = `ELEMENT ${el.number}: ${el.symbol} (${el.name})`;
+        } else {
+            elementText.innerText = "ELEMENT --";
+        }
+    }
+
+    function loadStage(stage) {
+        grid = stage.grid || { w: 5, h: 5 };
+        tileSize = canvas.width / grid.w;
+
+        player = { x: stage.player[0], y: stage.player[1] };
+        shadow = { x: stage.shadow[0], y: stage.shadow[1] };
+        goalA = { x: stage.goals.a[0], y: stage.goals.a[1] };
+        goalB = { x: stage.goals.b[0], y: stage.goals.b[1] };
+
+        const stageId = stage.id || `stage-${currentStageIndex + 1}`;
+        wallsSet = coordsToSet(stage.walls || []);
+        slipsSet = coordsToSet(stage.slips || []);
+        portals = stage.portals || [];
+        forbiddenSet = coordsToSet(stage.forbidden || []);
+        inversionSet = coordsToSet(stage.inversion || []);
+        sameDirectionNextMove = false;
+        moveLimit = stage.moveLimit ?? null;
+        moveCount = 0;
+        setStageHints(stage);
+        hideHint();
+
+        levelActive = true;
+        levelResult = 'active';
+        nextOverlay.style.display = 'none';
+        addLog(`> STAGE LOADED: ${stageId}`);
+        statusText.innerText = stageId === 'stage-1'
+            ? "TUTORIAL: ALIGN BOTH TARGETS"
+            : "ALIGN QUANTUM NODES";
+        statusText.style.color = "#ff9900";
+        if (stageId === 'stage-1') {
+            addLog("> TIP: GREEN MOVES, RED MOVES OPPOSITE.");
+            addLog("> GOAL: PLACE BOTH ON TARGET FRAMES.");
+            addLog("> CONTROLS: SWIPE OR ARROW KEYS.");
+        }
+        updateStageMeta(stage);
+        updateMoveLimitUI();
+        draw();
+    }
+
+    function advanceStage() {
+        if (!useLevelData || levels.length === 0) {
+            initRandomStage();
+            return;
+        }
+        if (levelResult === 'fail') {
+            loadStage(levels[currentStageIndex]);
+            return;
+        }
+        currentStageIndex += 1;
+        if (currentStageIndex >= levels.length) {
+            currentStageIndex = 0;
+            addLog("> PROTOCOL LOOP: STAGE RESET.");
+        }
+        loadStage(levels[currentStageIndex]);
+    }
+
+    function draw() {
+        ctx.fillStyle = '#111';
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+        ctx.strokeStyle = '#222';
+        ctx.lineWidth = 1;
+        for (let i = 0; i <= grid.w; i++) {
+            ctx.beginPath();
+            ctx.moveTo(i * tileSize, 0);
+            ctx.lineTo(i * tileSize, canvas.height);
+            ctx.stroke();
+        }
+        for (let i = 0; i <= grid.h; i++) {
+            ctx.beginPath();
+            ctx.moveTo(0, i * tileSize);
+            ctx.lineTo(canvas.width, i * tileSize);
+            ctx.stroke();
+        }
+
+        // Walls
+        ctx.fillStyle = '#1b1b1b';
+        for (const key of wallsSet) {
+            const [x, y] = key.split(',').map(Number);
+            ctx.fillRect(x * tileSize, y * tileSize, tileSize, tileSize);
+        }
+
+        // Slip tiles
+        ctx.strokeStyle = '#00b3ff';
+        ctx.lineWidth = 2;
+        for (const key of slipsSet) {
+            const [x, y] = key.split(',').map(Number);
+            ctx.strokeRect(x * tileSize + 6, y * tileSize + 6, tileSize - 12, tileSize - 12);
+        }
+
+        // Forbidden tiles
+        ctx.strokeStyle = '#ff9900';
+        ctx.lineWidth = 2;
+        for (const key of forbiddenSet) {
+            const [x, y] = key.split(',').map(Number);
+            ctx.beginPath();
+            ctx.moveTo(x * tileSize + 6, y * tileSize + 6);
+            ctx.lineTo(x * tileSize + tileSize - 6, y * tileSize + tileSize - 6);
+            ctx.moveTo(x * tileSize + tileSize - 6, y * tileSize + 6);
+            ctx.lineTo(x * tileSize + 6, y * tileSize + tileSize - 6);
+            ctx.stroke();
+        }
+
+        // Inversion tiles
+        ctx.strokeStyle = '#ff66cc';
+        ctx.lineWidth = 2;
+        for (const key of inversionSet) {
+            const [x, y] = key.split(',').map(Number);
+            const cx = x * tileSize + tileSize / 2;
+            const cy = y * tileSize + tileSize / 2;
+            const r = tileSize * 0.28;
+            ctx.beginPath();
+            ctx.moveTo(cx, cy - r);
+            ctx.lineTo(cx + r, cy);
+            ctx.lineTo(cx, cy + r);
+            ctx.lineTo(cx - r, cy);
+            ctx.closePath();
+            ctx.stroke();
+        }
+
+        // Portals
+        ctx.strokeStyle = '#ff9900';
+        ctx.lineWidth = 2;
+        for (const pair of portals) {
+            if (!Array.isArray(pair) || pair.length !== 2) continue;
+            for (const coord of pair) {
+                const x = coord[0];
+                const y = coord[1];
+                ctx.beginPath();
+                ctx.arc(x * tileSize + tileSize / 2, y * tileSize + tileSize / 2, tileSize / 3, 0, Math.PI * 2);
+                ctx.stroke();
+            }
+        }
+
+        // Goals
+        const goalInset = tileSize * 0.15;
+        ctx.strokeStyle = '#00ff41';
+        ctx.lineWidth = 3;
+        ctx.strokeRect(goalA.x * tileSize + goalInset, goalA.y * tileSize + goalInset, tileSize - goalInset * 2, tileSize - goalInset * 2);
+
+        ctx.strokeStyle = '#ff3333';
+        ctx.strokeRect(goalB.x * tileSize + goalInset, goalB.y * tileSize + goalInset, tileSize - goalInset * 2, tileSize - goalInset * 2);
+
+        // Player and Shadow
+        const pad = tileSize * 0.22;
+        ctx.fillStyle = '#00ff41';
+        ctx.fillRect(player.x * tileSize + pad, player.y * tileSize + pad, tileSize - pad * 2, tileSize - pad * 2);
+
+        ctx.fillStyle = '#ff3333';
+        ctx.fillRect(shadow.x * tileSize + pad, shadow.y * tileSize + pad, tileSize - pad * 2, tileSize - pad * 2);
+    }
+
+    function move(dx, dy) {
+        if (!levelActive) return;
+
+        const useSameDirection = sameDirectionNextMove;
+        sameDirectionNextMove = false;
+
+        const shadowDx = useSameDirection ? dx : -dx;
+        const shadowDy = useSameDirection ? dy : -dy;
+
+        let nextP = { x: player.x + dx, y: player.y + dy };
+        let nextS = { x: shadow.x + shadowDx, y: shadow.y + shadowDy };
+
+        if (!inBounds(nextP)) {
+            addLog("ERROR: BOUNDARY COLLISION (A)");
+            return;
+        }
+        if (!inBounds(nextS)) {
+            addLog("ERROR: BOUNDARY COLLISION (B)");
+            return;
+        }
+        if (isBlockedForPlayer(nextP)) {
+            addLog("ERROR: WALL COLLISION (A)");
+            return;
+        }
+        if (isBlockedForShadow(nextS)) {
+            addLog("ERROR: WALL COLLISION (B)");
+            return;
+        }
+
+        player = nextP;
+        shadow = nextS;
+
+        let portalUsed = false;
+        let playerWarped = false;
+        let shadowWarped = false;
+
+        let portalResult = applyPortal(player);
+        player = portalResult.pos;
+        playerWarped = portalResult.used;
+        portalUsed = portalUsed || portalResult.used;
+
+        portalResult = applyPortal(shadow);
+        shadow = portalResult.pos;
+        shadowWarped = portalResult.used;
+        portalUsed = portalUsed || portalResult.used;
+
+        player = applySlip(player, dx, dy, isBlockedForPlayer);
+        shadow = applySlip(shadow, shadowDx, shadowDy, isBlockedForShadow);
+
+        if (!playerWarped) {
+            portalResult = applyPortal(player);
+            player = portalResult.pos;
+            portalUsed = portalUsed || portalResult.used;
+        }
+
+        if (!shadowWarped) {
+            portalResult = applyPortal(shadow);
+            shadow = portalResult.pos;
+            portalUsed = portalUsed || portalResult.used;
+        }
+
+        if (checkInversion(player) || checkInversion(shadow)) {
+            sameDirectionNextMove = true;
+        }
+
+        moveCount += 1;
+        updateMoveLimitUI();
+        if (moveLimit !== null && moveCount > moveLimit) {
+            levelActive = false;
+            levelResult = 'fail';
+            statusText.innerText = "MOVE LIMIT HIT";
+            statusText.style.color = "#ff3333";
+            addLog("FAIL: MOVE LIMIT EXCEEDED.");
+            updateMoveLimitUI();
+            return;
+        }
+
+        addLog(`> MOVE(${dx}, ${dy}) | ENTANGLEMENT: OK`);
+        if (portalUsed) {
+            addLog("> PORTAL WARP.");
+        }
+        draw();
+        checkWin();
+    }
+
+    function checkWin() {
+        if (player.x === goalA.x && player.y === goalA.y &&
+            shadow.x === goalB.x && shadow.y === goalB.y) {
+
+            levelActive = false;
+            levelResult = 'win';
+            statusText.innerText = "SYNC COMPLETE - SWIPE UP";
+            statusText.style.color = "#00ff41";
+            addLog("SUCCESS: NODES LINKED.");
+
+            setTimeout(() => {
+                nextOverlay.style.display = 'flex';
+            }, 300);
+        }
+    }
+
+    function addLog(msg) {
+        const div = document.createElement('div');
+        div.className = 'log-entry';
+        div.innerText = msg;
+        logConsole.prepend(div);
+        if (logConsole.children.length > 5) {
+            logConsole.removeChild(logConsole.lastChild);
+        }
+    }
+
+    async function loadLevels() {
+        try {
+            const response = await fetch('levels.json', { cache: 'no-store' });
+            if (!response.ok) {
+                throw new Error(`HTTP ${response.status}`);
+            }
+            const data = await response.json();
+            if (!data || !Array.isArray(data.stages) || data.stages.length === 0) {
+                throw new Error('Invalid level data');
+            }
+            levels = data.stages;
+            useLevelData = true;
+            currentStageIndex = 0;
+            addLog("> LEVEL DATA LOADED.");
+            levels = shuffleLevelsByTier(levels);
+            loadStage(levels[currentStageIndex]);
+        } catch (err) {
+            useLevelData = false;
+            addLog("> LEVEL DATA LOAD FAILED. RANDOM MODE.");
+            if (location.protocol === 'file:') {
+                addLog("> TIP: RUN A LOCAL SERVER TO LOAD JSON.");
+            }
+            initRandomStage();
+        }
+    }
+
+    function shuffleLevelsByTier(stages) {
+        const grouped = {};
+        for (const stage of stages) {
+            const tier = stage.tier || 1;
+            if (!grouped[tier]) grouped[tier] = [];
+            grouped[tier].push(stage);
+        }
+        const tiers = Object.keys(grouped).map(Number).sort((a, b) => a - b);
+        const shuffled = [];
+        for (const tier of tiers) {
+            const group = grouped[tier];
+            for (let i = group.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [group[i], group[j]] = [group[j], group[i]];
+            }
+            shuffled.push(...group);
+        }
+        return shuffled;
+    }
+
+    // Input Listeners
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'h' || e.key === 'H') {
+            showHint();
+            return;
+        }
+        if (!levelActive) {
+            if (e.key === 'Enter' || e.key === ' ' || e.key === 'ArrowUp') {
+                nextOverlay.style.display = 'none';
+                advanceStage();
+            }
+            return;
+        }
+        switch(e.key) {
+            case 'ArrowUp': move(0, -1); break;
+            case 'ArrowDown': move(0, 1); break;
+            case 'ArrowLeft': move(-1, 0); break;
+            case 'ArrowRight': move(1, 0); break;
+        }
+    });
+
+    if (statusText) {
+        const startHintPress = () => {
+            if (hintPressTimer) return;
+            hintPressTimer = setTimeout(() => {
+                showHint();
+                hintPressTimer = null;
+            }, 700);
+        };
+        const cancelHintPress = () => {
+            if (hintPressTimer) {
+                clearTimeout(hintPressTimer);
+                hintPressTimer = null;
+            }
+        };
+        statusText.addEventListener('pointerdown', startHintPress);
+        statusText.addEventListener('pointerup', cancelHintPress);
+        statusText.addEventListener('pointerleave', cancelHintPress);
+        statusText.addEventListener('pointercancel', cancelHintPress);
+    }
+
+    // Touch Handling (Swipe for Move AND Shorts transition)
+    document.addEventListener('touchstart', (e) => {
+        touchStartX = e.changedTouches[0].screenX;
+        touchStartY = e.changedTouches[0].screenY;
+    });
+
+    document.addEventListener('touchend', (e) => {
+        touchEndX = e.changedTouches[0].screenX;
+        touchEndY = e.changedTouches[0].screenY;
+        handleSwipe();
+    });
+
+    function handleSwipe() {
+        const diffX = touchEndX - touchStartX;
+        const diffY = touchEndY - touchStartY;
+        const absX = Math.abs(diffX);
+        const absY = Math.abs(diffY);
+
+        // Transition Logic (When Level Cleared)
+        if (!levelActive) {
+            const isSwipeUp = absY > 50 && diffY < 0;
+            const isTap = absX < 10 && absY < 10;
+            if (isSwipeUp || isTap) {
+                nextOverlay.style.display = 'none';
+                advanceStage();
+            }
+            return;
+        }
+
+        // Gameplay Move Logic
+        if (Math.max(absX, absY) > 30) { // Threshold
+            if (absX > absY) {
+                // Horizontal
+                diffX > 0 ? move(1, 0) : move(-1, 0);
+            } else {
+                // Vertical
+                diffY > 0 ? move(0, 1) : move(0, -1);
+            }
+        }
+    }
+
+    // Start
+    addLog("> SYSTEM READY. AWAITING COMMAND.");
+    loadLevels();
+</script>
+</body>
+</html>

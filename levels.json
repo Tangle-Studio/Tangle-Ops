@@ -1,0 +1,12503 @@
+{
+  "version": 20,
+  "stages": [
+    {
+      "id": "stage-1",
+      "tier": 1,
+      "grid": {
+        "w": 5,
+        "h": 5
+      },
+      "player": [
+        0,
+        0
+      ],
+      "shadow": [
+        4,
+        4
+      ],
+      "goals": {
+        "a": [
+          4,
+          0
+        ],
+        "b": [
+          0,
+          4
+        ]
+      },
+      "walls": [],
+      "slips": [],
+      "portals": [],
+      "forbidden": [],
+      "inversion": [],
+      "name": "Element 1: H",
+      "element": {
+        "number": 1,
+        "symbol": "H",
+        "name": "Hydrogen",
+        "category": "nonmetal",
+        "phase": "Gas"
+      },
+      "hints": [
+        "ELEMENT 1 H: Hydrogen.",
+        "Light element. Slips may help."
+      ]
+    },
+    {
+      "grid": {
+        "w": 5,
+        "h": 5
+      },
+      "player": [
+        4,
+        1
+      ],
+      "shadow": [
+        0,
+        3
+      ],
+      "goals": {
+        "a": [
+          0,
+          4
+        ],
+        "b": [
+          4,
+          0
+        ]
+      },
+      "walls": [],
+      "slips": [],
+      "portals": [],
+      "forbidden": [],
+      "inversion": [],
+      "id": "stage-2",
+      "tier": 1,
+      "name": "Element 2: He",
+      "element": {
+        "number": 2,
+        "symbol": "He",
+        "name": "Helium",
+        "category": "noble",
+        "phase": "Gas"
+      },
+      "hints": [
+        "ELEMENT 2 He: Helium.",
+        "Stable noble gas. Few obstacles expected."
+      ]
+    },
+    {
+      "grid": {
+        "w": 5,
+        "h": 5
+      },
+      "player": [
+        2,
+        3
+      ],
+      "shadow": [
+        1,
+        1
+      ],
+      "goals": {
+        "a": [
+          4,
+          3
+        ],
+        "b": [
+          0,
+          1
+        ]
+      },
+      "walls": [],
+      "slips": [
+        [
+          2,
+          1
+        ]
+      ],
+      "portals": [],
+      "forbidden": [],
+      "inversion": [],
+      "id": "stage-3",
+      "tier": 1,
+      "name": "Element 3: Li",
+      "element": {
+        "number": 3,
+        "symbol": "Li",
+        "name": "Lithium",
+        "category": "alkali",
+        "phase": "Solid"
+      },
+      "hints": [
+        "ELEMENT 3 Li: Lithium.",
+        "Alkali metal. Slippery movement is likely."
+      ]
+    },
+    {
+      "grid": {
+        "w": 5,
+        "h": 5
+      },
+      "player": [
+        0,
+        1
+      ],
+      "shadow": [
+        4,
+        1
+      ],
+      "goals": {
+        "a": [
+          4,
+          2
+        ],
+        "b": [
+          0,
+          0
+        ]
+      },
+      "walls": [
+        [
+          2,
+          2
+        ]
+      ],
+      "slips": [],
+      "portals": [],
+      "forbidden": [],
+      "inversion": [],
+      "id": "stage-4",
+      "tier": 1,
+      "name": "Element 4: Be",
+      "element": {
+        "number": 4,
+        "symbol": "Be",
+        "name": "Beryllium",
+        "category": "alkaline",
+        "phase": "Solid"
+      },
+      "hints": [
+        "ELEMENT 4 Be: Beryllium.",
+        "Alkaline earth metal. Walls are common."
+      ]
+    },
+    {
+      "grid": {
+        "w": 5,
+        "h": 5
+      },
+      "player": [
+        3,
+        2
+      ],
+      "shadow": [
+        1,
+        2
+      ],
+      "goals": {
+        "a": [
+          1,
+          4
+        ],
+        "b": [
+          3,
+          0
+        ]
+      },
+      "walls": [],
+      "slips": [],
+      "portals": [],
+      "forbidden": [],
+      "inversion": [],
+      "id": "stage-5",
+      "tier": 1,
+      "name": "Element 5: B",
+      "element": {
+        "number": 5,
+        "symbol": "B",
+        "name": "Boron",
+        "category": "metalloid",
+        "phase": "Solid"
+      },
+      "hints": [
+        "ELEMENT 5 B: Boron.",
+        "Metalloid. Balanced tile mix."
+      ]
+    },
+    {
+      "grid": {
+        "w": 5,
+        "h": 5
+      },
+      "player": [
+        0,
+        4
+      ],
+      "shadow": [
+        4,
+        0
+      ],
+      "goals": {
+        "a": [
+          0,
+          0
+        ],
+        "b": [
+          4,
+          4
+        ]
+      },
+      "walls": [
+        [
+          2,
+          3
+        ]
+      ],
+      "slips": [
+        [
+          3,
+          4
+        ],
+        [
+          4,
+          2
+        ]
+      ],
+      "portals": [],
+      "forbidden": [],
+      "inversion": [],
+      "id": "stage-6",
+      "tier": 1,
+      "name": "Element 6: C",
+      "element": {
+        "number": 6,
+        "symbol": "C",
+        "name": "Carbon",
+        "category": "nonmetal",
+        "phase": "Solid"
+      },
+      "hints": [
+        "ELEMENT 6 C: Carbon.",
+        "Light element. Slips may help."
+      ]
+    },
+    {
+      "grid": {
+        "w": 5,
+        "h": 5
+      },
+      "player": [
+        0,
+        3
+      ],
+      "shadow": [
+        4,
+        1
+      ],
+      "goals": {
+        "a": [
+          1,
+          4
+        ],
+        "b": [
+          2,
+          0
+        ]
+      },
+      "walls": [
+        [
+          4,
+          4
+        ],
+        [
+          3,
+          2
+        ]
+      ],
+      "slips": [
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "portals": [],
+      "forbidden": [],
+      "inversion": [],
+      "id": "stage-7",
+      "tier": 1,
+      "name": "Element 7: N",
+      "element": {
+        "number": 7,
+        "symbol": "N",
+        "name": "Nitrogen",
+        "category": "nonmetal",
+        "phase": "Gas"
+      },
+      "hints": [
+        "ELEMENT 7 N: Nitrogen.",
+        "Light element. Slips may help."
+      ]
+    },
+    {
+      "grid": {
+        "w": 5,
+        "h": 5
+      },
+      "player": [
+        4,
+        3
+      ],
+      "shadow": [
+        0,
+        1
+      ],
+      "goals": {
+        "a": [
+          3,
+          4
+        ],
+        "b": [
+          1,
+          1
+        ]
+      },
+      "walls": [
+        [
+          2,
+          1
+        ]
+      ],
+      "slips": [
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          4
+        ]
+      ],
+      "portals": [],
+      "forbidden": [],
+      "inversion": [],
+      "id": "stage-8",
+      "tier": 1,
+      "name": "Element 8: O",
+      "element": {
+        "number": 8,
+        "symbol": "O",
+        "name": "Oxygen",
+        "category": "nonmetal",
+        "phase": "Gas"
+      },
+      "hints": [
+        "ELEMENT 8 O: Oxygen.",
+        "Light element. Slips may help."
+      ]
+    },
+    {
+      "grid": {
+        "w": 5,
+        "h": 5
+      },
+      "player": [
+        3,
+        2
+      ],
+      "shadow": [
+        0,
+        2
+      ],
+      "goals": {
+        "a": [
+          0,
+          1
+        ],
+        "b": [
+          4,
+          1
+        ]
+      },
+      "walls": [
+        [
+          4,
+          3
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "slips": [
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "portals": [],
+      "forbidden": [],
+      "inversion": [],
+      "id": "stage-9",
+      "tier": 1,
+      "name": "Element 9: F",
+      "element": {
+        "number": 9,
+        "symbol": "F",
+        "name": "Fluorine",
+        "category": "nonmetal",
+        "phase": "Gas"
+      },
+      "hints": [
+        "ELEMENT 9 F: Fluorine.",
+        "Light element. Slips may help."
+      ]
+    },
+    {
+      "grid": {
+        "w": 5,
+        "h": 5
+      },
+      "player": [
+        4,
+        1
+      ],
+      "shadow": [
+        0,
+        4
+      ],
+      "goals": {
+        "a": [
+          1,
+          4
+        ],
+        "b": [
+          3,
+          1
+        ]
+      },
+      "walls": [
+        [
+          1,
+          0
+        ]
+      ],
+      "slips": [],
+      "portals": [],
+      "forbidden": [],
+      "inversion": [],
+      "id": "stage-10",
+      "tier": 1,
+      "name": "Element 10: Ne",
+      "element": {
+        "number": 10,
+        "symbol": "Ne",
+        "name": "Neon",
+        "category": "noble",
+        "phase": "Gas"
+      },
+      "hints": [
+        "ELEMENT 10 Ne: Neon.",
+        "Stable noble gas. Few obstacles expected."
+      ]
+    },
+    {
+      "grid": {
+        "w": 6,
+        "h": 6
+      },
+      "player": [
+        0,
+        2
+      ],
+      "shadow": [
+        2,
+        4
+      ],
+      "goals": {
+        "a": [
+          1,
+          2
+        ],
+        "b": [
+          2,
+          5
+        ]
+      },
+      "walls": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "slips": [
+        [
+          5,
+          4
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "portals": [],
+      "forbidden": [],
+      "inversion": [],
+      "id": "stage-11",
+      "tier": 1,
+      "name": "Element 11: Na",
+      "element": {
+        "number": 11,
+        "symbol": "Na",
+        "name": "Sodium",
+        "category": "alkali",
+        "phase": "Solid"
+      },
+      "hints": [
+        "ELEMENT 11 Na: Sodium.",
+        "Alkali metal. Slippery movement is likely."
+      ],
+      "moveLimit": 20
+    },
+    {
+      "grid": {
+        "w": 6,
+        "h": 6
+      },
+      "player": [
+        4,
+        0
+      ],
+      "shadow": [
+        5,
+        5
+      ],
+      "goals": {
+        "a": [
+          5,
+          3
+        ],
+        "b": [
+          2,
+          1
+        ]
+      },
+      "walls": [
+        [
+          0,
+          4
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          3
+        ]
+      ],
+      "slips": [
+        [
+          4,
+          1
+        ]
+      ],
+      "portals": [],
+      "forbidden": [],
+      "inversion": [],
+      "id": "stage-12",
+      "tier": 1,
+      "name": "Element 12: Mg",
+      "element": {
+        "number": 12,
+        "symbol": "Mg",
+        "name": "Magnesium",
+        "category": "alkaline",
+        "phase": "Solid"
+      },
+      "hints": [
+        "ELEMENT 12 Mg: Magnesium.",
+        "Alkaline earth metal. Walls are common."
+      ],
+      "moveLimit": 27
+    },
+    {
+      "grid": {
+        "w": 6,
+        "h": 6
+      },
+      "player": [
+        3,
+        4
+      ],
+      "shadow": [
+        4,
+        2
+      ],
+      "goals": {
+        "a": [
+          3,
+          5
+        ],
+        "b": [
+          2,
+          1
+        ]
+      },
+      "walls": [
+        [
+          3,
+          3
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          4
+        ]
+      ],
+      "slips": [
+        [
+          3,
+          2
+        ]
+      ],
+      "portals": [],
+      "forbidden": [
+        [
+          2,
+          2
+        ]
+      ],
+      "inversion": [],
+      "id": "stage-13",
+      "tier": 1,
+      "name": "Element 13: Al",
+      "element": {
+        "number": 13,
+        "symbol": "Al",
+        "name": "Aluminium",
+        "category": "transition",
+        "phase": "Solid"
+      },
+      "hints": [
+        "ELEMENT 13 Al: Aluminium.",
+        "Transition metal. Dense obstacles likely."
+      ],
+      "moveLimit": 20
+    },
+    {
+      "grid": {
+        "w": 6,
+        "h": 6
+      },
+      "player": [
+        5,
+        2
+      ],
+      "shadow": [
+        0,
+        0
+      ],
+      "goals": {
+        "a": [
+          1,
+          1
+        ],
+        "b": [
+          5,
+          0
+        ]
+      },
+      "walls": [
+        [
+          3,
+          3
+        ],
+        [
+          0,
+          2
+        ]
+      ],
+      "slips": [
+        [
+          3,
+          1
+        ]
+      ],
+      "portals": [],
+      "forbidden": [],
+      "inversion": [],
+      "id": "stage-14",
+      "tier": 1,
+      "name": "Element 14: Si",
+      "element": {
+        "number": 14,
+        "symbol": "Si",
+        "name": "Silicon",
+        "category": "metalloid",
+        "phase": "Solid"
+      },
+      "hints": [
+        "ELEMENT 14 Si: Silicon.",
+        "Metalloid. Balanced tile mix."
+      ],
+      "moveLimit": 18
+    },
+    {
+      "grid": {
+        "w": 6,
+        "h": 6
+      },
+      "player": [
+        5,
+        4
+      ],
+      "shadow": [
+        0,
+        3
+      ],
+      "goals": {
+        "a": [
+          4,
+          5
+        ],
+        "b": [
+          4,
+          2
+        ]
+      },
+      "walls": [
+        [
+          5,
+          3
+        ],
+        [
+          3,
+          2
+        ]
+      ],
+      "slips": [
+        [
+          3,
+          5
+        ],
+        [
+          3,
+          3
+        ]
+      ],
+      "portals": [],
+      "forbidden": [],
+      "inversion": [],
+      "id": "stage-15",
+      "tier": 1,
+      "name": "Element 15: P",
+      "element": {
+        "number": 15,
+        "symbol": "P",
+        "name": "Phosphorus",
+        "category": "nonmetal",
+        "phase": "Solid"
+      },
+      "hints": [
+        "ELEMENT 15 P: Phosphorus.",
+        "Light element. Slips may help."
+      ],
+      "moveLimit": 23
+    },
+    {
+      "grid": {
+        "w": 6,
+        "h": 6
+      },
+      "player": [
+        4,
+        4
+      ],
+      "shadow": [
+        1,
+        2
+      ],
+      "goals": {
+        "a": [
+          1,
+          3
+        ],
+        "b": [
+          3,
+          1
+        ]
+      },
+      "walls": [
+        [
+          2,
+          1
+        ],
+        [
+          3,
+          0
+        ]
+      ],
+      "slips": [
+        [
+          4,
+          1
+        ],
+        [
+          5,
+          5
+        ]
+      ],
+      "portals": [],
+      "forbidden": [],
+      "inversion": [],
+      "id": "stage-16",
+      "tier": 1,
+      "name": "Element 16: S",
+      "element": {
+        "number": 16,
+        "symbol": "S",
+        "name": "Sulfur",
+        "category": "nonmetal",
+        "phase": "Solid"
+      },
+      "hints": [
+        "ELEMENT 16 S: Sulfur.",
+        "Light element. Slips may help."
+      ],
+      "moveLimit": 27
+    },
+    {
+      "grid": {
+        "w": 6,
+        "h": 6
+      },
+      "player": [
+        3,
+        0
+      ],
+      "shadow": [
+        4,
+        4
+      ],
+      "goals": {
+        "a": [
+          5,
+          2
+        ],
+        "b": [
+          0,
+          3
+        ]
+      },
+      "walls": [
+        [
+          2,
+          0
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "slips": [
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          3
+        ]
+      ],
+      "portals": [],
+      "forbidden": [],
+      "inversion": [],
+      "id": "stage-17",
+      "tier": 1,
+      "name": "Element 17: Cl",
+      "element": {
+        "number": 17,
+        "symbol": "Cl",
+        "name": "Chlorine",
+        "category": "nonmetal",
+        "phase": "Gas"
+      },
+      "hints": [
+        "ELEMENT 17 Cl: Chlorine.",
+        "Light element. Slips may help."
+      ],
+      "moveLimit": 21
+    },
+    {
+      "grid": {
+        "w": 6,
+        "h": 6
+      },
+      "player": [
+        4,
+        2
+      ],
+      "shadow": [
+        1,
+        0
+      ],
+      "goals": {
+        "a": [
+          0,
+          0
+        ],
+        "b": [
+          5,
+          2
+        ]
+      },
+      "walls": [
+        [
+          2,
+          1
+        ]
+      ],
+      "slips": [],
+      "portals": [],
+      "forbidden": [],
+      "inversion": [],
+      "id": "stage-18",
+      "tier": 1,
+      "name": "Element 18: Ar",
+      "element": {
+        "number": 18,
+        "symbol": "Ar",
+        "name": "Argon",
+        "category": "noble",
+        "phase": "Gas"
+      },
+      "hints": [
+        "ELEMENT 18 Ar: Argon.",
+        "Stable noble gas. Few obstacles expected."
+      ],
+      "moveLimit": 18
+    },
+    {
+      "grid": {
+        "w": 6,
+        "h": 6
+      },
+      "player": [
+        5,
+        3
+      ],
+      "shadow": [
+        1,
+        4
+      ],
+      "goals": {
+        "a": [
+          0,
+          5
+        ],
+        "b": [
+          5,
+          2
+        ]
+      },
+      "walls": [
+        [
+          2,
+          4
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "slips": [
+        [
+          3,
+          2
+        ],
+        [
+          1,
+          5
+        ]
+      ],
+      "portals": [],
+      "forbidden": [],
+      "inversion": [],
+      "id": "stage-19",
+      "tier": 1,
+      "name": "Element 19: K",
+      "element": {
+        "number": 19,
+        "symbol": "K",
+        "name": "Potassium",
+        "category": "alkali",
+        "phase": "Solid"
+      },
+      "hints": [
+        "ELEMENT 19 K: Potassium.",
+        "Alkali metal. Slippery movement is likely."
+      ],
+      "moveLimit": 21
+    },
+    {
+      "grid": {
+        "w": 6,
+        "h": 6
+      },
+      "player": [
+        3,
+        0
+      ],
+      "shadow": [
+        4,
+        3
+      ],
+      "goals": {
+        "a": [
+          4,
+          1
+        ],
+        "b": [
+          1,
+          2
+        ]
+      },
+      "walls": [
+        [
+          2,
+          0
+        ],
+        [
+          5,
+          5
+        ],
+        [
+          0,
+          4
+        ]
+      ],
+      "slips": [
+        [
+          2,
+          1
+        ]
+      ],
+      "portals": [],
+      "forbidden": [],
+      "inversion": [],
+      "id": "stage-20",
+      "tier": 1,
+      "name": "Element 20: Ca",
+      "element": {
+        "number": 20,
+        "symbol": "Ca",
+        "name": "Calcium",
+        "category": "alkaline",
+        "phase": "Solid"
+      },
+      "hints": [
+        "ELEMENT 20 Ca: Calcium.",
+        "Alkaline earth metal. Walls are common."
+      ],
+      "moveLimit": 20
+    },
+    {
+      "grid": {
+        "w": 6,
+        "h": 6
+      },
+      "player": [
+        0,
+        1
+      ],
+      "shadow": [
+        4,
+        5
+      ],
+      "goals": {
+        "a": [
+          3,
+          2
+        ],
+        "b": [
+          1,
+          1
+        ]
+      },
+      "walls": [
+        [
+          3,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          5,
+          3
+        ],
+        [
+          1,
+          5
+        ]
+      ],
+      "slips": [
+        [
+          1,
+          2
+        ]
+      ],
+      "portals": [],
+      "forbidden": [
+        [
+          4,
+          4
+        ]
+      ],
+      "inversion": [],
+      "id": "stage-21",
+      "tier": 2,
+      "name": "Element 21: Sc",
+      "element": {
+        "number": 21,
+        "symbol": "Sc",
+        "name": "Scandium",
+        "category": "transition",
+        "phase": "Solid"
+      },
+      "hints": [
+        "ELEMENT 21 Sc: Scandium.",
+        "Transition metal. Dense obstacles likely."
+      ],
+      "moveLimit": 27
+    },
+    {
+      "grid": {
+        "w": 6,
+        "h": 6
+      },
+      "player": [
+        0,
+        0
+      ],
+      "shadow": [
+        4,
+        4
+      ],
+      "goals": {
+        "a": [
+          3,
+          1
+        ],
+        "b": [
+          1,
+          2
+        ]
+      },
+      "walls": [
+        [
+          3,
+          5
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          4,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          1,
+          5
+        ]
+      ],
+      "slips": [
+        [
+          1,
+          1
+        ]
+      ],
+      "portals": [],
+      "forbidden": [
+        [
+          1,
+          4
+        ]
+      ],
+      "inversion": [],
+      "id": "stage-22",
+      "tier": 2,
+      "name": "Element 22: Ti",
+      "element": {
+        "number": 22,
+        "symbol": "Ti",
+        "name": "Titanium",
+        "category": "transition",
+        "phase": "Solid"
+      },
+      "hints": [
+        "ELEMENT 22 Ti: Titanium.",
+        "Transition metal. Dense obstacles likely."
+      ],
+      "moveLimit": 24
+    },
+    {
+      "grid": {
+        "w": 6,
+        "h": 6
+      },
+      "player": [
+        3,
+        0
+      ],
+      "shadow": [
+        0,
+        4
+      ],
+      "goals": {
+        "a": [
+          1,
+          3
+        ],
+        "b": [
+          3,
+          3
+        ]
+      },
+      "walls": [
+        [
+          5,
+          1
+        ],
+        [
+          4,
+          0
+        ],
+        [
+          4,
+          1
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "slips": [
+        [
+          2,
+          4
+        ]
+      ],
+      "portals": [],
+      "forbidden": [
+        [
+          2,
+          2
+        ]
+      ],
+      "inversion": [],
+      "id": "stage-23",
+      "tier": 2,
+      "name": "Element 23: V",
+      "element": {
+        "number": 23,
+        "symbol": "V",
+        "name": "Vanadium",
+        "category": "transition",
+        "phase": "Solid"
+      },
+      "hints": [
+        "ELEMENT 23 V: Vanadium.",
+        "Transition metal. Dense obstacles likely."
+      ],
+      "moveLimit": 30
+    },
+    {
+      "grid": {
+        "w": 6,
+        "h": 6
+      },
+      "player": [
+        3,
+        5
+      ],
+      "shadow": [
+        1,
+        1
+      ],
+      "goals": {
+        "a": [
+          4,
+          2
+        ],
+        "b": [
+          1,
+          5
+        ]
+      },
+      "walls": [
+        [
+          4,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          5,
+          4
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          2
+        ]
+      ],
+      "slips": [
+        [
+          1,
+          3
+        ]
+      ],
+      "portals": [],
+      "forbidden": [
+        [
+          0,
+          2
+        ]
+      ],
+      "inversion": [],
+      "id": "stage-24",
+      "tier": 2,
+      "name": "Element 24: Cr",
+      "element": {
+        "number": 24,
+        "symbol": "Cr",
+        "name": "Chromium",
+        "category": "transition",
+        "phase": "Solid"
+      },
+      "hints": [
+        "ELEMENT 24 Cr: Chromium.",
+        "Transition metal. Dense obstacles likely."
+      ],
+      "moveLimit": 27
+    },
+    {
+      "grid": {
+        "w": 6,
+        "h": 6
+      },
+      "player": [
+        2,
+        0
+      ],
+      "shadow": [
+        3,
+        4
+      ],
+      "goals": {
+        "a": [
+          2,
+          3
+        ],
+        "b": [
+          4,
+          3
+        ]
+      },
+      "walls": [
+        [
+          5,
+          4
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          5
+        ]
+      ],
+      "slips": [
+        [
+          2,
+          4
+        ]
+      ],
+      "portals": [],
+      "forbidden": [
+        [
+          4,
+          0
+        ]
+      ],
+      "inversion": [],
+      "id": "stage-25",
+      "tier": 2,
+      "name": "Element 25: Mn",
+      "element": {
+        "number": 25,
+        "symbol": "Mn",
+        "name": "Manganese",
+        "category": "transition",
+        "phase": "Solid"
+      },
+      "hints": [
+        "ELEMENT 25 Mn: Manganese.",
+        "Transition metal. Dense obstacles likely."
+      ],
+      "moveLimit": 33
+    },
+    {
+      "grid": {
+        "w": 6,
+        "h": 6
+      },
+      "player": [
+        4,
+        4
+      ],
+      "shadow": [
+        0,
+        0
+      ],
+      "goals": {
+        "a": [
+          2,
+          0
+        ],
+        "b": [
+          4,
+          2
+        ]
+      },
+      "walls": [
+        [
+          5,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          4,
+          1
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          5,
+          1
+        ],
+        [
+          5,
+          5
+        ]
+      ],
+      "slips": [
+        [
+          3,
+          2
+        ]
+      ],
+      "portals": [],
+      "forbidden": [
+        [
+          5,
+          2
+        ]
+      ],
+      "inversion": [],
+      "id": "stage-26",
+      "tier": 2,
+      "name": "Element 26: Fe",
+      "element": {
+        "number": 26,
+        "symbol": "Fe",
+        "name": "Iron",
+        "category": "transition",
+        "phase": "Solid"
+      },
+      "hints": [
+        "ELEMENT 26 Fe: Iron.",
+        "Transition metal. Dense obstacles likely."
+      ],
+      "moveLimit": 26
+    },
+    {
+      "grid": {
+        "w": 6,
+        "h": 6
+      },
+      "player": [
+        2,
+        1
+      ],
+      "shadow": [
+        4,
+        5
+      ],
+      "goals": {
+        "a": [
+          5,
+          4
+        ],
+        "b": [
+          2,
+          4
+        ]
+      },
+      "walls": [
+        [
+          5,
+          5
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          5,
+          0
+        ]
+      ],
+      "slips": [
+        [
+          4,
+          3
+        ]
+      ],
+      "portals": [],
+      "forbidden": [
+        [
+          4,
+          0
+        ]
+      ],
+      "inversion": [],
+      "id": "stage-27",
+      "tier": 2,
+      "name": "Element 27: Co",
+      "element": {
+        "number": 27,
+        "symbol": "Co",
+        "name": "Cobalt",
+        "category": "transition",
+        "phase": "Solid"
+      },
+      "hints": [
+        "ELEMENT 27 Co: Cobalt.",
+        "Transition metal. Dense obstacles likely."
+      ],
+      "moveLimit": 26
+    },
+    {
+      "grid": {
+        "w": 6,
+        "h": 6
+      },
+      "player": [
+        0,
+        1
+      ],
+      "shadow": [
+        3,
+        5
+      ],
+      "goals": {
+        "a": [
+          1,
+          0
+        ],
+        "b": [
+          4,
+          5
+        ]
+      },
+      "walls": [
+        [
+          5,
+          4
+        ],
+        [
+          4,
+          0
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          5,
+          0
+        ]
+      ],
+      "slips": [
+        [
+          2,
+          5
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "portals": [],
+      "forbidden": [
+        [
+          5,
+          3
+        ]
+      ],
+      "inversion": [],
+      "id": "stage-28",
+      "tier": 2,
+      "name": "Element 28: Ni",
+      "element": {
+        "number": 28,
+        "symbol": "Ni",
+        "name": "Nickel",
+        "category": "transition",
+        "phase": "Solid"
+      },
+      "hints": [
+        "ELEMENT 28 Ni: Nickel.",
+        "Transition metal. Dense obstacles likely."
+      ],
+      "moveLimit": 30
+    },
+    {
+      "grid": {
+        "w": 6,
+        "h": 6
+      },
+      "player": [
+        5,
+        1
+      ],
+      "shadow": [
+        4,
+        3
+      ],
+      "goals": {
+        "a": [
+          4,
+          2
+        ],
+        "b": [
+          3,
+          3
+        ]
+      },
+      "walls": [
+        [
+          1,
+          5
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          4
+        ]
+      ],
+      "slips": [
+        [
+          4,
+          4
+        ]
+      ],
+      "portals": [],
+      "forbidden": [
+        [
+          3,
+          5
+        ]
+      ],
+      "inversion": [],
+      "id": "stage-29",
+      "tier": 2,
+      "name": "Element 29: Cu",
+      "element": {
+        "number": 29,
+        "symbol": "Cu",
+        "name": "Copper",
+        "category": "transition",
+        "phase": "Solid"
+      },
+      "hints": [
+        "ELEMENT 29 Cu: Copper.",
+        "Transition metal. Dense obstacles likely."
+      ],
+      "moveLimit": 24
+    },
+    {
+      "grid": {
+        "w": 6,
+        "h": 6
+      },
+      "player": [
+        2,
+        3
+      ],
+      "shadow": [
+        2,
+        5
+      ],
+      "goals": {
+        "a": [
+          4,
+          1
+        ],
+        "b": [
+          2,
+          4
+        ]
+      },
+      "walls": [
+        [
+          0,
+          3
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          4,
+          3
+        ],
+        [
+          0,
+          4
+        ]
+      ],
+      "slips": [
+        [
+          3,
+          4
+        ],
+        [
+          4,
+          4
+        ]
+      ],
+      "portals": [
+        [
+          [
+            1,
+            1
+          ],
+          [
+            0,
+            0
+          ]
+        ]
+      ],
+      "forbidden": [
+        [
+          1,
+          3
+        ]
+      ],
+      "inversion": [],
+      "id": "stage-30",
+      "tier": 2,
+      "name": "Element 30: Zn",
+      "element": {
+        "number": 30,
+        "symbol": "Zn",
+        "name": "Zinc",
+        "category": "transition",
+        "phase": "Solid"
+      },
+      "hints": [
+        "ELEMENT 30 Zn: Zinc.",
+        "Transition metal. Dense obstacles likely."
+      ],
+      "moveLimit": 33
+    },
+    {
+      "grid": {
+        "w": 6,
+        "h": 6
+      },
+      "player": [
+        1,
+        4
+      ],
+      "shadow": [
+        1,
+        2
+      ],
+      "goals": {
+        "a": [
+          3,
+          2
+        ],
+        "b": [
+          2,
+          4
+        ]
+      },
+      "walls": [
+        [
+          0,
+          0
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          5,
+          5
+        ],
+        [
+          5,
+          2
+        ]
+      ],
+      "slips": [
+        [
+          2,
+          3
+        ]
+      ],
+      "portals": [
+        [
+          [
+            3,
+            3
+          ],
+          [
+            4,
+            2
+          ]
+        ]
+      ],
+      "forbidden": [
+        [
+          3,
+          4
+        ]
+      ],
+      "inversion": [],
+      "id": "stage-31",
+      "tier": 2,
+      "name": "Element 31: Ga",
+      "element": {
+        "number": 31,
+        "symbol": "Ga",
+        "name": "Gallium",
+        "category": "transition",
+        "phase": "Solid"
+      },
+      "hints": [
+        "ELEMENT 31 Ga: Gallium.",
+        "Transition metal. Dense obstacles likely."
+      ],
+      "moveLimit": 24
+    },
+    {
+      "grid": {
+        "w": 6,
+        "h": 6
+      },
+      "player": [
+        4,
+        5
+      ],
+      "shadow": [
+        0,
+        1
+      ],
+      "goals": {
+        "a": [
+          1,
+          4
+        ],
+        "b": [
+          3,
+          5
+        ]
+      },
+      "walls": [
+        [
+          3,
+          2
+        ],
+        [
+          5,
+          2
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          5
+        ]
+      ],
+      "slips": [
+        [
+          5,
+          0
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "portals": [
+        [
+          [
+            1,
+            5
+          ],
+          [
+            5,
+            1
+          ]
+        ]
+      ],
+      "forbidden": [],
+      "inversion": [],
+      "id": "stage-32",
+      "tier": 2,
+      "name": "Element 32: Ge",
+      "element": {
+        "number": 32,
+        "symbol": "Ge",
+        "name": "Germanium",
+        "category": "metalloid",
+        "phase": "Solid"
+      },
+      "hints": [
+        "ELEMENT 32 Ge: Germanium.",
+        "Metalloid. Balanced tile mix."
+      ],
+      "moveLimit": 27
+    },
+    {
+      "grid": {
+        "w": 6,
+        "h": 6
+      },
+      "player": [
+        2,
+        3
+      ],
+      "shadow": [
+        1,
+        0
+      ],
+      "goals": {
+        "a": [
+          2,
+          0
+        ],
+        "b": [
+          4,
+          3
+        ]
+      },
+      "walls": [
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "slips": [
+        [
+          5,
+          5
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "portals": [
+        [
+          [
+            3,
+            4
+          ],
+          [
+            4,
+            1
+          ]
+        ]
+      ],
+      "forbidden": [],
+      "inversion": [],
+      "id": "stage-33",
+      "tier": 2,
+      "name": "Element 33: As",
+      "element": {
+        "number": 33,
+        "symbol": "As",
+        "name": "Arsenic",
+        "category": "metalloid",
+        "phase": "Solid"
+      },
+      "hints": [
+        "ELEMENT 33 As: Arsenic.",
+        "Metalloid. Balanced tile mix."
+      ],
+      "moveLimit": 33
+    },
+    {
+      "grid": {
+        "w": 6,
+        "h": 6
+      },
+      "player": [
+        3,
+        5
+      ],
+      "shadow": [
+        3,
+        3
+      ],
+      "goals": {
+        "a": [
+          4,
+          2
+        ],
+        "b": [
+          1,
+          3
+        ]
+      },
+      "walls": [
+        [
+          5,
+          0
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          5,
+          4
+        ]
+      ],
+      "slips": [
+        [
+          5,
+          5
+        ],
+        [
+          4,
+          3
+        ],
+        [
+          4,
+          0
+        ]
+      ],
+      "portals": [
+        [
+          [
+            2,
+            0
+          ],
+          [
+            4,
+            1
+          ]
+        ]
+      ],
+      "forbidden": [],
+      "inversion": [],
+      "id": "stage-34",
+      "tier": 2,
+      "name": "Element 34: Se",
+      "element": {
+        "number": 34,
+        "symbol": "Se",
+        "name": "Selenium",
+        "category": "nonmetal",
+        "phase": "Solid"
+      },
+      "hints": [
+        "ELEMENT 34 Se: Selenium.",
+        "Light element. Slips may help."
+      ],
+      "moveLimit": 32
+    },
+    {
+      "grid": {
+        "w": 6,
+        "h": 6
+      },
+      "player": [
+        1,
+        1
+      ],
+      "shadow": [
+        3,
+        4
+      ],
+      "goals": {
+        "a": [
+          3,
+          5
+        ],
+        "b": [
+          4,
+          2
+        ]
+      },
+      "walls": [
+        [
+          4,
+          1
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          5,
+          5
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "slips": [
+        [
+          0,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          4,
+          3
+        ]
+      ],
+      "portals": [
+        [
+          [
+            2,
+            3
+          ],
+          [
+            5,
+            2
+          ]
+        ]
+      ],
+      "forbidden": [
+        [
+          5,
+          1
+        ]
+      ],
+      "inversion": [],
+      "id": "stage-35",
+      "tier": 2,
+      "name": "Element 35: Br",
+      "element": {
+        "number": 35,
+        "symbol": "Br",
+        "name": "Bromine",
+        "category": "nonmetal",
+        "phase": "Liquid"
+      },
+      "hints": [
+        "ELEMENT 35 Br: Bromine.",
+        "Light element. Slips may help."
+      ],
+      "moveLimit": 33
+    },
+    {
+      "grid": {
+        "w": 7,
+        "h": 7
+      },
+      "player": [
+        1,
+        0
+      ],
+      "shadow": [
+        4,
+        4
+      ],
+      "goals": {
+        "a": [
+          3,
+          4
+        ],
+        "b": [
+          4,
+          1
+        ]
+      },
+      "walls": [
+        [
+          0,
+          6
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          5,
+          6
+        ],
+        [
+          2,
+          4
+        ]
+      ],
+      "slips": [
+        [
+          1,
+          3
+        ]
+      ],
+      "portals": [],
+      "forbidden": [],
+      "inversion": [],
+      "id": "stage-36",
+      "tier": 2,
+      "name": "Element 36: Kr",
+      "element": {
+        "number": 36,
+        "symbol": "Kr",
+        "name": "Krypton",
+        "category": "noble",
+        "phase": "Gas"
+      },
+      "hints": [
+        "ELEMENT 36 Kr: Krypton.",
+        "Stable noble gas. Few obstacles expected."
+      ],
+      "moveLimit": 29
+    },
+    {
+      "grid": {
+        "w": 7,
+        "h": 7
+      },
+      "player": [
+        5,
+        2
+      ],
+      "shadow": [
+        5,
+        5
+      ],
+      "goals": {
+        "a": [
+          3,
+          1
+        ],
+        "b": [
+          6,
+          3
+        ]
+      },
+      "walls": [
+        [
+          4,
+          0
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          6,
+          1
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "slips": [
+        [
+          4,
+          6
+        ],
+        [
+          6,
+          5
+        ],
+        [
+          4,
+          2
+        ]
+      ],
+      "portals": [
+        [
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            1
+          ]
+        ]
+      ],
+      "forbidden": [
+        [
+          6,
+          2
+        ]
+      ],
+      "inversion": [],
+      "id": "stage-37",
+      "tier": 2,
+      "name": "Element 37: Rb",
+      "element": {
+        "number": 37,
+        "symbol": "Rb",
+        "name": "Rubidium",
+        "category": "alkali",
+        "phase": "Solid"
+      },
+      "hints": [
+        "ELEMENT 37 Rb: Rubidium.",
+        "Alkali metal. Slippery movement is likely."
+      ],
+      "moveLimit": 26
+    },
+    {
+      "grid": {
+        "w": 7,
+        "h": 7
+      },
+      "player": [
+        2,
+        5
+      ],
+      "shadow": [
+        4,
+        0
+      ],
+      "goals": {
+        "a": [
+          6,
+          4
+        ],
+        "b": [
+          0,
+          3
+        ]
+      },
+      "walls": [
+        [
+          5,
+          4
+        ],
+        [
+          5,
+          5
+        ],
+        [
+          6,
+          3
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          6,
+          0
+        ],
+        [
+          5,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "slips": [
+        [
+          1,
+          6
+        ],
+        [
+          3,
+          2
+        ]
+      ],
+      "portals": [
+        [
+          [
+            4,
+            1
+          ],
+          [
+            3,
+            1
+          ]
+        ]
+      ],
+      "forbidden": [
+        [
+          2,
+          0
+        ]
+      ],
+      "inversion": [],
+      "id": "stage-38",
+      "tier": 2,
+      "name": "Element 38: Sr",
+      "element": {
+        "number": 38,
+        "symbol": "Sr",
+        "name": "Strontium",
+        "category": "alkaline",
+        "phase": "Solid"
+      },
+      "hints": [
+        "ELEMENT 38 Sr: Strontium.",
+        "Alkaline earth metal. Walls are common."
+      ],
+      "moveLimit": 32
+    },
+    {
+      "grid": {
+        "w": 7,
+        "h": 7
+      },
+      "player": [
+        2,
+        1
+      ],
+      "shadow": [
+        0,
+        1
+      ],
+      "goals": {
+        "a": [
+          5,
+          0
+        ],
+        "b": [
+          0,
+          2
+        ]
+      },
+      "walls": [
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          3,
+          6
+        ],
+        [
+          6,
+          5
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          2,
+          5
+        ]
+      ],
+      "slips": [
+        [
+          1,
+          0
+        ],
+        [
+          4,
+          5
+        ]
+      ],
+      "portals": [
+        [
+          [
+            4,
+            1
+          ],
+          [
+            1,
+            6
+          ]
+        ]
+      ],
+      "forbidden": [
+        [
+          3,
+          5
+        ],
+        [
+          5,
+          2
+        ]
+      ],
+      "inversion": [],
+      "id": "stage-39",
+      "tier": 2,
+      "name": "Element 39: Y",
+      "element": {
+        "number": 39,
+        "symbol": "Y",
+        "name": "Yttrium",
+        "category": "transition",
+        "phase": "Solid"
+      },
+      "hints": [
+        "ELEMENT 39 Y: Yttrium.",
+        "Transition metal. Dense obstacles likely."
+      ],
+      "moveLimit": 30
+    },
+    {
+      "grid": {
+        "w": 7,
+        "h": 7
+      },
+      "player": [
+        0,
+        0
+      ],
+      "shadow": [
+        6,
+        5
+      ],
+      "goals": {
+        "a": [
+          3,
+          6
+        ],
+        "b": [
+          2,
+          1
+        ]
+      },
+      "walls": [
+        [
+          6,
+          6
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          5,
+          1
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          2,
+          6
+        ]
+      ],
+      "slips": [
+        [
+          1,
+          3
+        ]
+      ],
+      "portals": [
+        [
+          [
+            5,
+            5
+          ],
+          [
+            3,
+            4
+          ]
+        ]
+      ],
+      "forbidden": [
+        [
+          6,
+          3
+        ],
+        [
+          0,
+          3
+        ]
+      ],
+      "inversion": [
+        [
+          6,
+          4
+        ]
+      ],
+      "id": "stage-40",
+      "tier": 2,
+      "name": "Element 40: Zr",
+      "element": {
+        "number": 40,
+        "symbol": "Zr",
+        "name": "Zirconium",
+        "category": "transition",
+        "phase": "Solid"
+      },
+      "hints": [
+        "ELEMENT 40 Zr: Zirconium.",
+        "Transition metal. Dense obstacles likely."
+      ],
+      "moveLimit": 29
+    },
+    {
+      "grid": {
+        "w": 7,
+        "h": 7
+      },
+      "player": [
+        3,
+        5
+      ],
+      "shadow": [
+        2,
+        4
+      ],
+      "goals": {
+        "a": [
+          0,
+          3
+        ],
+        "b": [
+          2,
+          3
+        ]
+      },
+      "walls": [
+        [
+          5,
+          0
+        ],
+        [
+          3,
+          6
+        ],
+        [
+          5,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          6,
+          5
+        ],
+        [
+          5,
+          6
+        ],
+        [
+          5,
+          5
+        ]
+      ],
+      "slips": [
+        [
+          3,
+          1
+        ],
+        [
+          0,
+          4
+        ]
+      ],
+      "portals": [
+        [
+          [
+            0,
+            6
+          ],
+          [
+            2,
+            2
+          ]
+        ]
+      ],
+      "forbidden": [
+        [
+          4,
+          2
+        ],
+        [
+          5,
+          2
+        ]
+      ],
+      "inversion": [
+        [
+          2,
+          5
+        ]
+      ],
+      "id": "stage-41",
+      "tier": 2,
+      "name": "Element 41: Nb",
+      "element": {
+        "number": 41,
+        "symbol": "Nb",
+        "name": "Niobium",
+        "category": "transition",
+        "phase": "Solid"
+      },
+      "hints": [
+        "ELEMENT 41 Nb: Niobium.",
+        "Transition metal. Dense obstacles likely."
+      ],
+      "moveLimit": 24
+    },
+    {
+      "grid": {
+        "w": 7,
+        "h": 7
+      },
+      "player": [
+        3,
+        1
+      ],
+      "shadow": [
+        0,
+        5
+      ],
+      "goals": {
+        "a": [
+          0,
+          3
+        ],
+        "b": [
+          5,
+          0
+        ]
+      },
+      "walls": [
+        [
+          4,
+          3
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          4,
+          2
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          5,
+          5
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          4
+        ]
+      ],
+      "slips": [
+        [
+          3,
+          4
+        ]
+      ],
+      "portals": [
+        [
+          [
+            6,
+            1
+          ],
+          [
+            5,
+            1
+          ]
+        ]
+      ],
+      "forbidden": [
+        [
+          3,
+          6
+        ],
+        [
+          4,
+          1
+        ]
+      ],
+      "inversion": [
+        [
+          2,
+          2
+        ]
+      ],
+      "id": "stage-42",
+      "tier": 2,
+      "name": "Element 42: Mo",
+      "element": {
+        "number": 42,
+        "symbol": "Mo",
+        "name": "Molybdenum",
+        "category": "transition",
+        "phase": "Solid"
+      },
+      "hints": [
+        "ELEMENT 42 Mo: Molybdenum.",
+        "Transition metal. Dense obstacles likely."
+      ],
+      "moveLimit": 32
+    },
+    {
+      "grid": {
+        "w": 7,
+        "h": 7
+      },
+      "player": [
+        0,
+        6
+      ],
+      "shadow": [
+        4,
+        2
+      ],
+      "goals": {
+        "a": [
+          4,
+          4
+        ],
+        "b": [
+          3,
+          0
+        ]
+      },
+      "walls": [
+        [
+          3,
+          3
+        ],
+        [
+          4,
+          1
+        ],
+        [
+          6,
+          5
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          4,
+          3
+        ]
+      ],
+      "slips": [
+        [
+          1,
+          0
+        ]
+      ],
+      "portals": [
+        [
+          [
+            5,
+            5
+          ],
+          [
+            5,
+            4
+          ]
+        ]
+      ],
+      "forbidden": [
+        [
+          2,
+          2
+        ],
+        [
+          6,
+          0
+        ]
+      ],
+      "inversion": [
+        [
+          2,
+          4
+        ]
+      ],
+      "id": "stage-43",
+      "tier": 2,
+      "name": "Element 43: Tc",
+      "element": {
+        "number": 43,
+        "symbol": "Tc",
+        "name": "Technetium",
+        "category": "transition",
+        "phase": "Solid"
+      },
+      "hints": [
+        "ELEMENT 43 Tc: Technetium.",
+        "Transition metal. Dense obstacles likely."
+      ],
+      "moveLimit": 30
+    },
+    {
+      "grid": {
+        "w": 7,
+        "h": 7
+      },
+      "player": [
+        2,
+        4
+      ],
+      "shadow": [
+        5,
+        0
+      ],
+      "goals": {
+        "a": [
+          3,
+          5
+        ],
+        "b": [
+          0,
+          5
+        ]
+      },
+      "walls": [
+        [
+          1,
+          1
+        ],
+        [
+          6,
+          5
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "slips": [
+        [
+          6,
+          2
+        ],
+        [
+          5,
+          4
+        ]
+      ],
+      "portals": [
+        [
+          [
+            1,
+            5
+          ],
+          [
+            5,
+            2
+          ]
+        ]
+      ],
+      "forbidden": [
+        [
+          6,
+          4
+        ],
+        [
+          4,
+          3
+        ]
+      ],
+      "inversion": [
+        [
+          3,
+          3
+        ]
+      ],
+      "id": "stage-44",
+      "tier": 2,
+      "name": "Element 44: Ru",
+      "element": {
+        "number": 44,
+        "symbol": "Ru",
+        "name": "Ruthenium",
+        "category": "transition",
+        "phase": "Solid"
+      },
+      "hints": [
+        "ELEMENT 44 Ru: Ruthenium.",
+        "Transition metal. Dense obstacles likely."
+      ],
+      "moveLimit": 27
+    },
+    {
+      "grid": {
+        "w": 7,
+        "h": 7
+      },
+      "player": [
+        6,
+        0
+      ],
+      "shadow": [
+        0,
+        3
+      ],
+      "goals": {
+        "a": [
+          2,
+          5
+        ],
+        "b": [
+          0,
+          1
+        ]
+      },
+      "walls": [
+        [
+          0,
+          2
+        ],
+        [
+          5,
+          4
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          4,
+          0
+        ],
+        [
+          2,
+          6
+        ]
+      ],
+      "slips": [
+        [
+          0,
+          6
+        ],
+        [
+          3,
+          2
+        ]
+      ],
+      "portals": [
+        [
+          [
+            5,
+            0
+          ],
+          [
+            1,
+            4
+          ]
+        ]
+      ],
+      "forbidden": [
+        [
+          5,
+          6
+        ],
+        [
+          4,
+          3
+        ]
+      ],
+      "inversion": [
+        [
+          2,
+          3
+        ]
+      ],
+      "id": "stage-45",
+      "tier": 2,
+      "name": "Element 45: Rh",
+      "element": {
+        "number": 45,
+        "symbol": "Rh",
+        "name": "Rhodium",
+        "category": "transition",
+        "phase": "Solid"
+      },
+      "hints": [
+        "ELEMENT 45 Rh: Rhodium.",
+        "Transition metal. Dense obstacles likely."
+      ],
+      "moveLimit": 33
+    },
+    {
+      "grid": {
+        "w": 7,
+        "h": 7
+      },
+      "player": [
+        5,
+        4
+      ],
+      "shadow": [
+        3,
+        0
+      ],
+      "goals": {
+        "a": [
+          3,
+          2
+        ],
+        "b": [
+          3,
+          6
+        ]
+      },
+      "walls": [
+        [
+          5,
+          2
+        ],
+        [
+          5,
+          3
+        ],
+        [
+          6,
+          2
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "slips": [
+        [
+          4,
+          3
+        ]
+      ],
+      "portals": [
+        [
+          [
+            1,
+            6
+          ],
+          [
+            1,
+            0
+          ]
+        ]
+      ],
+      "forbidden": [
+        [
+          0,
+          1
+        ],
+        [
+          5,
+          0
+        ]
+      ],
+      "inversion": [
+        [
+          2,
+          2
+        ]
+      ],
+      "id": "stage-46",
+      "tier": 2,
+      "name": "Element 46: Pd",
+      "element": {
+        "number": 46,
+        "symbol": "Pd",
+        "name": "Palladium",
+        "category": "transition",
+        "phase": "Solid"
+      },
+      "hints": [
+        "ELEMENT 46 Pd: Palladium.",
+        "Transition metal. Dense obstacles likely."
+      ],
+      "moveLimit": 26
+    },
+    {
+      "grid": {
+        "w": 7,
+        "h": 7
+      },
+      "player": [
+        0,
+        4
+      ],
+      "shadow": [
+        4,
+        4
+      ],
+      "goals": {
+        "a": [
+          3,
+          1
+        ],
+        "b": [
+          4,
+          2
+        ]
+      },
+      "walls": [
+        [
+          5,
+          6
+        ],
+        [
+          4,
+          6
+        ],
+        [
+          5,
+          2
+        ],
+        [
+          0,
+          6
+        ],
+        [
+          4,
+          0
+        ]
+      ],
+      "slips": [
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "portals": [
+        [
+          [
+            1,
+            1
+          ],
+          [
+            5,
+            1
+          ]
+        ]
+      ],
+      "forbidden": [
+        [
+          6,
+          5
+        ],
+        [
+          4,
+          5
+        ]
+      ],
+      "inversion": [
+        [
+          3,
+          3
+        ]
+      ],
+      "id": "stage-47",
+      "tier": 2,
+      "name": "Element 47: Ag",
+      "element": {
+        "number": 47,
+        "symbol": "Ag",
+        "name": "Silver",
+        "category": "transition",
+        "phase": "Solid"
+      },
+      "hints": [
+        "ELEMENT 47 Ag: Silver.",
+        "Transition metal. Dense obstacles likely."
+      ],
+      "moveLimit": 27
+    },
+    {
+      "grid": {
+        "w": 7,
+        "h": 7
+      },
+      "player": [
+        4,
+        6
+      ],
+      "shadow": [
+        3,
+        0
+      ],
+      "goals": {
+        "a": [
+          4,
+          4
+        ],
+        "b": [
+          1,
+          2
+        ]
+      },
+      "walls": [
+        [
+          2,
+          6
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "slips": [
+        [
+          5,
+          4
+        ],
+        [
+          0,
+          6
+        ]
+      ],
+      "portals": [
+        [
+          [
+            2,
+            1
+          ],
+          [
+            3,
+            3
+          ]
+        ]
+      ],
+      "forbidden": [
+        [
+          3,
+          4
+        ],
+        [
+          4,
+          5
+        ]
+      ],
+      "inversion": [
+        [
+          5,
+          5
+        ]
+      ],
+      "id": "stage-48",
+      "tier": 2,
+      "name": "Element 48: Cd",
+      "element": {
+        "number": 48,
+        "symbol": "Cd",
+        "name": "Cadmium",
+        "category": "transition",
+        "phase": "Solid"
+      },
+      "hints": [
+        "ELEMENT 48 Cd: Cadmium.",
+        "Transition metal. Dense obstacles likely."
+      ],
+      "moveLimit": 32
+    },
+    {
+      "grid": {
+        "w": 7,
+        "h": 7
+      },
+      "player": [
+        1,
+        5
+      ],
+      "shadow": [
+        4,
+        0
+      ],
+      "goals": {
+        "a": [
+          2,
+          3
+        ],
+        "b": [
+          3,
+          3
+        ]
+      },
+      "walls": [
+        [
+          2,
+          0
+        ],
+        [
+          4,
+          1
+        ],
+        [
+          4,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "slips": [
+        [
+          0,
+          4
+        ],
+        [
+          6,
+          1
+        ]
+      ],
+      "portals": [
+        [
+          [
+            3,
+            6
+          ],
+          [
+            6,
+            2
+          ]
+        ]
+      ],
+      "forbidden": [
+        [
+          5,
+          1
+        ],
+        [
+          6,
+          5
+        ]
+      ],
+      "inversion": [
+        [
+          6,
+          4
+        ]
+      ],
+      "id": "stage-49",
+      "tier": 2,
+      "name": "Element 49: In",
+      "element": {
+        "number": 49,
+        "symbol": "In",
+        "name": "Indium",
+        "category": "transition",
+        "phase": "Solid"
+      },
+      "hints": [
+        "ELEMENT 49 In: Indium.",
+        "Transition metal. Dense obstacles likely."
+      ],
+      "moveLimit": 30
+    },
+    {
+      "grid": {
+        "w": 7,
+        "h": 7
+      },
+      "player": [
+        6,
+        2
+      ],
+      "shadow": [
+        4,
+        3
+      ],
+      "goals": {
+        "a": [
+          4,
+          0
+        ],
+        "b": [
+          5,
+          6
+        ]
+      },
+      "walls": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          1,
+          6
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          1,
+          4
+        ]
+      ],
+      "slips": [
+        [
+          3,
+          4
+        ]
+      ],
+      "portals": [
+        [
+          [
+            5,
+            3
+          ],
+          [
+            0,
+            6
+          ]
+        ]
+      ],
+      "forbidden": [
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          0
+        ]
+      ],
+      "inversion": [
+        [
+          6,
+          5
+        ]
+      ],
+      "id": "stage-50",
+      "tier": 2,
+      "name": "Element 50: Sn",
+      "element": {
+        "number": 50,
+        "symbol": "Sn",
+        "name": "Tin",
+        "category": "transition",
+        "phase": "Solid"
+      },
+      "hints": [
+        "ELEMENT 50 Sn: Tin.",
+        "Transition metal. Dense obstacles likely."
+      ],
+      "moveLimit": 33
+    },
+    {
+      "grid": {
+        "w": 7,
+        "h": 7
+      },
+      "player": [
+        6,
+        3
+      ],
+      "shadow": [
+        0,
+        0
+      ],
+      "goals": {
+        "a": [
+          1,
+          5
+        ],
+        "b": [
+          1,
+          0
+        ]
+      },
+      "walls": [
+        [
+          6,
+          4
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          5,
+          3
+        ],
+        [
+          3,
+          6
+        ]
+      ],
+      "slips": [
+        [
+          1,
+          3
+        ],
+        [
+          6,
+          6
+        ],
+        [
+          4,
+          2
+        ]
+      ],
+      "portals": [
+        [
+          [
+            5,
+            6
+          ],
+          [
+            3,
+            3
+          ]
+        ]
+      ],
+      "forbidden": [
+        [
+          5,
+          5
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "inversion": [
+        [
+          0,
+          6
+        ]
+      ],
+      "id": "stage-51",
+      "tier": 3,
+      "name": "Element 51: Sb",
+      "element": {
+        "number": 51,
+        "symbol": "Sb",
+        "name": "Antimony",
+        "category": "metalloid",
+        "phase": "Solid"
+      },
+      "hints": [
+        "ELEMENT 51 Sb: Antimony.",
+        "Metalloid. Balanced tile mix."
+      ],
+      "moveLimit": 36
+    },
+    {
+      "grid": {
+        "w": 7,
+        "h": 7
+      },
+      "player": [
+        6,
+        5
+      ],
+      "shadow": [
+        5,
+        1
+      ],
+      "goals": {
+        "a": [
+          4,
+          0
+        ],
+        "b": [
+          5,
+          2
+        ]
+      },
+      "walls": [
+        [
+          5,
+          4
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          4,
+          1
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "slips": [
+        [
+          3,
+          1
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          5,
+          0
+        ]
+      ],
+      "portals": [
+        [
+          [
+            0,
+            2
+          ],
+          [
+            4,
+            6
+          ]
+        ],
+        [
+          [
+            2,
+            5
+          ],
+          [
+            0,
+            0
+          ]
+        ]
+      ],
+      "forbidden": [
+        [
+          4,
+          3
+        ]
+      ],
+      "inversion": [
+        [
+          6,
+          3
+        ],
+        [
+          2,
+          2
+        ]
+      ],
+      "id": "stage-52",
+      "tier": 3,
+      "name": "Element 52: Te",
+      "element": {
+        "number": 52,
+        "symbol": "Te",
+        "name": "Tellurium",
+        "category": "metalloid",
+        "phase": "Solid"
+      },
+      "hints": [
+        "ELEMENT 52 Te: Tellurium.",
+        "Metalloid. Balanced tile mix."
+      ],
+      "moveLimit": 35
+    },
+    {
+      "grid": {
+        "w": 7,
+        "h": 7
+      },
+      "player": [
+        0,
+        1
+      ],
+      "shadow": [
+        2,
+        4
+      ],
+      "goals": {
+        "a": [
+          3,
+          1
+        ],
+        "b": [
+          5,
+          6
+        ]
+      },
+      "walls": [
+        [
+          5,
+          3
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          4,
+          1
+        ],
+        [
+          5,
+          0
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          2
+        ]
+      ],
+      "slips": [
+        [
+          4,
+          3
+        ],
+        [
+          5,
+          5
+        ],
+        [
+          5,
+          2
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "portals": [
+        [
+          [
+            2,
+            5
+          ],
+          [
+            1,
+            3
+          ]
+        ]
+      ],
+      "forbidden": [
+        [
+          1,
+          5
+        ],
+        [
+          6,
+          3
+        ]
+      ],
+      "inversion": [
+        [
+          1,
+          4
+        ]
+      ],
+      "id": "stage-53",
+      "tier": 3,
+      "name": "Element 53: I",
+      "element": {
+        "number": 53,
+        "symbol": "I",
+        "name": "Iodine",
+        "category": "nonmetal",
+        "phase": "Solid"
+      },
+      "hints": [
+        "ELEMENT 53 I: Iodine.",
+        "Light element. Slips may help."
+      ],
+      "moveLimit": 38
+    },
+    {
+      "grid": {
+        "w": 7,
+        "h": 7
+      },
+      "player": [
+        5,
+        6
+      ],
+      "shadow": [
+        4,
+        4
+      ],
+      "goals": {
+        "a": [
+          1,
+          6
+        ],
+        "b": [
+          5,
+          0
+        ]
+      },
+      "walls": [
+        [
+          6,
+          0
+        ],
+        [
+          4,
+          6
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "slips": [
+        [
+          5,
+          2
+        ]
+      ],
+      "portals": [],
+      "forbidden": [
+        [
+          6,
+          4
+        ]
+      ],
+      "inversion": [
+        [
+          6,
+          6
+        ]
+      ],
+      "id": "stage-54",
+      "tier": 3,
+      "name": "Element 54: Xe",
+      "element": {
+        "number": 54,
+        "symbol": "Xe",
+        "name": "Xenon",
+        "category": "noble",
+        "phase": "Gas"
+      },
+      "hints": [
+        "ELEMENT 54 Xe: Xenon.",
+        "Stable noble gas. Few obstacles expected."
+      ],
+      "moveLimit": 32
+    },
+    {
+      "grid": {
+        "w": 7,
+        "h": 7
+      },
+      "player": [
+        4,
+        0
+      ],
+      "shadow": [
+        3,
+        1
+      ],
+      "goals": {
+        "a": [
+          6,
+          3
+        ],
+        "b": [
+          2,
+          5
+        ]
+      },
+      "walls": [
+        [
+          1,
+          4
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          6,
+          0
+        ],
+        [
+          6,
+          2
+        ],
+        [
+          3,
+          5
+        ]
+      ],
+      "slips": [
+        [
+          4,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          3
+        ]
+      ],
+      "portals": [
+        [
+          [
+            2,
+            4
+          ],
+          [
+            2,
+            0
+          ]
+        ]
+      ],
+      "forbidden": [
+        [
+          5,
+          1
+        ]
+      ],
+      "inversion": [
+        [
+          4,
+          2
+        ]
+      ],
+      "id": "stage-55",
+      "tier": 3,
+      "name": "Element 55: Cs",
+      "element": {
+        "number": 55,
+        "symbol": "Cs",
+        "name": "Cesium",
+        "category": "alkali",
+        "phase": "Solid"
+      },
+      "hints": [
+        "ELEMENT 55 Cs: Cesium.",
+        "Alkali metal. Slippery movement is likely."
+      ],
+      "moveLimit": 35
+    },
+    {
+      "grid": {
+        "w": 7,
+        "h": 7
+      },
+      "player": [
+        2,
+        1
+      ],
+      "shadow": [
+        5,
+        5
+      ],
+      "goals": {
+        "a": [
+          5,
+          1
+        ],
+        "b": [
+          6,
+          0
+        ]
+      },
+      "walls": [
+        [
+          6,
+          4
+        ],
+        [
+          4,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          5
+        ]
+      ],
+      "slips": [
+        [
+          2,
+          0
+        ],
+        [
+          1,
+          3
+        ]
+      ],
+      "portals": [
+        [
+          [
+            0,
+            6
+          ],
+          [
+            5,
+            2
+          ]
+        ],
+        [
+          [
+            5,
+            4
+          ],
+          [
+            0,
+            5
+          ]
+        ]
+      ],
+      "forbidden": [
+        [
+          6,
+          2
+        ]
+      ],
+      "inversion": [
+        [
+          4,
+          1
+        ]
+      ],
+      "id": "stage-56",
+      "tier": 3,
+      "name": "Element 56: Ba",
+      "element": {
+        "number": 56,
+        "symbol": "Ba",
+        "name": "Barium",
+        "category": "alkaline",
+        "phase": "Solid"
+      },
+      "hints": [
+        "ELEMENT 56 Ba: Barium.",
+        "Alkaline earth metal. Walls are common."
+      ],
+      "moveLimit": 36
+    },
+    {
+      "grid": {
+        "w": 7,
+        "h": 7
+      },
+      "player": [
+        6,
+        2
+      ],
+      "shadow": [
+        3,
+        6
+      ],
+      "goals": {
+        "a": [
+          1,
+          6
+        ],
+        "b": [
+          0,
+          2
+        ]
+      },
+      "walls": [
+        [
+          6,
+          1
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          6,
+          0
+        ],
+        [
+          5,
+          1
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          5,
+          3
+        ]
+      ],
+      "slips": [
+        [
+          0,
+          0
+        ],
+        [
+          5,
+          5
+        ]
+      ],
+      "portals": [
+        [
+          [
+            6,
+            5
+          ],
+          [
+            0,
+            6
+          ]
+        ]
+      ],
+      "forbidden": [
+        [
+          3,
+          5
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "inversion": [
+        [
+          4,
+          2
+        ],
+        [
+          6,
+          4
+        ]
+      ],
+      "id": "stage-57",
+      "tier": 3,
+      "name": "Element 57: La",
+      "element": {
+        "number": 57,
+        "symbol": "La",
+        "name": "Lanthanum",
+        "category": "lanthanide",
+        "phase": "Solid"
+      },
+      "hints": [
+        "ELEMENT 57 La: Lanthanum.",
+        "Lanthanide. Inversion tiles likely."
+      ],
+      "moveLimit": 30
+    },
+    {
+      "grid": {
+        "w": 7,
+        "h": 7
+      },
+      "player": [
+        6,
+        3
+      ],
+      "shadow": [
+        1,
+        1
+      ],
+      "goals": {
+        "a": [
+          5,
+          0
+        ],
+        "b": [
+          1,
+          5
+        ]
+      },
+      "walls": [
+        [
+          2,
+          1
+        ],
+        [
+          6,
+          4
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          5,
+          2
+        ]
+      ],
+      "slips": [
+        [
+          1,
+          3
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          4,
+          6
+        ]
+      ],
+      "portals": [
+        [
+          [
+            6,
+            0
+          ],
+          [
+            6,
+            2
+          ]
+        ],
+        [
+          [
+            1,
+            0
+          ],
+          [
+            2,
+            2
+          ]
+        ]
+      ],
+      "forbidden": [
+        [
+          5,
+          4
+        ],
+        [
+          5,
+          5
+        ]
+      ],
+      "inversion": [
+        [
+          4,
+          2
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          6
+        ]
+      ],
+      "id": "stage-58",
+      "tier": 3,
+      "name": "Element 58: Ce",
+      "element": {
+        "number": 58,
+        "symbol": "Ce",
+        "name": "Cerium",
+        "category": "lanthanide",
+        "phase": "Solid"
+      },
+      "hints": [
+        "ELEMENT 58 Ce: Cerium.",
+        "Lanthanide. Inversion tiles likely."
+      ],
+      "moveLimit": 35
+    },
+    {
+      "grid": {
+        "w": 7,
+        "h": 7
+      },
+      "player": [
+        3,
+        1
+      ],
+      "shadow": [
+        4,
+        0
+      ],
+      "goals": {
+        "a": [
+          1,
+          2
+        ],
+        "b": [
+          6,
+          6
+        ]
+      },
+      "walls": [
+        [
+          0,
+          2
+        ],
+        [
+          5,
+          5
+        ],
+        [
+          1,
+          6
+        ],
+        [
+          5,
+          4
+        ],
+        [
+          4,
+          2
+        ]
+      ],
+      "slips": [
+        [
+          4,
+          3
+        ],
+        [
+          5,
+          2
+        ],
+        [
+          6,
+          1
+        ]
+      ],
+      "portals": [
+        [
+          [
+            0,
+            0
+          ],
+          [
+            3,
+            5
+          ]
+        ]
+      ],
+      "forbidden": [
+        [
+          3,
+          4
+        ],
+        [
+          0,
+          6
+        ]
+      ],
+      "inversion": [
+        [
+          6,
+          4
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "id": "stage-59",
+      "tier": 3,
+      "name": "Element 59: Pr",
+      "element": {
+        "number": 59,
+        "symbol": "Pr",
+        "name": "Praseodymium",
+        "category": "lanthanide",
+        "phase": "Solid"
+      },
+      "hints": [
+        "ELEMENT 59 Pr: Praseodymium.",
+        "Lanthanide. Inversion tiles likely."
+      ],
+      "moveLimit": 33
+    },
+    {
+      "grid": {
+        "w": 7,
+        "h": 7
+      },
+      "player": [
+        0,
+        6
+      ],
+      "shadow": [
+        3,
+        2
+      ],
+      "goals": {
+        "a": [
+          2,
+          5
+        ],
+        "b": [
+          6,
+          4
+        ]
+      },
+      "walls": [
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          6,
+          6
+        ],
+        [
+          3,
+          3
+        ]
+      ],
+      "slips": [
+        [
+          1,
+          1
+        ],
+        [
+          5,
+          4
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "portals": [
+        [
+          [
+            0,
+            4
+          ],
+          [
+            2,
+            0
+          ]
+        ]
+      ],
+      "forbidden": [
+        [
+          0,
+          2
+        ]
+      ],
+      "inversion": [
+        [
+          6,
+          2
+        ],
+        [
+          4,
+          6
+        ]
+      ],
+      "id": "stage-60",
+      "tier": 3,
+      "name": "Element 60: Nd",
+      "element": {
+        "number": 60,
+        "symbol": "Nd",
+        "name": "Neodymium",
+        "category": "lanthanide",
+        "phase": "Solid"
+      },
+      "hints": [
+        "ELEMENT 60 Nd: Neodymium.",
+        "Lanthanide. Inversion tiles likely."
+      ],
+      "moveLimit": 35
+    },
+    {
+      "grid": {
+        "w": 7,
+        "h": 7
+      },
+      "player": [
+        1,
+        1
+      ],
+      "shadow": [
+        1,
+        5
+      ],
+      "goals": {
+        "a": [
+          0,
+          1
+        ],
+        "b": [
+          5,
+          6
+        ]
+      },
+      "walls": [
+        [
+          3,
+          4
+        ],
+        [
+          3,
+          6
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          2,
+          6
+        ]
+      ],
+      "slips": [
+        [
+          1,
+          4
+        ],
+        [
+          5,
+          0
+        ]
+      ],
+      "portals": [
+        [
+          [
+            6,
+            5
+          ],
+          [
+            6,
+            2
+          ]
+        ]
+      ],
+      "forbidden": [
+        [
+          3,
+          0
+        ]
+      ],
+      "inversion": [
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          5,
+          1
+        ]
+      ],
+      "id": "stage-61",
+      "tier": 3,
+      "name": "Element 61: Pm",
+      "element": {
+        "number": 61,
+        "symbol": "Pm",
+        "name": "Promethium",
+        "category": "lanthanide",
+        "phase": "Solid"
+      },
+      "hints": [
+        "ELEMENT 61 Pm: Promethium.",
+        "Lanthanide. Inversion tiles likely."
+      ],
+      "moveLimit": 29
+    },
+    {
+      "grid": {
+        "w": 7,
+        "h": 7
+      },
+      "player": [
+        6,
+        5
+      ],
+      "shadow": [
+        2,
+        6
+      ],
+      "goals": {
+        "a": [
+          2,
+          5
+        ],
+        "b": [
+          1,
+          0
+        ]
+      },
+      "walls": [
+        [
+          4,
+          4
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          3,
+          3
+        ]
+      ],
+      "slips": [
+        [
+          4,
+          1
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          5
+        ]
+      ],
+      "portals": [
+        [
+          [
+            6,
+            6
+          ],
+          [
+            1,
+            3
+          ]
+        ]
+      ],
+      "forbidden": [
+        [
+          2,
+          4
+        ]
+      ],
+      "inversion": [
+        [
+          1,
+          5
+        ],
+        [
+          6,
+          3
+        ]
+      ],
+      "id": "stage-62",
+      "tier": 3,
+      "name": "Element 62: Sm",
+      "element": {
+        "number": 62,
+        "symbol": "Sm",
+        "name": "Samarium",
+        "category": "lanthanide",
+        "phase": "Solid"
+      },
+      "hints": [
+        "ELEMENT 62 Sm: Samarium.",
+        "Lanthanide. Inversion tiles likely."
+      ],
+      "moveLimit": 33
+    },
+    {
+      "grid": {
+        "w": 7,
+        "h": 7
+      },
+      "player": [
+        3,
+        1
+      ],
+      "shadow": [
+        0,
+        6
+      ],
+      "goals": {
+        "a": [
+          1,
+          0
+        ],
+        "b": [
+          5,
+          2
+        ]
+      },
+      "walls": [
+        [
+          2,
+          3
+        ],
+        [
+          4,
+          0
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          6,
+          3
+        ],
+        [
+          3,
+          3
+        ]
+      ],
+      "slips": [
+        [
+          1,
+          4
+        ],
+        [
+          0,
+          3
+        ]
+      ],
+      "portals": [
+        [
+          [
+            6,
+            0
+          ],
+          [
+            2,
+            1
+          ]
+        ],
+        [
+          [
+            4,
+            2
+          ],
+          [
+            4,
+            6
+          ]
+        ]
+      ],
+      "forbidden": [
+        [
+          6,
+          5
+        ]
+      ],
+      "inversion": [
+        [
+          0,
+          4
+        ],
+        [
+          5,
+          6
+        ],
+        [
+          1,
+          5
+        ]
+      ],
+      "id": "stage-63",
+      "tier": 3,
+      "name": "Element 63: Eu",
+      "element": {
+        "number": 63,
+        "symbol": "Eu",
+        "name": "Europium",
+        "category": "lanthanide",
+        "phase": "Solid"
+      },
+      "hints": [
+        "ELEMENT 63 Eu: Europium.",
+        "Lanthanide. Inversion tiles likely."
+      ],
+      "moveLimit": 35
+    },
+    {
+      "grid": {
+        "w": 7,
+        "h": 7
+      },
+      "player": [
+        5,
+        1
+      ],
+      "shadow": [
+        3,
+        3
+      ],
+      "goals": {
+        "a": [
+          5,
+          6
+        ],
+        "b": [
+          1,
+          3
+        ]
+      },
+      "walls": [
+        [
+          0,
+          3
+        ],
+        [
+          3,
+          6
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          6,
+          5
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "slips": [
+        [
+          3,
+          0
+        ],
+        [
+          1,
+          4
+        ]
+      ],
+      "portals": [
+        [
+          [
+            2,
+            5
+          ],
+          [
+            2,
+            4
+          ]
+        ]
+      ],
+      "forbidden": [
+        [
+          6,
+          6
+        ]
+      ],
+      "inversion": [
+        [
+          4,
+          1
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "id": "stage-64",
+      "tier": 3,
+      "name": "Element 64: Gd",
+      "element": {
+        "number": 64,
+        "symbol": "Gd",
+        "name": "Gadolinium",
+        "category": "lanthanide",
+        "phase": "Solid"
+      },
+      "hints": [
+        "ELEMENT 64 Gd: Gadolinium.",
+        "Lanthanide. Inversion tiles likely."
+      ],
+      "moveLimit": 30
+    },
+    {
+      "grid": {
+        "w": 7,
+        "h": 7
+      },
+      "player": [
+        1,
+        1
+      ],
+      "shadow": [
+        4,
+        3
+      ],
+      "goals": {
+        "a": [
+          0,
+          1
+        ],
+        "b": [
+          4,
+          5
+        ]
+      },
+      "walls": [
+        [
+          6,
+          6
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          4,
+          2
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "slips": [
+        [
+          1,
+          3
+        ],
+        [
+          0,
+          5
+        ]
+      ],
+      "portals": [
+        [
+          [
+            6,
+            0
+          ],
+          [
+            5,
+            4
+          ]
+        ]
+      ],
+      "forbidden": [
+        [
+          1,
+          2
+        ]
+      ],
+      "inversion": [
+        [
+          5,
+          2
+        ],
+        [
+          6,
+          2
+        ],
+        [
+          6,
+          4
+        ]
+      ],
+      "id": "stage-65",
+      "tier": 3,
+      "name": "Element 65: Tb",
+      "element": {
+        "number": 65,
+        "symbol": "Tb",
+        "name": "Terbium",
+        "category": "lanthanide",
+        "phase": "Solid"
+      },
+      "hints": [
+        "ELEMENT 65 Tb: Terbium.",
+        "Lanthanide. Inversion tiles likely."
+      ],
+      "moveLimit": 30
+    },
+    {
+      "grid": {
+        "w": 8,
+        "h": 8
+      },
+      "player": [
+        6,
+        2
+      ],
+      "shadow": [
+        0,
+        7
+      ],
+      "goals": {
+        "a": [
+          1,
+          6
+        ],
+        "b": [
+          7,
+          6
+        ]
+      },
+      "walls": [
+        [
+          1,
+          2
+        ],
+        [
+          4,
+          3
+        ],
+        [
+          7,
+          7
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          5,
+          6
+        ],
+        [
+          0,
+          6
+        ],
+        [
+          5,
+          0
+        ]
+      ],
+      "slips": [
+        [
+          3,
+          2
+        ],
+        [
+          7,
+          2
+        ],
+        [
+          5,
+          7
+        ]
+      ],
+      "portals": [
+        [
+          [
+            3,
+            5
+          ],
+          [
+            2,
+            6
+          ]
+        ],
+        [
+          [
+            2,
+            1
+          ],
+          [
+            6,
+            0
+          ]
+        ]
+      ],
+      "forbidden": [
+        [
+          7,
+          3
+        ]
+      ],
+      "inversion": [
+        [
+          3,
+          6
+        ],
+        [
+          0,
+          2
+        ]
+      ],
+      "id": "stage-66",
+      "tier": 3,
+      "name": "Element 66: Dy",
+      "element": {
+        "number": 66,
+        "symbol": "Dy",
+        "name": "Dysprosium",
+        "category": "lanthanide",
+        "phase": "Solid"
+      },
+      "hints": [
+        "ELEMENT 66 Dy: Dysprosium.",
+        "Lanthanide. Inversion tiles likely."
+      ],
+      "moveLimit": 35
+    },
+    {
+      "grid": {
+        "w": 8,
+        "h": 8
+      },
+      "player": [
+        3,
+        1
+      ],
+      "shadow": [
+        1,
+        7
+      ],
+      "goals": {
+        "a": [
+          1,
+          2
+        ],
+        "b": [
+          5,
+          2
+        ]
+      },
+      "walls": [
+        [
+          3,
+          0
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          4,
+          2
+        ],
+        [
+          6,
+          4
+        ],
+        [
+          1,
+          4
+        ]
+      ],
+      "slips": [
+        [
+          0,
+          1
+        ],
+        [
+          6,
+          5
+        ]
+      ],
+      "portals": [
+        [
+          [
+            5,
+            1
+          ],
+          [
+            2,
+            4
+          ]
+        ]
+      ],
+      "forbidden": [
+        [
+          3,
+          2
+        ]
+      ],
+      "inversion": [
+        [
+          7,
+          7
+        ],
+        [
+          0,
+          2
+        ]
+      ],
+      "id": "stage-67",
+      "tier": 3,
+      "name": "Element 67: Ho",
+      "element": {
+        "number": 67,
+        "symbol": "Ho",
+        "name": "Holmium",
+        "category": "lanthanide",
+        "phase": "Solid"
+      },
+      "hints": [
+        "ELEMENT 67 Ho: Holmium.",
+        "Lanthanide. Inversion tiles likely."
+      ],
+      "moveLimit": 36
+    },
+    {
+      "grid": {
+        "w": 8,
+        "h": 8
+      },
+      "player": [
+        0,
+        4
+      ],
+      "shadow": [
+        7,
+        5
+      ],
+      "goals": {
+        "a": [
+          5,
+          7
+        ],
+        "b": [
+          4,
+          2
+        ]
+      },
+      "walls": [
+        [
+          4,
+          3
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          5,
+          4
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "slips": [
+        [
+          2,
+          6
+        ],
+        [
+          7,
+          6
+        ]
+      ],
+      "portals": [
+        [
+          [
+            3,
+            5
+          ],
+          [
+            5,
+            1
+          ]
+        ],
+        [
+          [
+            5,
+            5
+          ],
+          [
+            1,
+            0
+          ]
+        ]
+      ],
+      "forbidden": [
+        [
+          4,
+          7
+        ]
+      ],
+      "inversion": [
+        [
+          1,
+          4
+        ],
+        [
+          6,
+          3
+        ],
+        [
+          3,
+          7
+        ]
+      ],
+      "id": "stage-68",
+      "tier": 3,
+      "name": "Element 68: Er",
+      "element": {
+        "number": 68,
+        "symbol": "Er",
+        "name": "Erbium",
+        "category": "lanthanide",
+        "phase": "Solid"
+      },
+      "hints": [
+        "ELEMENT 68 Er: Erbium.",
+        "Lanthanide. Inversion tiles likely."
+      ],
+      "moveLimit": 29
+    },
+    {
+      "grid": {
+        "w": 8,
+        "h": 8
+      },
+      "player": [
+        0,
+        1
+      ],
+      "shadow": [
+        5,
+        1
+      ],
+      "goals": {
+        "a": [
+          4,
+          7
+        ],
+        "b": [
+          2,
+          6
+        ]
+      },
+      "walls": [
+        [
+          3,
+          3
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          7,
+          7
+        ],
+        [
+          0,
+          7
+        ],
+        [
+          6,
+          1
+        ]
+      ],
+      "slips": [
+        [
+          6,
+          3
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "portals": [
+        [
+          [
+            2,
+            7
+          ],
+          [
+            4,
+            5
+          ]
+        ],
+        [
+          [
+            4,
+            3
+          ],
+          [
+            2,
+            1
+          ]
+        ]
+      ],
+      "forbidden": [
+        [
+          2,
+          4
+        ]
+      ],
+      "inversion": [
+        [
+          5,
+          0
+        ],
+        [
+          4,
+          1
+        ],
+        [
+          6,
+          6
+        ]
+      ],
+      "id": "stage-69",
+      "tier": 3,
+      "name": "Element 69: Tm",
+      "element": {
+        "number": 69,
+        "symbol": "Tm",
+        "name": "Thulium",
+        "category": "lanthanide",
+        "phase": "Solid"
+      },
+      "hints": [
+        "ELEMENT 69 Tm: Thulium.",
+        "Lanthanide. Inversion tiles likely."
+      ],
+      "moveLimit": 35
+    },
+    {
+      "grid": {
+        "w": 8,
+        "h": 8
+      },
+      "player": [
+        7,
+        7
+      ],
+      "shadow": [
+        2,
+        1
+      ],
+      "goals": {
+        "a": [
+          5,
+          4
+        ],
+        "b": [
+          6,
+          1
+        ]
+      },
+      "walls": [
+        [
+          6,
+          4
+        ],
+        [
+          5,
+          7
+        ],
+        [
+          0,
+          7
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "slips": [
+        [
+          3,
+          2
+        ],
+        [
+          1,
+          4
+        ]
+      ],
+      "portals": [
+        [
+          [
+            4,
+            3
+          ],
+          [
+            2,
+            0
+          ]
+        ],
+        [
+          [
+            7,
+            0
+          ],
+          [
+            6,
+            3
+          ]
+        ]
+      ],
+      "forbidden": [
+        [
+          7,
+          4
+        ],
+        [
+          4,
+          0
+        ]
+      ],
+      "inversion": [
+        [
+          0,
+          0
+        ],
+        [
+          4,
+          1
+        ],
+        [
+          2,
+          4
+        ]
+      ],
+      "id": "stage-70",
+      "tier": 3,
+      "name": "Element 70: Yb",
+      "element": {
+        "number": 70,
+        "symbol": "Yb",
+        "name": "Ytterbium",
+        "category": "lanthanide",
+        "phase": "Solid"
+      },
+      "hints": [
+        "ELEMENT 70 Yb: Ytterbium.",
+        "Lanthanide. Inversion tiles likely."
+      ],
+      "moveLimit": 33
+    },
+    {
+      "grid": {
+        "w": 8,
+        "h": 8
+      },
+      "player": [
+        4,
+        0
+      ],
+      "shadow": [
+        3,
+        3
+      ],
+      "goals": {
+        "a": [
+          0,
+          1
+        ],
+        "b": [
+          4,
+          1
+        ]
+      },
+      "walls": [
+        [
+          6,
+          2
+        ],
+        [
+          4,
+          7
+        ],
+        [
+          7,
+          2
+        ],
+        [
+          5,
+          3
+        ],
+        [
+          0,
+          3
+        ]
+      ],
+      "slips": [
+        [
+          5,
+          6
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          7,
+          1
+        ]
+      ],
+      "portals": [
+        [
+          [
+            7,
+            3
+          ],
+          [
+            6,
+            0
+          ]
+        ],
+        [
+          [
+            4,
+            6
+          ],
+          [
+            0,
+            0
+          ]
+        ]
+      ],
+      "forbidden": [
+        [
+          2,
+          3
+        ],
+        [
+          6,
+          7
+        ]
+      ],
+      "inversion": [
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          2
+        ]
+      ],
+      "id": "stage-71",
+      "tier": 3,
+      "name": "Element 71: Lu",
+      "element": {
+        "number": 71,
+        "symbol": "Lu",
+        "name": "Lutetium",
+        "category": "lanthanide",
+        "phase": "Solid"
+      },
+      "hints": [
+        "ELEMENT 71 Lu: Lutetium.",
+        "Lanthanide. Inversion tiles likely."
+      ],
+      "moveLimit": 35
+    },
+    {
+      "grid": {
+        "w": 8,
+        "h": 8
+      },
+      "player": [
+        5,
+        5
+      ],
+      "shadow": [
+        2,
+        2
+      ],
+      "goals": {
+        "a": [
+          5,
+          0
+        ],
+        "b": [
+          7,
+          0
+        ]
+      },
+      "walls": [
+        [
+          3,
+          3
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          6,
+          0
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          2,
+          6
+        ]
+      ],
+      "slips": [
+        [
+          5,
+          2
+        ],
+        [
+          6,
+          3
+        ],
+        [
+          2,
+          4
+        ]
+      ],
+      "portals": [
+        [
+          [
+            5,
+            4
+          ],
+          [
+            0,
+            7
+          ]
+        ]
+      ],
+      "forbidden": [
+        [
+          1,
+          7
+        ],
+        [
+          6,
+          5
+        ],
+        [
+          7,
+          2
+        ]
+      ],
+      "inversion": [
+        [
+          5,
+          1
+        ]
+      ],
+      "id": "stage-72",
+      "tier": 3,
+      "name": "Element 72: Hf",
+      "element": {
+        "number": 72,
+        "symbol": "Hf",
+        "name": "Hafnium",
+        "category": "transition",
+        "phase": "Solid"
+      },
+      "hints": [
+        "ELEMENT 72 Hf: Hafnium.",
+        "Transition metal. Dense obstacles likely."
+      ],
+      "moveLimit": 35
+    },
+    {
+      "grid": {
+        "w": 8,
+        "h": 8
+      },
+      "player": [
+        2,
+        6
+      ],
+      "shadow": [
+        4,
+        0
+      ],
+      "goals": {
+        "a": [
+          5,
+          7
+        ],
+        "b": [
+          7,
+          4
+        ]
+      },
+      "walls": [
+        [
+          7,
+          0
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          4,
+          2
+        ]
+      ],
+      "slips": [
+        [
+          5,
+          3
+        ],
+        [
+          5,
+          1
+        ],
+        [
+          6,
+          6
+        ]
+      ],
+      "portals": [
+        [
+          [
+            0,
+            0
+          ],
+          [
+            4,
+            3
+          ]
+        ],
+        [
+          [
+            1,
+            4
+          ],
+          [
+            2,
+            3
+          ]
+        ]
+      ],
+      "forbidden": [
+        [
+          4,
+          5
+        ],
+        [
+          4,
+          7
+        ]
+      ],
+      "inversion": [
+        [
+          2,
+          5
+        ]
+      ],
+      "id": "stage-73",
+      "tier": 3,
+      "name": "Element 73: Ta",
+      "element": {
+        "number": 73,
+        "symbol": "Ta",
+        "name": "Tantalum",
+        "category": "transition",
+        "phase": "Solid"
+      },
+      "hints": [
+        "ELEMENT 73 Ta: Tantalum.",
+        "Transition metal. Dense obstacles likely."
+      ],
+      "moveLimit": 36
+    },
+    {
+      "grid": {
+        "w": 8,
+        "h": 8
+      },
+      "player": [
+        0,
+        7
+      ],
+      "shadow": [
+        4,
+        2
+      ],
+      "goals": {
+        "a": [
+          1,
+          4
+        ],
+        "b": [
+          7,
+          2
+        ]
+      },
+      "walls": [
+        [
+          2,
+          0
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          6,
+          5
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          5,
+          5
+        ],
+        [
+          0,
+          4
+        ]
+      ],
+      "slips": [
+        [
+          2,
+          3
+        ],
+        [
+          4,
+          1
+        ]
+      ],
+      "portals": [
+        [
+          [
+            0,
+            1
+          ],
+          [
+            4,
+            0
+          ]
+        ]
+      ],
+      "forbidden": [
+        [
+          5,
+          0
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          7,
+          7
+        ]
+      ],
+      "inversion": [
+        [
+          4,
+          6
+        ]
+      ],
+      "id": "stage-74",
+      "tier": 3,
+      "name": "Element 74: W",
+      "element": {
+        "number": 74,
+        "symbol": "W",
+        "name": "Tungsten",
+        "category": "transition",
+        "phase": "Solid"
+      },
+      "hints": [
+        "ELEMENT 74 W: Tungsten.",
+        "Transition metal. Dense obstacles likely."
+      ],
+      "moveLimit": 32
+    },
+    {
+      "grid": {
+        "w": 8,
+        "h": 8
+      },
+      "player": [
+        2,
+        2
+      ],
+      "shadow": [
+        6,
+        1
+      ],
+      "goals": {
+        "a": [
+          5,
+          6
+        ],
+        "b": [
+          1,
+          2
+        ]
+      },
+      "walls": [
+        [
+          4,
+          1
+        ],
+        [
+          5,
+          7
+        ],
+        [
+          6,
+          3
+        ],
+        [
+          1,
+          6
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          1,
+          3
+        ]
+      ],
+      "slips": [
+        [
+          0,
+          2
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          5,
+          5
+        ]
+      ],
+      "portals": [
+        [
+          [
+            3,
+            4
+          ],
+          [
+            4,
+            0
+          ]
+        ]
+      ],
+      "forbidden": [
+        [
+          7,
+          1
+        ],
+        [
+          1,
+          7
+        ]
+      ],
+      "inversion": [
+        [
+          7,
+          4
+        ],
+        [
+          5,
+          0
+        ]
+      ],
+      "id": "stage-75",
+      "tier": 3,
+      "name": "Element 75: Re",
+      "element": {
+        "number": 75,
+        "symbol": "Re",
+        "name": "Rhenium",
+        "category": "transition",
+        "phase": "Solid"
+      },
+      "hints": [
+        "ELEMENT 75 Re: Rhenium.",
+        "Transition metal. Dense obstacles likely."
+      ],
+      "moveLimit": 35
+    },
+    {
+      "grid": {
+        "w": 8,
+        "h": 8
+      },
+      "player": [
+        6,
+        6
+      ],
+      "shadow": [
+        4,
+        7
+      ],
+      "goals": {
+        "a": [
+          1,
+          2
+        ],
+        "b": [
+          3,
+          5
+        ]
+      },
+      "walls": [
+        [
+          7,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          7,
+          7
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          6,
+          3
+        ]
+      ],
+      "slips": [
+        [
+          2,
+          0
+        ],
+        [
+          6,
+          4
+        ],
+        [
+          2,
+          5
+        ]
+      ],
+      "portals": [
+        [
+          [
+            3,
+            0
+          ],
+          [
+            6,
+            1
+          ]
+        ]
+      ],
+      "forbidden": [
+        [
+          4,
+          5
+        ],
+        [
+          5,
+          5
+        ]
+      ],
+      "inversion": [
+        [
+          7,
+          1
+        ],
+        [
+          4,
+          6
+        ]
+      ],
+      "id": "stage-76",
+      "tier": 3,
+      "name": "Element 76: Os",
+      "element": {
+        "number": 76,
+        "symbol": "Os",
+        "name": "Osmium",
+        "category": "transition",
+        "phase": "Solid"
+      },
+      "hints": [
+        "ELEMENT 76 Os: Osmium.",
+        "Transition metal. Dense obstacles likely."
+      ],
+      "moveLimit": 29
+    },
+    {
+      "grid": {
+        "w": 8,
+        "h": 8
+      },
+      "player": [
+        2,
+        1
+      ],
+      "shadow": [
+        7,
+        0
+      ],
+      "goals": {
+        "a": [
+          6,
+          7
+        ],
+        "b": [
+          4,
+          1
+        ]
+      },
+      "walls": [
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          3,
+          6
+        ],
+        [
+          7,
+          2
+        ],
+        [
+          4,
+          7
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "slips": [
+        [
+          0,
+          5
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "portals": [
+        [
+          [
+            1,
+            6
+          ],
+          [
+            3,
+            3
+          ]
+        ],
+        [
+          [
+            6,
+            4
+          ],
+          [
+            1,
+            3
+          ]
+        ]
+      ],
+      "forbidden": [
+        [
+          6,
+          0
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          4,
+          6
+        ]
+      ],
+      "inversion": [
+        [
+          4,
+          0
+        ]
+      ],
+      "id": "stage-77",
+      "tier": 3,
+      "name": "Element 77: Ir",
+      "element": {
+        "number": 77,
+        "symbol": "Ir",
+        "name": "Iridium",
+        "category": "transition",
+        "phase": "Solid"
+      },
+      "hints": [
+        "ELEMENT 77 Ir: Iridium.",
+        "Transition metal. Dense obstacles likely."
+      ],
+      "moveLimit": 36
+    },
+    {
+      "grid": {
+        "w": 8,
+        "h": 8
+      },
+      "player": [
+        5,
+        4
+      ],
+      "shadow": [
+        4,
+        5
+      ],
+      "goals": {
+        "a": [
+          4,
+          6
+        ],
+        "b": [
+          2,
+          2
+        ]
+      },
+      "walls": [
+        [
+          6,
+          0
+        ],
+        [
+          0,
+          7
+        ],
+        [
+          7,
+          0
+        ],
+        [
+          5,
+          7
+        ],
+        [
+          6,
+          3
+        ]
+      ],
+      "slips": [
+        [
+          6,
+          2
+        ],
+        [
+          3,
+          1
+        ]
+      ],
+      "portals": [
+        [
+          [
+            6,
+            4
+          ],
+          [
+            1,
+            6
+          ]
+        ],
+        [
+          [
+            7,
+            3
+          ],
+          [
+            4,
+            7
+          ]
+        ]
+      ],
+      "forbidden": [
+        [
+          2,
+          6
+        ],
+        [
+          4,
+          3
+        ]
+      ],
+      "inversion": [
+        [
+          7,
+          7
+        ]
+      ],
+      "id": "stage-78",
+      "tier": 3,
+      "name": "Element 78: Pt",
+      "element": {
+        "number": 78,
+        "symbol": "Pt",
+        "name": "Platinum",
+        "category": "transition",
+        "phase": "Solid"
+      },
+      "hints": [
+        "ELEMENT 78 Pt: Platinum.",
+        "Transition metal. Dense obstacles likely."
+      ],
+      "moveLimit": 36
+    },
+    {
+      "grid": {
+        "w": 8,
+        "h": 8
+      },
+      "player": [
+        6,
+        4
+      ],
+      "shadow": [
+        1,
+        3
+      ],
+      "goals": {
+        "a": [
+          4,
+          4
+        ],
+        "b": [
+          1,
+          4
+        ]
+      },
+      "walls": [
+        [
+          3,
+          7
+        ],
+        [
+          5,
+          3
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          6,
+          3
+        ],
+        [
+          6,
+          6
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          7,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "slips": [
+        [
+          7,
+          2
+        ],
+        [
+          5,
+          5
+        ],
+        [
+          3,
+          1
+        ]
+      ],
+      "portals": [
+        [
+          [
+            2,
+            3
+          ],
+          [
+            1,
+            0
+          ]
+        ]
+      ],
+      "forbidden": [
+        [
+          5,
+          4
+        ],
+        [
+          4,
+          7
+        ],
+        [
+          5,
+          1
+        ]
+      ],
+      "inversion": [
+        [
+          0,
+          6
+        ]
+      ],
+      "id": "stage-79",
+      "tier": 3,
+      "name": "Element 79: Au",
+      "element": {
+        "number": 79,
+        "symbol": "Au",
+        "name": "Gold",
+        "category": "transition",
+        "phase": "Solid"
+      },
+      "hints": [
+        "ELEMENT 79 Au: Gold.",
+        "Transition metal. Dense obstacles likely."
+      ],
+      "moveLimit": 33
+    },
+    {
+      "grid": {
+        "w": 8,
+        "h": 8
+      },
+      "player": [
+        0,
+        7
+      ],
+      "shadow": [
+        3,
+        1
+      ],
+      "goals": {
+        "a": [
+          2,
+          1
+        ],
+        "b": [
+          2,
+          2
+        ]
+      },
+      "walls": [
+        [
+          4,
+          0
+        ],
+        [
+          6,
+          0
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          6,
+          4
+        ],
+        [
+          6,
+          6
+        ]
+      ],
+      "slips": [
+        [
+          4,
+          2
+        ],
+        [
+          6,
+          1
+        ]
+      ],
+      "portals": [
+        [
+          [
+            7,
+            1
+          ],
+          [
+            4,
+            1
+          ]
+        ],
+        [
+          [
+            5,
+            6
+          ],
+          [
+            7,
+            5
+          ]
+        ]
+      ],
+      "forbidden": [
+        [
+          1,
+          2
+        ],
+        [
+          0,
+          3
+        ]
+      ],
+      "inversion": [
+        [
+          3,
+          2
+        ]
+      ],
+      "id": "stage-80",
+      "tier": 3,
+      "name": "Element 80: Hg",
+      "element": {
+        "number": 80,
+        "symbol": "Hg",
+        "name": "Mercury",
+        "category": "transition",
+        "phase": "Liquid"
+      },
+      "hints": [
+        "ELEMENT 80 Hg: Mercury.",
+        "Transition metal. Dense obstacles likely."
+      ],
+      "moveLimit": 29
+    },
+    {
+      "grid": {
+        "w": 8,
+        "h": 8
+      },
+      "player": [
+        4,
+        3
+      ],
+      "shadow": [
+        3,
+        0
+      ],
+      "goals": {
+        "a": [
+          5,
+          1
+        ],
+        "b": [
+          4,
+          6
+        ]
+      },
+      "walls": [
+        [
+          2,
+          1
+        ],
+        [
+          5,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          3,
+          6
+        ],
+        [
+          7,
+          4
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          5,
+          3
+        ]
+      ],
+      "slips": [
+        [
+          3,
+          2
+        ],
+        [
+          6,
+          6
+        ],
+        [
+          1,
+          4
+        ]
+      ],
+      "portals": [
+        [
+          [
+            4,
+            7
+          ],
+          [
+            1,
+            7
+          ]
+        ],
+        [
+          [
+            6,
+            1
+          ],
+          [
+            7,
+            0
+          ]
+        ]
+      ],
+      "forbidden": [
+        [
+          5,
+          4
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          6
+        ]
+      ],
+      "inversion": [
+        [
+          0,
+          5
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          0,
+          3
+        ]
+      ],
+      "id": "stage-81",
+      "tier": 4,
+      "name": "Element 81: Tl",
+      "element": {
+        "number": 81,
+        "symbol": "Tl",
+        "name": "Thallium",
+        "category": "transition",
+        "phase": "Solid"
+      },
+      "hints": [
+        "ELEMENT 81 Tl: Thallium.",
+        "Transition metal. Dense obstacles likely."
+      ],
+      "moveLimit": 35
+    },
+    {
+      "grid": {
+        "w": 8,
+        "h": 8
+      },
+      "player": [
+        6,
+        5
+      ],
+      "shadow": [
+        5,
+        0
+      ],
+      "goals": {
+        "a": [
+          4,
+          5
+        ],
+        "b": [
+          2,
+          1
+        ]
+      },
+      "walls": [
+        [
+          4,
+          0
+        ],
+        [
+          0,
+          7
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          6,
+          4
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          7,
+          7
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          6,
+          7
+        ],
+        [
+          5,
+          3
+        ]
+      ],
+      "slips": [
+        [
+          1,
+          4
+        ],
+        [
+          4,
+          6
+        ]
+      ],
+      "portals": [
+        [
+          [
+            5,
+            5
+          ],
+          [
+            7,
+            5
+          ]
+        ],
+        [
+          [
+            2,
+            7
+          ],
+          [
+            2,
+            5
+          ]
+        ]
+      ],
+      "forbidden": [
+        [
+          4,
+          7
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          5,
+          4
+        ]
+      ],
+      "inversion": [
+        [
+          7,
+          1
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "id": "stage-82",
+      "tier": 4,
+      "name": "Element 82: Pb",
+      "element": {
+        "number": 82,
+        "symbol": "Pb",
+        "name": "Lead",
+        "category": "transition",
+        "phase": "Solid"
+      },
+      "hints": [
+        "ELEMENT 82 Pb: Lead.",
+        "Transition metal. Dense obstacles likely."
+      ],
+      "moveLimit": 35
+    },
+    {
+      "grid": {
+        "w": 8,
+        "h": 8
+      },
+      "player": [
+        3,
+        0
+      ],
+      "shadow": [
+        4,
+        4
+      ],
+      "goals": {
+        "a": [
+          0,
+          7
+        ],
+        "b": [
+          4,
+          2
+        ]
+      },
+      "walls": [
+        [
+          7,
+          7
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          6,
+          1
+        ],
+        [
+          6,
+          6
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          6,
+          3
+        ],
+        [
+          7,
+          1
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          5
+        ]
+      ],
+      "slips": [
+        [
+          1,
+          2
+        ],
+        [
+          4,
+          0
+        ]
+      ],
+      "portals": [
+        [
+          [
+            2,
+            2
+          ],
+          [
+            7,
+            5
+          ]
+        ],
+        [
+          [
+            0,
+            6
+          ],
+          [
+            0,
+            0
+          ]
+        ]
+      ],
+      "forbidden": [
+        [
+          4,
+          3
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          7,
+          2
+        ]
+      ],
+      "inversion": [
+        [
+          2,
+          1
+        ],
+        [
+          7,
+          6
+        ],
+        [
+          1,
+          7
+        ]
+      ],
+      "id": "stage-83",
+      "tier": 4,
+      "name": "Element 83: Bi",
+      "element": {
+        "number": 83,
+        "symbol": "Bi",
+        "name": "Bismuth",
+        "category": "transition",
+        "phase": "Solid"
+      },
+      "hints": [
+        "ELEMENT 83 Bi: Bismuth.",
+        "Transition metal. Dense obstacles likely."
+      ],
+      "moveLimit": 36
+    },
+    {
+      "grid": {
+        "w": 8,
+        "h": 8
+      },
+      "player": [
+        3,
+        6
+      ],
+      "shadow": [
+        5,
+        5
+      ],
+      "goals": {
+        "a": [
+          2,
+          3
+        ],
+        "b": [
+          1,
+          1
+        ]
+      },
+      "walls": [
+        [
+          5,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          7,
+          4
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          5,
+          1
+        ],
+        [
+          1,
+          4
+        ]
+      ],
+      "slips": [
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          7
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "portals": [
+        [
+          [
+            4,
+            7
+          ],
+          [
+            0,
+            0
+          ]
+        ],
+        [
+          [
+            7,
+            6
+          ],
+          [
+            3,
+            2
+          ]
+        ]
+      ],
+      "forbidden": [
+        [
+          1,
+          5
+        ],
+        [
+          6,
+          5
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "inversion": [
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          6
+        ],
+        [
+          0,
+          7
+        ]
+      ],
+      "id": "stage-84",
+      "tier": 4,
+      "name": "Element 84: Po",
+      "element": {
+        "number": 84,
+        "symbol": "Po",
+        "name": "Polonium",
+        "category": "transition",
+        "phase": "Solid"
+      },
+      "hints": [
+        "ELEMENT 84 Po: Polonium.",
+        "Transition metal. Dense obstacles likely."
+      ],
+      "moveLimit": 36
+    },
+    {
+      "grid": {
+        "w": 8,
+        "h": 8
+      },
+      "player": [
+        2,
+        3
+      ],
+      "shadow": [
+        5,
+        3
+      ],
+      "goals": {
+        "a": [
+          1,
+          4
+        ],
+        "b": [
+          6,
+          6
+        ]
+      },
+      "walls": [
+        [
+          3,
+          3
+        ],
+        [
+          7,
+          4
+        ],
+        [
+          7,
+          2
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          0
+        ]
+      ],
+      "slips": [
+        [
+          7,
+          5
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          3,
+          6
+        ]
+      ],
+      "portals": [
+        [
+          [
+            7,
+            7
+          ],
+          [
+            2,
+            7
+          ]
+        ],
+        [
+          [
+            5,
+            1
+          ],
+          [
+            3,
+            7
+          ]
+        ]
+      ],
+      "forbidden": [
+        [
+          0,
+          3
+        ],
+        [
+          4,
+          0
+        ],
+        [
+          4,
+          6
+        ]
+      ],
+      "inversion": [
+        [
+          1,
+          0
+        ],
+        [
+          7,
+          3
+        ],
+        [
+          0,
+          2
+        ]
+      ],
+      "id": "stage-85",
+      "tier": 4,
+      "name": "Element 85: At",
+      "element": {
+        "number": 85,
+        "symbol": "At",
+        "name": "Astatine",
+        "category": "metalloid",
+        "phase": "Solid"
+      },
+      "hints": [
+        "ELEMENT 85 At: Astatine.",
+        "Metalloid. Balanced tile mix."
+      ],
+      "moveLimit": 33
+    },
+    {
+      "grid": {
+        "w": 8,
+        "h": 8
+      },
+      "player": [
+        2,
+        6
+      ],
+      "shadow": [
+        6,
+        1
+      ],
+      "goals": {
+        "a": [
+          3,
+          7
+        ],
+        "b": [
+          5,
+          3
+        ]
+      },
+      "walls": [
+        [
+          4,
+          3
+        ],
+        [
+          5,
+          2
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          7
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          6,
+          7
+        ]
+      ],
+      "slips": [
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "portals": [
+        [
+          [
+            1,
+            7
+          ],
+          [
+            0,
+            3
+          ]
+        ]
+      ],
+      "forbidden": [
+        [
+          5,
+          6
+        ]
+      ],
+      "inversion": [
+        [
+          1,
+          2
+        ]
+      ],
+      "id": "stage-86",
+      "tier": 4,
+      "name": "Element 86: Rn",
+      "element": {
+        "number": 86,
+        "symbol": "Rn",
+        "name": "Radon",
+        "category": "noble",
+        "phase": "Gas"
+      },
+      "hints": [
+        "ELEMENT 86 Rn: Radon.",
+        "Stable noble gas. Few obstacles expected."
+      ],
+      "moveLimit": 38
+    },
+    {
+      "grid": {
+        "w": 8,
+        "h": 8
+      },
+      "player": [
+        4,
+        5
+      ],
+      "shadow": [
+        4,
+        4
+      ],
+      "goals": {
+        "a": [
+          0,
+          3
+        ],
+        "b": [
+          3,
+          3
+        ]
+      },
+      "walls": [
+        [
+          0,
+          5
+        ],
+        [
+          6,
+          0
+        ],
+        [
+          7,
+          1
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          4,
+          0
+        ],
+        [
+          5,
+          0
+        ],
+        [
+          2,
+          6
+        ]
+      ],
+      "slips": [
+        [
+          7,
+          3
+        ],
+        [
+          4,
+          7
+        ],
+        [
+          2,
+          2
+        ]
+      ],
+      "portals": [
+        [
+          [
+            6,
+            2
+          ],
+          [
+            2,
+            1
+          ]
+        ],
+        [
+          [
+            4,
+            1
+          ],
+          [
+            0,
+            0
+          ]
+        ]
+      ],
+      "forbidden": [
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          7
+        ]
+      ],
+      "inversion": [
+        [
+          6,
+          3
+        ],
+        [
+          5,
+          1
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "id": "stage-87",
+      "tier": 4,
+      "name": "Element 87: Fr",
+      "element": {
+        "number": 87,
+        "symbol": "Fr",
+        "name": "Francium",
+        "category": "alkali",
+        "phase": "Solid"
+      },
+      "hints": [
+        "ELEMENT 87 Fr: Francium.",
+        "Alkali metal. Slippery movement is likely."
+      ],
+      "moveLimit": 39
+    },
+    {
+      "grid": {
+        "w": 8,
+        "h": 8
+      },
+      "player": [
+        6,
+        1
+      ],
+      "shadow": [
+        5,
+        5
+      ],
+      "goals": {
+        "a": [
+          7,
+          1
+        ],
+        "b": [
+          5,
+          1
+        ]
+      },
+      "walls": [
+        [
+          2,
+          4
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          0,
+          6
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          3,
+          6
+        ],
+        [
+          5,
+          3
+        ],
+        [
+          1,
+          7
+        ],
+        [
+          6,
+          7
+        ]
+      ],
+      "slips": [
+        [
+          1,
+          3
+        ],
+        [
+          5,
+          7
+        ]
+      ],
+      "portals": [
+        [
+          [
+            3,
+            1
+          ],
+          [
+            6,
+            5
+          ]
+        ],
+        [
+          [
+            0,
+            4
+          ],
+          [
+            2,
+            2
+          ]
+        ]
+      ],
+      "forbidden": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ]
+      ],
+      "inversion": [
+        [
+          4,
+          1
+        ],
+        [
+          5,
+          4
+        ]
+      ],
+      "id": "stage-88",
+      "tier": 4,
+      "name": "Element 88: Ra",
+      "element": {
+        "number": 88,
+        "symbol": "Ra",
+        "name": "Radium",
+        "category": "alkaline",
+        "phase": "Solid"
+      },
+      "hints": [
+        "ELEMENT 88 Ra: Radium.",
+        "Alkaline earth metal. Walls are common."
+      ],
+      "moveLimit": 38
+    },
+    {
+      "grid": {
+        "w": 8,
+        "h": 8
+      },
+      "player": [
+        3,
+        3
+      ],
+      "shadow": [
+        0,
+        3
+      ],
+      "goals": {
+        "a": [
+          3,
+          7
+        ],
+        "b": [
+          2,
+          1
+        ]
+      },
+      "walls": [
+        [
+          4,
+          4
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          7,
+          7
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          7,
+          4
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          4,
+          1
+        ],
+        [
+          7,
+          1
+        ]
+      ],
+      "slips": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          6
+        ]
+      ],
+      "portals": [
+        [
+          [
+            3,
+            2
+          ],
+          [
+            0,
+            5
+          ]
+        ],
+        [
+          [
+            5,
+            1
+          ],
+          [
+            6,
+            0
+          ]
+        ]
+      ],
+      "forbidden": [
+        [
+          1,
+          5
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          0,
+          2
+        ]
+      ],
+      "inversion": [
+        [
+          6,
+          2
+        ],
+        [
+          5,
+          7
+        ],
+        [
+          3,
+          6
+        ],
+        [
+          6,
+          3
+        ]
+      ],
+      "id": "stage-89",
+      "tier": 4,
+      "name": "Element 89: Ac",
+      "element": {
+        "number": 89,
+        "symbol": "Ac",
+        "name": "Actinium",
+        "category": "actinide",
+        "phase": "Solid"
+      },
+      "hints": [
+        "ELEMENT 89 Ac: Actinium.",
+        "Actinide. Inversion and forbidden tiles likely."
+      ],
+      "moveLimit": 39
+    },
+    {
+      "grid": {
+        "w": 8,
+        "h": 8
+      },
+      "player": [
+        0,
+        5
+      ],
+      "shadow": [
+        4,
+        2
+      ],
+      "goals": {
+        "a": [
+          0,
+          3
+        ],
+        "b": [
+          6,
+          6
+        ]
+      },
+      "walls": [
+        [
+          7,
+          7
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          4,
+          6
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          7,
+          3
+        ]
+      ],
+      "slips": [
+        [
+          3,
+          2
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          6,
+          7
+        ]
+      ],
+      "portals": [
+        [
+          [
+            6,
+            3
+          ],
+          [
+            1,
+            7
+          ]
+        ],
+        [
+          [
+            1,
+            6
+          ],
+          [
+            6,
+            1
+          ]
+        ]
+      ],
+      "forbidden": [
+        [
+          3,
+          5
+        ],
+        [
+          4,
+          1
+        ],
+        [
+          5,
+          1
+        ]
+      ],
+      "inversion": [
+        [
+          7,
+          5
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "id": "stage-90",
+      "tier": 4,
+      "name": "Element 90: Th",
+      "element": {
+        "number": 90,
+        "symbol": "Th",
+        "name": "Thorium",
+        "category": "actinide",
+        "phase": "Solid"
+      },
+      "hints": [
+        "ELEMENT 90 Th: Thorium.",
+        "Actinide. Inversion and forbidden tiles likely."
+      ],
+      "moveLimit": 33
+    },
+    {
+      "grid": {
+        "w": 9,
+        "h": 9
+      },
+      "player": [
+        8,
+        4
+      ],
+      "shadow": [
+        3,
+        6
+      ],
+      "goals": {
+        "a": [
+          2,
+          2
+        ],
+        "b": [
+          4,
+          7
+        ]
+      },
+      "walls": [
+        [
+          6,
+          5
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          4,
+          8
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          8,
+          7
+        ],
+        [
+          5,
+          8
+        ],
+        [
+          1,
+          6
+        ]
+      ],
+      "slips": [
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          6
+        ],
+        [
+          8,
+          2
+        ]
+      ],
+      "portals": [
+        [
+          [
+            3,
+            1
+          ],
+          [
+            0,
+            1
+          ]
+        ],
+        [
+          [
+            3,
+            8
+          ],
+          [
+            8,
+            1
+          ]
+        ]
+      ],
+      "forbidden": [
+        [
+          3,
+          2
+        ],
+        [
+          7,
+          8
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "inversion": [
+        [
+          6,
+          2
+        ],
+        [
+          4,
+          3
+        ],
+        [
+          1,
+          8
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "id": "stage-91",
+      "tier": 4,
+      "name": "Element 91: Pa",
+      "element": {
+        "number": 91,
+        "symbol": "Pa",
+        "name": "Protactinium",
+        "category": "actinide",
+        "phase": "Solid"
+      },
+      "hints": [
+        "ELEMENT 91 Pa: Protactinium.",
+        "Actinide. Inversion and forbidden tiles likely."
+      ],
+      "moveLimit": 36
+    },
+    {
+      "grid": {
+        "w": 9,
+        "h": 9
+      },
+      "player": [
+        6,
+        2
+      ],
+      "shadow": [
+        8,
+        5
+      ],
+      "goals": {
+        "a": [
+          4,
+          2
+        ],
+        "b": [
+          7,
+          7
+        ]
+      },
+      "walls": [
+        [
+          8,
+          6
+        ],
+        [
+          7,
+          6
+        ],
+        [
+          6,
+          6
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          6,
+          8
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          7
+        ],
+        [
+          3,
+          3
+        ]
+      ],
+      "slips": [
+        [
+          0,
+          7
+        ],
+        [
+          7,
+          0
+        ],
+        [
+          7,
+          2
+        ]
+      ],
+      "portals": [
+        [
+          [
+            6,
+            5
+          ],
+          [
+            3,
+            2
+          ]
+        ],
+        [
+          [
+            2,
+            2
+          ],
+          [
+            0,
+            4
+          ]
+        ]
+      ],
+      "forbidden": [
+        [
+          4,
+          5
+        ],
+        [
+          4,
+          7
+        ],
+        [
+          0,
+          2
+        ]
+      ],
+      "inversion": [
+        [
+          1,
+          5
+        ],
+        [
+          5,
+          8
+        ],
+        [
+          8,
+          7
+        ],
+        [
+          2,
+          8
+        ]
+      ],
+      "id": "stage-92",
+      "tier": 4,
+      "name": "Element 92: U",
+      "element": {
+        "number": 92,
+        "symbol": "U",
+        "name": "Uranium",
+        "category": "actinide",
+        "phase": "Solid"
+      },
+      "hints": [
+        "ELEMENT 92 U: Uranium.",
+        "Actinide. Inversion and forbidden tiles likely."
+      ],
+      "moveLimit": 39
+    },
+    {
+      "grid": {
+        "w": 9,
+        "h": 9
+      },
+      "player": [
+        2,
+        8
+      ],
+      "shadow": [
+        7,
+        1
+      ],
+      "goals": {
+        "a": [
+          0,
+          7
+        ],
+        "b": [
+          7,
+          7
+        ]
+      },
+      "walls": [
+        [
+          4,
+          2
+        ],
+        [
+          8,
+          0
+        ],
+        [
+          0,
+          6
+        ],
+        [
+          6,
+          6
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          6,
+          3
+        ],
+        [
+          2,
+          7
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          8,
+          1
+        ]
+      ],
+      "slips": [
+        [
+          3,
+          5
+        ],
+        [
+          4,
+          5
+        ]
+      ],
+      "portals": [
+        [
+          [
+            0,
+            4
+          ],
+          [
+            8,
+            3
+          ]
+        ],
+        [
+          [
+            1,
+            7
+          ],
+          [
+            5,
+            0
+          ]
+        ]
+      ],
+      "forbidden": [
+        [
+          8,
+          6
+        ],
+        [
+          7,
+          4
+        ],
+        [
+          4,
+          6
+        ]
+      ],
+      "inversion": [
+        [
+          4,
+          0
+        ],
+        [
+          6,
+          8
+        ],
+        [
+          5,
+          7
+        ],
+        [
+          7,
+          3
+        ]
+      ],
+      "id": "stage-93",
+      "tier": 4,
+      "name": "Element 93: Np",
+      "element": {
+        "number": 93,
+        "symbol": "Np",
+        "name": "Neptunium",
+        "category": "actinide",
+        "phase": "Solid"
+      },
+      "hints": [
+        "ELEMENT 93 Np: Neptunium.",
+        "Actinide. Inversion and forbidden tiles likely."
+      ],
+      "moveLimit": 41
+    },
+    {
+      "grid": {
+        "w": 9,
+        "h": 9
+      },
+      "player": [
+        8,
+        3
+      ],
+      "shadow": [
+        7,
+        2
+      ],
+      "goals": {
+        "a": [
+          6,
+          2
+        ],
+        "b": [
+          2,
+          4
+        ]
+      },
+      "walls": [
+        [
+          2,
+          2
+        ],
+        [
+          1,
+          6
+        ],
+        [
+          6,
+          1
+        ],
+        [
+          3,
+          8
+        ],
+        [
+          8,
+          2
+        ],
+        [
+          1,
+          7
+        ],
+        [
+          8,
+          7
+        ],
+        [
+          5,
+          6
+        ],
+        [
+          3,
+          3
+        ]
+      ],
+      "slips": [
+        [
+          7,
+          8
+        ],
+        [
+          7,
+          7
+        ],
+        [
+          8,
+          5
+        ]
+      ],
+      "portals": [
+        [
+          [
+            7,
+            1
+          ],
+          [
+            5,
+            5
+          ]
+        ],
+        [
+          [
+            3,
+            7
+          ],
+          [
+            8,
+            0
+          ]
+        ]
+      ],
+      "forbidden": [
+        [
+          5,
+          3
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          0,
+          6
+        ],
+        [
+          6,
+          0
+        ]
+      ],
+      "inversion": [
+        [
+          5,
+          7
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          7,
+          4
+        ],
+        [
+          5,
+          2
+        ]
+      ],
+      "id": "stage-94",
+      "tier": 4,
+      "name": "Element 94: Pu",
+      "element": {
+        "number": 94,
+        "symbol": "Pu",
+        "name": "Plutonium",
+        "category": "actinide",
+        "phase": "Solid"
+      },
+      "hints": [
+        "ELEMENT 94 Pu: Plutonium.",
+        "Actinide. Inversion and forbidden tiles likely."
+      ],
+      "moveLimit": 41
+    },
+    {
+      "grid": {
+        "w": 9,
+        "h": 9
+      },
+      "player": [
+        3,
+        8
+      ],
+      "shadow": [
+        6,
+        6
+      ],
+      "goals": {
+        "a": [
+          6,
+          5
+        ],
+        "b": [
+          7,
+          5
+        ]
+      },
+      "walls": [
+        [
+          0,
+          4
+        ],
+        [
+          8,
+          0
+        ],
+        [
+          5,
+          7
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          4
+        ]
+      ],
+      "slips": [
+        [
+          6,
+          0
+        ],
+        [
+          8,
+          6
+        ]
+      ],
+      "portals": [
+        [
+          [
+            0,
+            8
+          ],
+          [
+            7,
+            1
+          ]
+        ],
+        [
+          [
+            2,
+            4
+          ],
+          [
+            7,
+            4
+          ]
+        ]
+      ],
+      "forbidden": [
+        [
+          8,
+          4
+        ],
+        [
+          7,
+          6
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "inversion": [
+        [
+          8,
+          1
+        ],
+        [
+          1,
+          7
+        ],
+        [
+          6,
+          1
+        ],
+        [
+          3,
+          1
+        ]
+      ],
+      "id": "stage-95",
+      "tier": 4,
+      "name": "Element 95: Am",
+      "element": {
+        "number": 95,
+        "symbol": "Am",
+        "name": "Americium",
+        "category": "actinide",
+        "phase": "Solid"
+      },
+      "hints": [
+        "ELEMENT 95 Am: Americium.",
+        "Actinide. Inversion and forbidden tiles likely."
+      ],
+      "moveLimit": 39
+    },
+    {
+      "grid": {
+        "w": 9,
+        "h": 9
+      },
+      "player": [
+        1,
+        2
+      ],
+      "shadow": [
+        7,
+        2
+      ],
+      "goals": {
+        "a": [
+          0,
+          4
+        ],
+        "b": [
+          6,
+          7
+        ]
+      },
+      "walls": [
+        [
+          6,
+          6
+        ],
+        [
+          5,
+          6
+        ],
+        [
+          6,
+          2
+        ],
+        [
+          7,
+          1
+        ],
+        [
+          4,
+          7
+        ],
+        [
+          8,
+          0
+        ]
+      ],
+      "slips": [
+        [
+          3,
+          8
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "portals": [
+        [
+          [
+            5,
+            3
+          ],
+          [
+            4,
+            0
+          ]
+        ],
+        [
+          [
+            1,
+            5
+          ],
+          [
+            0,
+            8
+          ]
+        ]
+      ],
+      "forbidden": [
+        [
+          1,
+          8
+        ],
+        [
+          5,
+          1
+        ],
+        [
+          2,
+          8
+        ]
+      ],
+      "inversion": [
+        [
+          8,
+          2
+        ],
+        [
+          6,
+          3
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "id": "stage-96",
+      "tier": 4,
+      "name": "Element 96: Cm",
+      "element": {
+        "number": 96,
+        "symbol": "Cm",
+        "name": "Curium",
+        "category": "actinide",
+        "phase": "Solid"
+      },
+      "hints": [
+        "ELEMENT 96 Cm: Curium.",
+        "Actinide. Inversion and forbidden tiles likely."
+      ],
+      "moveLimit": 38
+    },
+    {
+      "grid": {
+        "w": 9,
+        "h": 9
+      },
+      "player": [
+        6,
+        6
+      ],
+      "shadow": [
+        4,
+        7
+      ],
+      "goals": {
+        "a": [
+          1,
+          4
+        ],
+        "b": [
+          0,
+          4
+        ]
+      },
+      "walls": [
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          8,
+          8
+        ],
+        [
+          7,
+          8
+        ],
+        [
+          6,
+          7
+        ],
+        [
+          8,
+          5
+        ]
+      ],
+      "slips": [
+        [
+          7,
+          4
+        ],
+        [
+          5,
+          4
+        ]
+      ],
+      "portals": [
+        [
+          [
+            8,
+            3
+          ],
+          [
+            4,
+            0
+          ]
+        ],
+        [
+          [
+            0,
+            6
+          ],
+          [
+            8,
+            7
+          ]
+        ]
+      ],
+      "forbidden": [
+        [
+          3,
+          8
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          7
+        ]
+      ],
+      "inversion": [
+        [
+          3,
+          7
+        ],
+        [
+          6,
+          1
+        ],
+        [
+          2,
+          2
+        ]
+      ],
+      "id": "stage-97",
+      "tier": 4,
+      "name": "Element 97: Bk",
+      "element": {
+        "number": 97,
+        "symbol": "Bk",
+        "name": "Berkelium",
+        "category": "actinide",
+        "phase": "Solid"
+      },
+      "hints": [
+        "ELEMENT 97 Bk: Berkelium.",
+        "Actinide. Inversion and forbidden tiles likely."
+      ],
+      "moveLimit": 38
+    },
+    {
+      "grid": {
+        "w": 9,
+        "h": 9
+      },
+      "player": [
+        0,
+        1
+      ],
+      "shadow": [
+        6,
+        0
+      ],
+      "goals": {
+        "a": [
+          7,
+          0
+        ],
+        "b": [
+          2,
+          5
+        ]
+      },
+      "walls": [
+        [
+          0,
+          3
+        ],
+        [
+          8,
+          1
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          4,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          8,
+          0
+        ],
+        [
+          4,
+          2
+        ]
+      ],
+      "slips": [
+        [
+          5,
+          6
+        ],
+        [
+          2,
+          4
+        ]
+      ],
+      "portals": [
+        [
+          [
+            4,
+            8
+          ],
+          [
+            8,
+            6
+          ]
+        ],
+        [
+          [
+            4,
+            5
+          ],
+          [
+            7,
+            6
+          ]
+        ]
+      ],
+      "forbidden": [
+        [
+          1,
+          5
+        ],
+        [
+          4,
+          7
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          0,
+          6
+        ]
+      ],
+      "inversion": [
+        [
+          3,
+          8
+        ],
+        [
+          5,
+          5
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          4,
+          6
+        ]
+      ],
+      "id": "stage-98",
+      "tier": 4,
+      "name": "Element 98: Cf",
+      "element": {
+        "number": 98,
+        "symbol": "Cf",
+        "name": "Californium",
+        "category": "actinide",
+        "phase": "Solid"
+      },
+      "hints": [
+        "ELEMENT 98 Cf: Californium.",
+        "Actinide. Inversion and forbidden tiles likely."
+      ],
+      "moveLimit": 33
+    },
+    {
+      "grid": {
+        "w": 9,
+        "h": 9
+      },
+      "player": [
+        7,
+        8
+      ],
+      "shadow": [
+        6,
+        6
+      ],
+      "goals": {
+        "a": [
+          7,
+          6
+        ],
+        "b": [
+          1,
+          4
+        ]
+      },
+      "walls": [
+        [
+          7,
+          2
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          2,
+          7
+        ],
+        [
+          5,
+          0
+        ],
+        [
+          5,
+          3
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "slips": [
+        [
+          1,
+          8
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "portals": [
+        [
+          [
+            6,
+            4
+          ],
+          [
+            7,
+            7
+          ]
+        ],
+        [
+          [
+            4,
+            3
+          ],
+          [
+            8,
+            7
+          ]
+        ]
+      ],
+      "forbidden": [
+        [
+          3,
+          4
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          1,
+          6
+        ],
+        [
+          0,
+          6
+        ]
+      ],
+      "inversion": [
+        [
+          5,
+          8
+        ],
+        [
+          5,
+          7
+        ],
+        [
+          6,
+          2
+        ],
+        [
+          7,
+          4
+        ]
+      ],
+      "id": "stage-99",
+      "tier": 4,
+      "name": "Element 99: Es",
+      "element": {
+        "number": 99,
+        "symbol": "Es",
+        "name": "Einsteinium",
+        "category": "actinide",
+        "phase": "Solid"
+      },
+      "hints": [
+        "ELEMENT 99 Es: Einsteinium.",
+        "Actinide. Inversion and forbidden tiles likely."
+      ],
+      "moveLimit": 33
+    },
+    {
+      "grid": {
+        "w": 9,
+        "h": 9
+      },
+      "player": [
+        6,
+        5
+      ],
+      "shadow": [
+        2,
+        7
+      ],
+      "goals": {
+        "a": [
+          6,
+          7
+        ],
+        "b": [
+          5,
+          0
+        ]
+      },
+      "walls": [
+        [
+          3,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          7,
+          8
+        ],
+        [
+          4,
+          1
+        ],
+        [
+          5,
+          3
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "slips": [
+        [
+          6,
+          2
+        ],
+        [
+          3,
+          1
+        ]
+      ],
+      "portals": [
+        [
+          [
+            8,
+            3
+          ],
+          [
+            2,
+            8
+          ]
+        ],
+        [
+          [
+            6,
+            4
+          ],
+          [
+            6,
+            6
+          ]
+        ]
+      ],
+      "forbidden": [
+        [
+          5,
+          6
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          2
+        ]
+      ],
+      "inversion": [
+        [
+          0,
+          5
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          7,
+          3
+        ]
+      ],
+      "id": "stage-100",
+      "tier": 4,
+      "name": "Element 100: Fm",
+      "element": {
+        "number": 100,
+        "symbol": "Fm",
+        "name": "Fermium",
+        "category": "actinide",
+        "phase": "Solid"
+      },
+      "hints": [
+        "ELEMENT 100 Fm: Fermium.",
+        "Actinide. Inversion and forbidden tiles likely."
+      ],
+      "moveLimit": 42
+    },
+    {
+      "grid": {
+        "w": 9,
+        "h": 9
+      },
+      "player": [
+        7,
+        0
+      ],
+      "shadow": [
+        6,
+        8
+      ],
+      "goals": {
+        "a": [
+          2,
+          3
+        ],
+        "b": [
+          2,
+          0
+        ]
+      },
+      "walls": [
+        [
+          3,
+          5
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          8,
+          8
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          6,
+          5
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          5,
+          1
+        ],
+        [
+          2,
+          2
+        ]
+      ],
+      "slips": [
+        [
+          1,
+          8
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          5,
+          0
+        ]
+      ],
+      "portals": [
+        [
+          [
+            2,
+            1
+          ],
+          [
+            6,
+            6
+          ]
+        ],
+        [
+          [
+            7,
+            8
+          ],
+          [
+            1,
+            6
+          ]
+        ]
+      ],
+      "forbidden": [
+        [
+          5,
+          4
+        ],
+        [
+          7,
+          4
+        ],
+        [
+          8,
+          7
+        ],
+        [
+          0,
+          6
+        ]
+      ],
+      "inversion": [
+        [
+          0,
+          8
+        ],
+        [
+          7,
+          6
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          1,
+          3
+        ]
+      ],
+      "id": "stage-101",
+      "tier": 5,
+      "name": "Element 101: Md",
+      "element": {
+        "number": 101,
+        "symbol": "Md",
+        "name": "Mendelevium",
+        "category": "actinide",
+        "phase": "Solid"
+      },
+      "hints": [
+        "ELEMENT 101 Md: Mendelevium.",
+        "Actinide. Inversion and forbidden tiles likely."
+      ],
+      "moveLimit": 41
+    },
+    {
+      "grid": {
+        "w": 9,
+        "h": 9
+      },
+      "player": [
+        3,
+        2
+      ],
+      "shadow": [
+        6,
+        1
+      ],
+      "goals": {
+        "a": [
+          2,
+          4
+        ],
+        "b": [
+          3,
+          6
+        ]
+      },
+      "walls": [
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          7
+        ],
+        [
+          5,
+          4
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          8,
+          4
+        ],
+        [
+          6,
+          4
+        ],
+        [
+          8,
+          0
+        ],
+        [
+          4,
+          2
+        ],
+        [
+          4,
+          6
+        ],
+        [
+          7,
+          0
+        ]
+      ],
+      "slips": [
+        [
+          1,
+          3
+        ],
+        [
+          4,
+          3
+        ],
+        [
+          2,
+          8
+        ]
+      ],
+      "portals": [
+        [
+          [
+            5,
+            8
+          ],
+          [
+            7,
+            3
+          ]
+        ],
+        [
+          [
+            1,
+            5
+          ],
+          [
+            1,
+            6
+          ]
+        ]
+      ],
+      "forbidden": [
+        [
+          3,
+          3
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          0,
+          8
+        ],
+        [
+          3,
+          1
+        ]
+      ],
+      "inversion": [
+        [
+          5,
+          3
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          6,
+          8
+        ],
+        [
+          0,
+          2
+        ]
+      ],
+      "id": "stage-102",
+      "tier": 5,
+      "name": "Element 102: No",
+      "element": {
+        "number": 102,
+        "symbol": "No",
+        "name": "Nobelium",
+        "category": "actinide",
+        "phase": "Solid"
+      },
+      "hints": [
+        "ELEMENT 102 No: Nobelium.",
+        "Actinide. Inversion and forbidden tiles likely."
+      ],
+      "moveLimit": 45
+    },
+    {
+      "grid": {
+        "w": 9,
+        "h": 9
+      },
+      "player": [
+        4,
+        8
+      ],
+      "shadow": [
+        2,
+        5
+      ],
+      "goals": {
+        "a": [
+          4,
+          3
+        ],
+        "b": [
+          3,
+          1
+        ]
+      },
+      "walls": [
+        [
+          3,
+          6
+        ],
+        [
+          7,
+          4
+        ],
+        [
+          5,
+          7
+        ],
+        [
+          4,
+          0
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          6,
+          4
+        ],
+        [
+          0,
+          7
+        ],
+        [
+          8,
+          1
+        ]
+      ],
+      "slips": [
+        [
+          6,
+          7
+        ],
+        [
+          6,
+          2
+        ],
+        [
+          7,
+          5
+        ]
+      ],
+      "portals": [
+        [
+          [
+            7,
+            8
+          ],
+          [
+            7,
+            0
+          ]
+        ],
+        [
+          [
+            0,
+            6
+          ],
+          [
+            7,
+            6
+          ]
+        ]
+      ],
+      "forbidden": [
+        [
+          8,
+          5
+        ],
+        [
+          7,
+          7
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "inversion": [
+        [
+          2,
+          2
+        ],
+        [
+          8,
+          0
+        ],
+        [
+          1,
+          5
+        ]
+      ],
+      "id": "stage-103",
+      "tier": 5,
+      "name": "Element 103: Lr",
+      "element": {
+        "number": 103,
+        "symbol": "Lr",
+        "name": "Lawrencium",
+        "category": "actinide",
+        "phase": "Solid"
+      },
+      "hints": [
+        "ELEMENT 103 Lr: Lawrencium.",
+        "Actinide. Inversion and forbidden tiles likely."
+      ],
+      "moveLimit": 41
+    },
+    {
+      "grid": {
+        "w": 9,
+        "h": 9
+      },
+      "player": [
+        1,
+        7
+      ],
+      "shadow": [
+        2,
+        0
+      ],
+      "goals": {
+        "a": [
+          7,
+          7
+        ],
+        "b": [
+          2,
+          4
+        ]
+      },
+      "walls": [
+        [
+          5,
+          0
+        ],
+        [
+          5,
+          2
+        ],
+        [
+          7,
+          2
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          8,
+          5
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          4,
+          3
+        ],
+        [
+          6,
+          6
+        ],
+        [
+          0,
+          5
+        ]
+      ],
+      "slips": [
+        [
+          1,
+          3
+        ],
+        [
+          3,
+          8
+        ],
+        [
+          3,
+          7
+        ]
+      ],
+      "portals": [
+        [
+          [
+            1,
+            0
+          ],
+          [
+            5,
+            7
+          ]
+        ],
+        [
+          [
+            2,
+            6
+          ],
+          [
+            5,
+            6
+          ]
+        ]
+      ],
+      "forbidden": [
+        [
+          4,
+          0
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          3,
+          1
+        ]
+      ],
+      "inversion": [
+        [
+          7,
+          6
+        ],
+        [
+          6,
+          5
+        ]
+      ],
+      "id": "stage-104",
+      "tier": 5,
+      "name": "Element 104: Rf",
+      "element": {
+        "number": 104,
+        "symbol": "Rf",
+        "name": "Rutherfordium",
+        "category": "transition",
+        "phase": "Solid"
+      },
+      "hints": [
+        "ELEMENT 104 Rf: Rutherfordium.",
+        "Transition metal. Dense obstacles likely."
+      ],
+      "moveLimit": 39
+    },
+    {
+      "grid": {
+        "w": 9,
+        "h": 9
+      },
+      "player": [
+        1,
+        3
+      ],
+      "shadow": [
+        3,
+        8
+      ],
+      "goals": {
+        "a": [
+          5,
+          6
+        ],
+        "b": [
+          8,
+          2
+        ]
+      },
+      "walls": [
+        [
+          8,
+          3
+        ],
+        [
+          4,
+          0
+        ],
+        [
+          1,
+          8
+        ],
+        [
+          6,
+          0
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          8,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          4,
+          2
+        ],
+        [
+          7,
+          4
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "slips": [
+        [
+          5,
+          4
+        ],
+        [
+          6,
+          6
+        ],
+        [
+          2,
+          8
+        ]
+      ],
+      "portals": [
+        [
+          [
+            4,
+            4
+          ],
+          [
+            1,
+            4
+          ]
+        ],
+        [
+          [
+            0,
+            8
+          ],
+          [
+            5,
+            5
+          ]
+        ]
+      ],
+      "forbidden": [
+        [
+          7,
+          6
+        ],
+        [
+          4,
+          8
+        ],
+        [
+          6,
+          1
+        ],
+        [
+          3,
+          7
+        ]
+      ],
+      "inversion": [
+        [
+          2,
+          4
+        ],
+        [
+          4,
+          3
+        ],
+        [
+          6,
+          4
+        ]
+      ],
+      "id": "stage-105",
+      "tier": 5,
+      "name": "Element 105: Db",
+      "element": {
+        "number": 105,
+        "symbol": "Db",
+        "name": "Dubnium",
+        "category": "transition",
+        "phase": "Solid"
+      },
+      "hints": [
+        "ELEMENT 105 Db: Dubnium.",
+        "Transition metal. Dense obstacles likely."
+      ],
+      "moveLimit": 36
+    },
+    {
+      "grid": {
+        "w": 9,
+        "h": 9
+      },
+      "player": [
+        2,
+        4
+      ],
+      "shadow": [
+        7,
+        1
+      ],
+      "goals": {
+        "a": [
+          1,
+          3
+        ],
+        "b": [
+          5,
+          7
+        ]
+      },
+      "walls": [
+        [
+          4,
+          3
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          8,
+          2
+        ],
+        [
+          8,
+          0
+        ],
+        [
+          7,
+          3
+        ],
+        [
+          8,
+          1
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "slips": [
+        [
+          2,
+          2
+        ],
+        [
+          6,
+          8
+        ],
+        [
+          3,
+          1
+        ]
+      ],
+      "portals": [
+        [
+          [
+            6,
+            1
+          ],
+          [
+            4,
+            2
+          ]
+        ],
+        [
+          [
+            6,
+            5
+          ],
+          [
+            3,
+            5
+          ]
+        ]
+      ],
+      "forbidden": [
+        [
+          7,
+          4
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          8,
+          4
+        ]
+      ],
+      "inversion": [
+        [
+          7,
+          5
+        ],
+        [
+          6,
+          3
+        ]
+      ],
+      "id": "stage-106",
+      "tier": 5,
+      "name": "Element 106: Sg",
+      "element": {
+        "number": 106,
+        "symbol": "Sg",
+        "name": "Seaborgium",
+        "category": "transition",
+        "phase": "Solid"
+      },
+      "hints": [
+        "ELEMENT 106 Sg: Seaborgium.",
+        "Transition metal. Dense obstacles likely."
+      ],
+      "moveLimit": 38
+    },
+    {
+      "grid": {
+        "w": 9,
+        "h": 9
+      },
+      "player": [
+        2,
+        7
+      ],
+      "shadow": [
+        1,
+        2
+      ],
+      "goals": {
+        "a": [
+          1,
+          7
+        ],
+        "b": [
+          7,
+          7
+        ]
+      },
+      "walls": [
+        [
+          5,
+          6
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          6,
+          3
+        ],
+        [
+          8,
+          8
+        ],
+        [
+          5,
+          8
+        ],
+        [
+          6,
+          0
+        ],
+        [
+          4,
+          0
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          4,
+          6
+        ]
+      ],
+      "slips": [
+        [
+          3,
+          3
+        ],
+        [
+          8,
+          2
+        ],
+        [
+          6,
+          2
+        ]
+      ],
+      "portals": [
+        [
+          [
+            8,
+            4
+          ],
+          [
+            3,
+            5
+          ]
+        ],
+        [
+          [
+            6,
+            6
+          ],
+          [
+            2,
+            1
+          ]
+        ]
+      ],
+      "forbidden": [
+        [
+          6,
+          5
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          7,
+          2
+        ],
+        [
+          0,
+          2
+        ]
+      ],
+      "inversion": [
+        [
+          4,
+          5
+        ],
+        [
+          7,
+          6
+        ]
+      ],
+      "id": "stage-107",
+      "tier": 5,
+      "name": "Element 107: Bh",
+      "element": {
+        "number": 107,
+        "symbol": "Bh",
+        "name": "Bohrium",
+        "category": "transition",
+        "phase": "Solid"
+      },
+      "hints": [
+        "ELEMENT 107 Bh: Bohrium.",
+        "Transition metal. Dense obstacles likely."
+      ],
+      "moveLimit": 45
+    },
+    {
+      "grid": {
+        "w": 9,
+        "h": 9
+      },
+      "player": [
+        8,
+        2
+      ],
+      "shadow": [
+        2,
+        8
+      ],
+      "goals": {
+        "a": [
+          8,
+          8
+        ],
+        "b": [
+          0,
+          1
+        ]
+      },
+      "walls": [
+        [
+          3,
+          3
+        ],
+        [
+          0,
+          7
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          6,
+          6
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          0,
+          8
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          5,
+          4
+        ],
+        [
+          3,
+          0
+        ]
+      ],
+      "slips": [
+        [
+          6,
+          0
+        ],
+        [
+          7,
+          7
+        ],
+        [
+          4,
+          4
+        ]
+      ],
+      "portals": [
+        [
+          [
+            2,
+            2
+          ],
+          [
+            3,
+            5
+          ]
+        ],
+        [
+          [
+            7,
+            3
+          ],
+          [
+            4,
+            8
+          ]
+        ]
+      ],
+      "forbidden": [
+        [
+          6,
+          8
+        ],
+        [
+          4,
+          2
+        ],
+        [
+          4,
+          5
+        ]
+      ],
+      "inversion": [
+        [
+          3,
+          4
+        ],
+        [
+          7,
+          6
+        ]
+      ],
+      "id": "stage-108",
+      "tier": 5,
+      "name": "Element 108: Hs",
+      "element": {
+        "number": 108,
+        "symbol": "Hs",
+        "name": "Hassium",
+        "category": "transition",
+        "phase": "Solid"
+      },
+      "hints": [
+        "ELEMENT 108 Hs: Hassium.",
+        "Transition metal. Dense obstacles likely."
+      ],
+      "moveLimit": 38
+    },
+    {
+      "grid": {
+        "w": 9,
+        "h": 9
+      },
+      "player": [
+        4,
+        5
+      ],
+      "shadow": [
+        7,
+        1
+      ],
+      "goals": {
+        "a": [
+          2,
+          0
+        ],
+        "b": [
+          7,
+          4
+        ]
+      },
+      "walls": [
+        [
+          4,
+          0
+        ],
+        [
+          8,
+          4
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          3,
+          6
+        ],
+        [
+          7,
+          5
+        ],
+        [
+          4,
+          1
+        ],
+        [
+          7,
+          6
+        ],
+        [
+          7,
+          8
+        ],
+        [
+          3,
+          3
+        ]
+      ],
+      "slips": [
+        [
+          0,
+          0
+        ],
+        [
+          6,
+          2
+        ],
+        [
+          6,
+          6
+        ]
+      ],
+      "portals": [
+        [
+          [
+            0,
+            6
+          ],
+          [
+            0,
+            4
+          ]
+        ],
+        [
+          [
+            8,
+            3
+          ],
+          [
+            0,
+            2
+          ]
+        ]
+      ],
+      "forbidden": [
+        [
+          7,
+          3
+        ],
+        [
+          6,
+          1
+        ],
+        [
+          4,
+          3
+        ],
+        [
+          2,
+          7
+        ]
+      ],
+      "inversion": [
+        [
+          2,
+          5
+        ],
+        [
+          5,
+          5
+        ],
+        [
+          1,
+          4
+        ]
+      ],
+      "id": "stage-109",
+      "tier": 5,
+      "name": "Element 109: Mt",
+      "element": {
+        "number": 109,
+        "symbol": "Mt",
+        "name": "Meitnerium",
+        "category": "transition",
+        "phase": "Solid"
+      },
+      "hints": [
+        "ELEMENT 109 Mt: Meitnerium.",
+        "Transition metal. Dense obstacles likely."
+      ],
+      "moveLimit": 41
+    },
+    {
+      "grid": {
+        "w": 9,
+        "h": 9
+      },
+      "player": [
+        5,
+        4
+      ],
+      "shadow": [
+        4,
+        1
+      ],
+      "goals": {
+        "a": [
+          4,
+          5
+        ],
+        "b": [
+          2,
+          1
+        ]
+      },
+      "walls": [
+        [
+          1,
+          7
+        ],
+        [
+          7,
+          6
+        ],
+        [
+          1,
+          8
+        ],
+        [
+          5,
+          1
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          8,
+          4
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          6,
+          0
+        ]
+      ],
+      "slips": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          0,
+          7
+        ]
+      ],
+      "portals": [
+        [
+          [
+            2,
+            0
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        [
+          [
+            6,
+            8
+          ],
+          [
+            3,
+            2
+          ]
+        ]
+      ],
+      "forbidden": [
+        [
+          3,
+          5
+        ],
+        [
+          5,
+          7
+        ],
+        [
+          6,
+          1
+        ]
+      ],
+      "inversion": [
+        [
+          4,
+          7
+        ],
+        [
+          0,
+          3
+        ]
+      ],
+      "id": "stage-110",
+      "tier": 5,
+      "name": "Element 110: Ds",
+      "element": {
+        "number": 110,
+        "symbol": "Ds",
+        "name": "Darmstadtium",
+        "category": "transition",
+        "phase": "Solid"
+      },
+      "hints": [
+        "ELEMENT 110 Ds: Darmstadtium.",
+        "Transition metal. Dense obstacles likely."
+      ],
+      "moveLimit": 42
+    },
+    {
+      "grid": {
+        "w": 9,
+        "h": 9
+      },
+      "player": [
+        1,
+        3
+      ],
+      "shadow": [
+        2,
+        3
+      ],
+      "goals": {
+        "a": [
+          4,
+          6
+        ],
+        "b": [
+          7,
+          1
+        ]
+      },
+      "walls": [
+        [
+          0,
+          0
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          6,
+          4
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          5,
+          7
+        ],
+        [
+          0,
+          7
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          0,
+          8
+        ],
+        [
+          8,
+          5
+        ]
+      ],
+      "slips": [
+        [
+          8,
+          2
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          6,
+          1
+        ]
+      ],
+      "portals": [
+        [
+          [
+            0,
+            3
+          ],
+          [
+            4,
+            8
+          ]
+        ],
+        [
+          [
+            5,
+            8
+          ],
+          [
+            7,
+            4
+          ]
+        ]
+      ],
+      "forbidden": [
+        [
+          2,
+          8
+        ],
+        [
+          5,
+          5
+        ],
+        [
+          5,
+          4
+        ],
+        [
+          3,
+          2
+        ]
+      ],
+      "inversion": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          7
+        ]
+      ],
+      "id": "stage-111",
+      "tier": 5,
+      "name": "Element 111: Rg",
+      "element": {
+        "number": 111,
+        "symbol": "Rg",
+        "name": "Roentgenium",
+        "category": "transition",
+        "phase": "Solid"
+      },
+      "hints": [
+        "ELEMENT 111 Rg: Roentgenium.",
+        "Transition metal. Dense obstacles likely."
+      ],
+      "moveLimit": 36
+    },
+    {
+      "grid": {
+        "w": 9,
+        "h": 9
+      },
+      "player": [
+        4,
+        7
+      ],
+      "shadow": [
+        3,
+        7
+      ],
+      "goals": {
+        "a": [
+          4,
+          5
+        ],
+        "b": [
+          1,
+          2
+        ]
+      },
+      "walls": [
+        [
+          3,
+          0
+        ],
+        [
+          5,
+          8
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          8,
+          7
+        ],
+        [
+          5,
+          6
+        ],
+        [
+          4,
+          1
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          3,
+          1
+        ]
+      ],
+      "slips": [
+        [
+          1,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          6,
+          1
+        ]
+      ],
+      "portals": [
+        [
+          [
+            2,
+            1
+          ],
+          [
+            7,
+            5
+          ]
+        ],
+        [
+          [
+            8,
+            1
+          ],
+          [
+            3,
+            8
+          ]
+        ]
+      ],
+      "forbidden": [
+        [
+          2,
+          5
+        ],
+        [
+          7,
+          3
+        ],
+        [
+          5,
+          7
+        ]
+      ],
+      "inversion": [
+        [
+          7,
+          7
+        ],
+        [
+          6,
+          6
+        ]
+      ],
+      "id": "stage-112",
+      "tier": 5,
+      "name": "Element 112: Cn",
+      "element": {
+        "number": 112,
+        "symbol": "Cn",
+        "name": "Copernicium",
+        "category": "transition",
+        "phase": "Liquid"
+      },
+      "hints": [
+        "ELEMENT 112 Cn: Copernicium.",
+        "Transition metal. Dense obstacles likely."
+      ],
+      "moveLimit": 36
+    },
+    {
+      "grid": {
+        "w": 9,
+        "h": 9
+      },
+      "player": [
+        5,
+        5
+      ],
+      "shadow": [
+        8,
+        5
+      ],
+      "goals": {
+        "a": [
+          1,
+          0
+        ],
+        "b": [
+          1,
+          4
+        ]
+      },
+      "walls": [
+        [
+          8,
+          8
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          7,
+          8
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          5,
+          6
+        ],
+        [
+          6,
+          0
+        ],
+        [
+          4,
+          3
+        ],
+        [
+          5,
+          0
+        ]
+      ],
+      "slips": [
+        [
+          3,
+          6
+        ],
+        [
+          7,
+          7
+        ],
+        [
+          3,
+          2
+        ]
+      ],
+      "portals": [
+        [
+          [
+            8,
+            1
+          ],
+          [
+            6,
+            8
+          ]
+        ],
+        [
+          [
+            1,
+            1
+          ],
+          [
+            0,
+            6
+          ]
+        ]
+      ],
+      "forbidden": [
+        [
+          6,
+          4
+        ],
+        [
+          4,
+          7
+        ],
+        [
+          2,
+          7
+        ],
+        [
+          7,
+          0
+        ]
+      ],
+      "inversion": [
+        [
+          2,
+          0
+        ],
+        [
+          8,
+          4
+        ]
+      ],
+      "id": "stage-113",
+      "tier": 5,
+      "name": "Element 113: Nh",
+      "element": {
+        "number": 113,
+        "symbol": "Nh",
+        "name": "Nihonium",
+        "category": "transition",
+        "phase": "Solid"
+      },
+      "hints": [
+        "ELEMENT 113 Nh: Nihonium.",
+        "Transition metal. Dense obstacles likely."
+      ],
+      "moveLimit": 44
+    },
+    {
+      "grid": {
+        "w": 9,
+        "h": 9
+      },
+      "player": [
+        8,
+        1
+      ],
+      "shadow": [
+        2,
+        1
+      ],
+      "goals": {
+        "a": [
+          0,
+          6
+        ],
+        "b": [
+          3,
+          5
+        ]
+      },
+      "walls": [
+        [
+          8,
+          6
+        ],
+        [
+          0,
+          7
+        ],
+        [
+          4,
+          0
+        ],
+        [
+          4,
+          6
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          6,
+          5
+        ]
+      ],
+      "slips": [
+        [
+          6,
+          0
+        ],
+        [
+          7,
+          2
+        ],
+        [
+          6,
+          2
+        ]
+      ],
+      "portals": [
+        [
+          [
+            1,
+            7
+          ],
+          [
+            4,
+            2
+          ]
+        ],
+        [
+          [
+            3,
+            6
+          ],
+          [
+            4,
+            8
+          ]
+        ]
+      ],
+      "forbidden": [
+        [
+          8,
+          2
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          8,
+          5
+        ],
+        [
+          4,
+          3
+        ]
+      ],
+      "inversion": [
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          0
+        ]
+      ],
+      "id": "stage-114",
+      "tier": 5,
+      "name": "Element 114: Fl",
+      "element": {
+        "number": 114,
+        "symbol": "Fl",
+        "name": "Flerovium",
+        "category": "transition",
+        "phase": "Solid"
+      },
+      "hints": [
+        "ELEMENT 114 Fl: Flerovium.",
+        "Transition metal. Dense obstacles likely."
+      ],
+      "moveLimit": 39
+    },
+    {
+      "grid": {
+        "w": 9,
+        "h": 9
+      },
+      "player": [
+        4,
+        3
+      ],
+      "shadow": [
+        0,
+        2
+      ],
+      "goals": {
+        "a": [
+          1,
+          6
+        ],
+        "b": [
+          4,
+          2
+        ]
+      },
+      "walls": [
+        [
+          1,
+          5
+        ],
+        [
+          6,
+          5
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          8
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          5,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          7
+        ],
+        [
+          5,
+          3
+        ]
+      ],
+      "slips": [
+        [
+          4,
+          1
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          6,
+          3
+        ]
+      ],
+      "portals": [
+        [
+          [
+            3,
+            3
+          ],
+          [
+            7,
+            1
+          ]
+        ],
+        [
+          [
+            0,
+            8
+          ],
+          [
+            8,
+            8
+          ]
+        ]
+      ],
+      "forbidden": [
+        [
+          5,
+          0
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          7,
+          0
+        ],
+        [
+          3,
+          8
+        ]
+      ],
+      "inversion": [
+        [
+          1,
+          8
+        ],
+        [
+          0,
+          6
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "id": "stage-115",
+      "tier": 5,
+      "name": "Element 115: Mc",
+      "element": {
+        "number": 115,
+        "symbol": "Mc",
+        "name": "Moscovium",
+        "category": "transition",
+        "phase": "Solid"
+      },
+      "hints": [
+        "ELEMENT 115 Mc: Moscovium.",
+        "Transition metal. Dense obstacles likely."
+      ],
+      "moveLimit": 39
+    },
+    {
+      "grid": {
+        "w": 9,
+        "h": 9
+      },
+      "player": [
+        5,
+        3
+      ],
+      "shadow": [
+        2,
+        4
+      ],
+      "goals": {
+        "a": [
+          4,
+          0
+        ],
+        "b": [
+          1,
+          4
+        ]
+      },
+      "walls": [
+        [
+          4,
+          4
+        ],
+        [
+          6,
+          6
+        ],
+        [
+          0,
+          7
+        ],
+        [
+          5,
+          1
+        ],
+        [
+          3,
+          6
+        ],
+        [
+          7,
+          5
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "slips": [
+        [
+          7,
+          3
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          6,
+          7
+        ]
+      ],
+      "portals": [
+        [
+          [
+            6,
+            8
+          ],
+          [
+            6,
+            5
+          ]
+        ],
+        [
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            5
+          ]
+        ]
+      ],
+      "forbidden": [
+        [
+          8,
+          4
+        ],
+        [
+          6,
+          4
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          5,
+          2
+        ]
+      ],
+      "inversion": [
+        [
+          2,
+          3
+        ],
+        [
+          7,
+          2
+        ]
+      ],
+      "id": "stage-116",
+      "tier": 5,
+      "name": "Element 116: Lv",
+      "element": {
+        "number": 116,
+        "symbol": "Lv",
+        "name": "Livermorium",
+        "category": "transition",
+        "phase": "Solid"
+      },
+      "hints": [
+        "ELEMENT 116 Lv: Livermorium.",
+        "Transition metal. Dense obstacles likely."
+      ],
+      "moveLimit": 38
+    },
+    {
+      "grid": {
+        "w": 9,
+        "h": 9
+      },
+      "player": [
+        7,
+        6
+      ],
+      "shadow": [
+        7,
+        1
+      ],
+      "goals": {
+        "a": [
+          8,
+          3
+        ],
+        "b": [
+          2,
+          8
+        ]
+      },
+      "walls": [
+        [
+          5,
+          5
+        ],
+        [
+          8,
+          0
+        ],
+        [
+          8,
+          1
+        ],
+        [
+          8,
+          4
+        ],
+        [
+          8,
+          8
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          6,
+          0
+        ],
+        [
+          0,
+          3
+        ]
+      ],
+      "slips": [
+        [
+          7,
+          5
+        ],
+        [
+          4,
+          7
+        ],
+        [
+          2,
+          2
+        ]
+      ],
+      "portals": [
+        [
+          [
+            2,
+            5
+          ],
+          [
+            5,
+            7
+          ]
+        ],
+        [
+          [
+            4,
+            6
+          ],
+          [
+            2,
+            4
+          ]
+        ]
+      ],
+      "forbidden": [
+        [
+          4,
+          4
+        ],
+        [
+          8,
+          5
+        ]
+      ],
+      "inversion": [
+        [
+          7,
+          0
+        ],
+        [
+          6,
+          8
+        ],
+        [
+          0,
+          2
+        ]
+      ],
+      "id": "stage-117",
+      "tier": 5,
+      "name": "Element 117: Ts",
+      "element": {
+        "number": 117,
+        "symbol": "Ts",
+        "name": "Tennessine",
+        "category": "metalloid",
+        "phase": "Solid"
+      },
+      "hints": [
+        "ELEMENT 117 Ts: Tennessine.",
+        "Metalloid. Balanced tile mix."
+      ],
+      "moveLimit": 36
+    },
+    {
+      "grid": {
+        "w": 9,
+        "h": 9
+      },
+      "player": [
+        5,
+        8
+      ],
+      "shadow": [
+        1,
+        2
+      ],
+      "goals": {
+        "a": [
+          6,
+          2
+        ],
+        "b": [
+          4,
+          3
+        ]
+      },
+      "walls": [
+        [
+          1,
+          4
+        ],
+        [
+          8,
+          3
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          6,
+          0
+        ],
+        [
+          6,
+          6
+        ],
+        [
+          7,
+          2
+        ]
+      ],
+      "slips": [
+        [
+          3,
+          7
+        ],
+        [
+          3,
+          5
+        ]
+      ],
+      "portals": [
+        [
+          [
+            8,
+            1
+          ],
+          [
+            4,
+            0
+          ]
+        ]
+      ],
+      "forbidden": [
+        [
+          8,
+          5
+        ]
+      ],
+      "inversion": [
+        [
+          1,
+          6
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "id": "stage-118",
+      "tier": 5,
+      "name": "Element 118: Og",
+      "element": {
+        "number": 118,
+        "symbol": "Og",
+        "name": "Oganesson",
+        "category": "noble",
+        "phase": "Solid"
+      },
+      "hints": [
+        "ELEMENT 118 Og: Oganesson.",
+        "Stable noble gas. Few obstacles expected."
+      ],
+      "moveLimit": 38
+    },
+    {
+      "grid": {
+        "w": 9,
+        "h": 9
+      },
+      "player": [
+        4,
+        8
+      ],
+      "shadow": [
+        3,
+        6
+      ],
+      "goals": {
+        "a": [
+          0,
+          1
+        ],
+        "b": [
+          7,
+          7
+        ]
+      },
+      "walls": [
+        [
+          3,
+          7
+        ],
+        [
+          6,
+          8
+        ],
+        [
+          8,
+          8
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          7,
+          1
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          5,
+          3
+        ]
+      ],
+      "slips": [
+        [
+          0,
+          7
+        ],
+        [
+          4,
+          3
+        ],
+        [
+          4,
+          0
+        ],
+        [
+          8,
+          4
+        ]
+      ],
+      "portals": [
+        [
+          [
+            0,
+            8
+          ],
+          [
+            6,
+            1
+          ]
+        ],
+        [
+          [
+            7,
+            2
+          ],
+          [
+            7,
+            4
+          ]
+        ]
+      ],
+      "forbidden": [
+        [
+          1,
+          7
+        ],
+        [
+          8,
+          2
+        ]
+      ],
+      "inversion": [
+        [
+          7,
+          3
+        ],
+        [
+          8,
+          7
+        ],
+        [
+          4,
+          5
+        ]
+      ],
+      "id": "stage-119",
+      "tier": 5,
+      "name": "Element 119: Uue",
+      "element": {
+        "number": 119,
+        "symbol": "Uue",
+        "name": "Ununennium",
+        "category": "alkali",
+        "phase": "Solid"
+      },
+      "hints": [
+        "ELEMENT 119 Uue: Ununennium.",
+        "Alkali metal. Slippery movement is likely."
+      ],
+      "moveLimit": 36
+    }
+  ]
+}
