@@ -1,12 +1,6 @@
 # Public Game Package (KR/EN)
 
-이 폴더는 공개 배포용 게임 콘텐츠만 포함합니다.
-This folder contains only the playable game content for public release.
-
-## 구성
-- `index.html`
-- `levels.json`
-- `manual.md`
+### 🕹️ **[Tangle-Ops play](https://tangle-studio.github.io/Tangle-Ops/)**
 
 ## 안내
 - 정적 호스팅에 업로드하여 공개할 수 있습니다.
