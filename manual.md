@@ -28,8 +28,11 @@ Tangle-Ops는 격자형 퍼즐 게임입니다. 녹색 유닛을 움직이면 �
 - 왼쪽 스와이프: 왼쪽 이동
 - 오른쪽 스와이프: 오른쪽 이동
 - 스테이지 클리어 후 위로 스와이프 또는 탭: 다음 스테이지
-- 힌트 보기: `H` 키 또는 상단 상태 텍스트 롱프레스
+- 힌트 보기: `H` 키, 상단 상태 텍스트 롱프레스, 또는 HINT 버튼 (클리어용 힌트)
+- 엘리먼트 정보: ELEMENT 옆 `?` 버튼 (상단 팝업)
 - 힌트는 여러 번 호출하면 순환 표시됨
+- 인덱스 맵: `M` 키 또는 MAP 버튼, 클리어/스킵한 스테이지만 표시(최근 기록 순, 스킵은 브랜치로 표시)
+- 스킵: 실패 4회 또는 2분 30초 경과 시 SKIP 표시 (티어당 최대 3개, 핵심 스테이지는 스킵 불가)
 
 ## 진행 방식
 - 스테이지는 `levels.json` 순서대로 로드됩니다(난이도 구간 내에서 랜덤).
@@ -83,8 +86,11 @@ units on their target frames at the same time.
 - Swipe Left: move left
 - Swipe Right: move right
 - After clearing a stage, swipe up or tap to go to the next stage
-- Show hint: press `H` or long-press the top status text
+- Show hint: press `H`, long-press the top status text, or tap HINT (clear hints)
+- Element info: tap the `?` button next to ELEMENT (top popup)
 - Repeat hint triggers to cycle through multiple hints
+- Index map: press `M` or tap MAP, shows cleared/skipped stages only (newest first, skipped shown as branches)
+- Skip: appears after 4 fails or 2.5 minutes (max 3 per tier, core stages cannot be skipped)
 
 ## Stage Progression
 - Stages load from `levels.json` with random order inside each difficulty tier.
@@ -106,4 +112,3 @@ units on their target frames at the same time.
 
 ## Copyright
 - © Tangle-Studio. All rights reserved.
-
