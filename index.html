@@ -12,39 +12,65 @@
             background-color: #050505; /* Deep Space Black */
             color: #00ff41; /* Terminal Green */
             font-family: 'VT323', monospace;
-            overflow: hidden;
+            overflow-y: auto;
             display: flex;
             flex-direction: column;
             align-items: center;
             height: 100vh;
-            touch-action: none; /* Prevent browser scrolling */
+            touch-action: pan-y; /* Allow vertical scroll on small screens */
+            scrollbar-color: #00ff41 #050505;
+            scrollbar-width: thin;
+        }
+
+        body::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        body::-webkit-scrollbar-track {
+            background: #050505;
+        }
+
+        body::-webkit-scrollbar-thumb {
+            background: #00ff41;
+            border: 2px solid #050505;
+        }
+
+        body::-webkit-scrollbar-thumb:hover {
+            background: #33ff66;
         }
 
         #game-container {
             position: relative;
             width: 100%;
             max-width: 500px;
-            height: 100%;
+            min-height: 100%;
             display: flex;
             flex-direction: column;
-            justify-content: center;
+            justify-content: flex-start;
             align-items: center;
             border-left: 1px solid #333;
             border-right: 1px solid #333;
+            gap: 10px;
+            padding-top: 10px;
         }
 
         canvas {
             background-color: #111;
             border: 2px solid #00ff41;
             box-shadow: 0 0 10px rgba(0, 255, 65, 0.2);
+            touch-action: none; /* Keep swipe input on canvas */
+            width: min(90vw, 350px);
+            height: auto;
         }
 
         #ui-layer {
-            position: absolute;
-            top: 20px;
+            position: relative;
             width: 100%;
             text-align: center;
-            pointer-events: none;
+            pointer-events: auto;
+            user-select: none;
+            -webkit-user-select: none;
+            -webkit-touch-callout: none;
         }
 
         .title {
@@ -60,14 +86,42 @@
         }
 
         #stage-meta {
-            margin-top: 6px;
+            margin-top: 10px;
             font-size: 14px;
             color: #00ff41;
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 2px;
+            gap: 4px;
             pointer-events: auto;
+        }
+
+        #element-row {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        #element-info {
+            margin-top: 0;
+            font-size: 16px;
+            color: #00ff41;
+            background: rgba(0, 20, 0, 0.9);
+            border: 1px solid #00ff41;
+            padding: 8px 12px;
+            max-width: 90%;
+            display: none;
+            text-align: center;
+            pointer-events: auto;
+            position: absolute;
+            top: 6px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 130;
+        }
+
+        #element-info.active {
+            display: inline-block;
         }
 
         #move-limit {
@@ -101,7 +155,7 @@
         }
 
         #hint-box {
-            margin-top: 8px;
+            margin-top: 0;
             font-size: 14px;
             color: #00ff41;
             background: rgba(0, 20, 0, 0.7);
@@ -117,9 +171,207 @@
             display: inline-block;
         }
 
+        #hud-panel {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+            margin-top: 10px;
+            pointer-events: auto;
+        }
+
+        #ui-actions {
+            margin-top: 0;
+            display: flex;
+            gap: 8px;
+            justify-content: center;
+            pointer-events: auto;
+        }
+
+        .ui-btn {
+            background: rgba(0, 0, 0, 0.6);
+            border: 1px solid #00ff41;
+            color: #00ff41;
+            font-family: 'VT323', monospace;
+            font-size: 14px;
+            padding: 4px 10px;
+            cursor: pointer;
+        }
+
+        .ui-btn.mini {
+            font-size: 12px;
+            padding: 2px 6px;
+        }
+
+        .ui-btn[disabled] {
+            border-color: #333;
+            color: #333;
+            cursor: default;
+        }
+
+        #map-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.92);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            z-index: 120;
+            pointer-events: auto;
+        }
+
+        #map-overlay.active {
+            display: flex;
+        }
+
+        #map-panel {
+            width: 92%;
+            max-width: 520px;
+            max-height: 90%;
+            overflow: auto;
+            border: 1px solid #00ff41;
+            padding: 10px;
+            background: rgba(0, 10, 0, 0.9);
+            scrollbar-color: #00ff41 #050505;
+            scrollbar-width: thin;
+        }
+
+        #map-panel::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        #map-panel::-webkit-scrollbar-track {
+            background: #050505;
+        }
+
+        #map-panel::-webkit-scrollbar-thumb {
+            background: #00ff41;
+            border: 2px solid #050505;
+        }
+
+        #map-panel::-webkit-scrollbar-thumb:hover {
+            background: #33ff66;
+        }
+
+        #map-title {
+            font-size: 18px;
+            margin-bottom: 6px;
+            text-align: center;
+        }
+
+        #map-note {
+            font-size: 12px;
+            color: #ff9900;
+            text-align: center;
+            margin-top: 8px;
+        }
+
+        #map-content {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .map-timeline {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            padding-left: 16px;
+        }
+
+        .map-timeline::before {
+            content: '';
+            position: absolute;
+            left: 8px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: rgba(0, 255, 65, 0.35);
+        }
+
+        .map-item {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 12px;
+            cursor: pointer;
+            margin-left: -12px;
+            position: relative;
+        }
+
+        .map-item.branch {
+            margin-left: 16px;
+        }
+
+        .map-item.branch::before {
+            content: '';
+            position: absolute;
+            left: -24px;
+            top: 50%;
+            width: 24px;
+            height: 2px;
+            background: rgba(0, 255, 65, 0.35);
+        }
+
+        .map-empty {
+            font-size: 12px;
+            color: #ff9900;
+            text-align: center;
+            padding: 12px 0;
+        }
+
+        .node {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 12px;
+            cursor: pointer;
+        }
+
+        .node-dot {
+            width: 8px;
+            height: 8px;
+            border: 1px solid #00ff41;
+            border-radius: 50%;
+            background: transparent;
+            box-sizing: border-box;
+        }
+
+        .node.cleared .node-dot {
+            background: #00ff41;
+        }
+
+        .node.skipped .node-dot {
+            border-color: #ff9900;
+        }
+
+        .node.skipped .node-label {
+            color: #ff9900;
+        }
+
+        .node.locked {
+            opacity: 0.3;
+            cursor: not-allowed;
+        }
+
+        .node.core .node-dot {
+            box-shadow: 0 0 0 2px rgba(0, 255, 65, 0.35);
+        }
+
+        .node.current .node-dot {
+            box-shadow: 0 0 6px rgba(0, 255, 65, 0.6);
+        }
+
         #log-console {
             width: 90%;
             height: 100px;
+            min-height: 100px;
+            flex: 0 0 100px;
             background: rgba(0, 20, 0, 0.8);
             border-top: 1px solid #00ff41;
             margin-top: 20px;
@@ -129,6 +381,12 @@
             display: flex;
             flex-direction: column-reverse; /* New logs at bottom visually, but we prepend */
             pointer-events: none;
+        }
+
+        @media (max-height: 700px) {
+            canvas {
+                width: min(82vw, 300px);
+            }
         }
 
         #copyright {
@@ -187,16 +445,28 @@
             <div class="status" id="status-text">WAITING FOR INPUT...</div>
             <div id="stage-meta">
                 <div id="stage-text">STAGE -- / --</div>
-                <div id="element-text">ELEMENT --</div>
+                <div id="element-row">
+                    <div id="element-text">ELEMENT --</div>
+                    <button id="element-info-button" class="ui-btn mini">?</button>
+                </div>
             </div>
+            <div id="element-info">ELEMENT INFO</div>
             <div id="move-limit">
                 <div id="move-text">MOVES: --</div>
                 <div id="move-bar"><div id="move-fill"></div></div>
             </div>
-            <div id="hint-box">HINT</div>
         </div>
 
         <canvas id="gameCanvas" width="350" height="350"></canvas>
+
+        <div id="hud-panel">
+            <div id="hint-box">HINT</div>
+            <div id="ui-actions">
+                <button id="hint-button" class="ui-btn">HINT</button>
+                <button id="map-button" class="ui-btn">MAP</button>
+                <button id="skip-button" class="ui-btn" style="display:none;">SKIP</button>
+            </div>
+        </div>
 
         <div id="log-console">
             <div class="log-entry">> SYSTEM_INIT... OK</div>
@@ -205,6 +475,14 @@
 
         <div id="copyright">
             <div>© Tangle-Studio</div>
+        </div>
+
+        <div id="map-overlay">
+            <div id="map-panel">
+                <div id="map-title">INDEX MAP</div>
+                <div id="map-content"></div>
+                <div id="map-note">CLEARED + SKIPPED / NEWEST FIRST</div>
+            </div>
         </div>
 
         <div id="next-overlay">
@@ -224,6 +502,20 @@
     const hintBox = document.getElementById('hint-box');
     const stageText = document.getElementById('stage-text');
     const elementText = document.getElementById('element-text');
+    const mapOverlay = document.getElementById('map-overlay');
+    const mapContent = document.getElementById('map-content');
+    const mapPanel = document.getElementById('map-panel');
+    const elementInfoBox = document.getElementById('element-info');
+    const elementInfoButton = document.getElementById('element-info-button');
+    const hintButton = document.getElementById('hint-button');
+    const mapButton = document.getElementById('map-button');
+    const skipButton = document.getElementById('skip-button');
+
+    const PROGRESS_KEY = 'tangleOpsProgress_v1';
+    const MERGE_CLEAR_RATIO = 0.6;
+    const CHAPTER_SKIP_LIMIT = 3;
+    const SKIP_FAIL_THRESHOLD = 4;
+    const SKIP_TIME_MS = 150000;
 
     // Game Config
     let grid = { w: 5, h: 5 };
@@ -253,6 +545,16 @@
     let stageHintIndex = 0;
     let hintTimer = null;
     let hintPressTimer = null;
+    let elementInfoText = '';
+    let elementInfoTimer = null;
+    let progress = { version: 1, stages: {} };
+    let stageById = new Map();
+    let tierStageIds = {};
+    let tierIndexRanges = {};
+    let coreStageIds = new Set();
+    let stageStartTime = 0;
+    let stageFailCount = 0;
+    let skipInterval = null;
 
     // Input Handling vars
     let touchStartY = 0;
@@ -317,6 +619,7 @@
     function initRandomStage() {
         grid = { w: 5, h: 5 };
         tileSize = canvas.width / grid.w;
+        canvas.height = canvas.width;
 
         player = { x: 0, y: 0 };
         shadow = { x: grid.w - 1, y: grid.h - 1 };
@@ -346,6 +649,7 @@
         hideHint();
         updateStageMeta(null);
         updateMoveLimitUI();
+        updateSkipUI();
         draw();
     }
 
@@ -381,15 +685,376 @@
     function setStageHints(stage) {
         stageHints = [];
         stageHintIndex = 0;
+        let elementLines = [];
         if (stage) {
             if (Array.isArray(stage.hints) && stage.hints.length > 0) {
-                stageHints = stage.hints.filter((hint) => typeof hint === "string" && hint.trim().length);
+                const hints = stage.hints
+                    .filter((hint) => typeof hint === "string" && hint.trim().length)
+                    .map((hint) => hint.trim());
+                hints.forEach((hint) => {
+                    if (/^ELEMENT\s+\d+/i.test(hint)) {
+                        elementLines.push(hint);
+                    } else {
+                        stageHints.push(hint);
+                    }
+                });
             } else if (typeof stage.hint === "string" && stage.hint.trim().length) {
                 stageHints = [stage.hint.trim()];
             }
         }
         if (stageHints.length === 0) {
             stageHints = buildHints(stage);
+        }
+        setElementInfo(stage, elementLines);
+    }
+
+    function setElementInfo(stage, elementLines) {
+        elementInfoText = '';
+        if (Array.isArray(elementLines) && elementLines.length > 0) {
+            elementInfoText = elementLines.join(' ');
+        } else if (stage && stage.element) {
+            const element = stage.element;
+            if (element.number && element.symbol && element.name) {
+                elementInfoText = `ELEMENT ${element.number} ${element.symbol}: ${element.name}.`;
+            }
+        }
+        if (elementInfoButton) {
+            elementInfoButton.disabled = !elementInfoText;
+        }
+        if (elementInfoBox) {
+            elementInfoBox.innerText = elementInfoText || 'NO ELEMENT INFO.';
+        }
+        hideElementInfo();
+    }
+
+    function stageNumberFromId(id) {
+        if (!id) return 0;
+        const parts = id.split('-');
+        const num = Number(parts[1]);
+        return Number.isFinite(num) ? num : 0;
+    }
+
+    function stageNumber(stage) {
+        if (stage && stage.element && Number.isFinite(stage.element.number)) {
+            return stage.element.number;
+        }
+        return stageNumberFromId(stage ? stage.id : '');
+    }
+
+    function buildStageIndex(stages) {
+        stageById = new Map();
+        tierStageIds = {};
+        tierIndexRanges = {};
+        coreStageIds = new Set();
+        stages.forEach((stage, index) => {
+            if (!stage || !stage.id) return;
+            stageById.set(stage.id, stage);
+            const tier = stage.tier || 1;
+            if (!tierStageIds[tier]) {
+                tierStageIds[tier] = [];
+                tierIndexRanges[tier] = { start: index, end: index };
+            }
+            tierStageIds[tier].push(stage.id);
+            tierIndexRanges[tier].end = index;
+        });
+        Object.keys(tierStageIds).forEach((tierKey) => {
+            const tier = Number(tierKey);
+            const stagesInTier = tierStageIds[tier]
+                .map((id) => stageById.get(id))
+                .filter(Boolean)
+                .sort((a, b) => stageNumber(a) - stageNumber(b));
+            if (stagesInTier.length > 0) {
+                coreStageIds.add(stagesInTier[0].id);
+            }
+        });
+    }
+
+    function loadProgress() {
+        try {
+            const raw = localStorage.getItem(PROGRESS_KEY);
+            if (raw) {
+                progress = JSON.parse(raw);
+            }
+        } catch (err) {
+            progress = { version: 1, stages: {} };
+        }
+        if (!progress || !progress.stages) {
+            progress = { version: 1, stages: {} };
+        }
+    }
+
+    function saveProgress() {
+        try {
+            localStorage.setItem(PROGRESS_KEY, JSON.stringify(progress));
+        } catch (err) {
+            // Ignore write failures (private mode).
+        }
+    }
+
+    function initProgress(stages) {
+        if (!progress || !progress.stages) {
+            progress = { version: 1, stages: {} };
+        }
+        stages.forEach((stage) => {
+            if (!stage || !stage.id) return;
+            if (!progress.stages[stage.id]) {
+                progress.stages[stage.id] = {
+                    status: 'unplayed',
+                    attempts: 0,
+                    clears: 0,
+                    skips: 0,
+                    fails: 0,
+                    bestMoves: null,
+                    tier: stage.tier || 1
+                };
+            }
+        });
+        saveProgress();
+    }
+
+    function getStageStatus(stageId) {
+        if (!stageId || !progress.stages[stageId]) return 'unplayed';
+        return progress.stages[stageId].status || 'unplayed';
+    }
+
+    function isStageVisible(stage) {
+        if (!stage || !stage.id) return false;
+        const entry = progress.stages[stage.id];
+        if (!entry) return false;
+        return entry.status === 'cleared' || entry.status === 'skipped';
+    }
+
+    function getTierStats(tier) {
+        const ids = tierStageIds[tier] || [];
+        let cleared = 0;
+        let skipped = 0;
+        ids.forEach((id) => {
+            const status = getStageStatus(id);
+            if (status === 'cleared') cleared += 1;
+            if (status === 'skipped') skipped += 1;
+        });
+        const total = ids.length;
+        const ratio = total ? cleared / total : 0;
+        return { total, cleared, skipped, ratio };
+    }
+
+    function isTierUnlocked(tier) {
+        if (tier <= 1) return true;
+        const prevStats = getTierStats(tier - 1);
+        return prevStats.total > 0 &&
+            prevStats.ratio >= MERGE_CLEAR_RATIO &&
+            prevStats.skipped <= CHAPTER_SKIP_LIMIT;
+    }
+
+    function markStageStart(stage) {
+        if (!stage || !stage.id || !progress.stages[stage.id]) return;
+        const entry = progress.stages[stage.id];
+        entry.attempts = (entry.attempts || 0) + 1;
+        entry.lastPlayedAt = Date.now();
+        progress.currentStageId = stage.id;
+        stageStartTime = Date.now();
+        stageFailCount = entry.fails || 0;
+        saveProgress();
+        startSkipTimer();
+        updateSkipUI();
+    }
+
+    function markStageClear(stage) {
+        if (!stage || !stage.id || !progress.stages[stage.id]) return;
+        const entry = progress.stages[stage.id];
+        entry.status = 'cleared';
+        entry.clears = (entry.clears || 0) + 1;
+        entry.clearedAt = Date.now();
+        if (Number.isFinite(moveCount)) {
+            entry.bestMoves = entry.bestMoves ? Math.min(entry.bestMoves, moveCount) : moveCount;
+        }
+        saveProgress();
+    }
+
+    function markStageSkip(stage) {
+        if (!stage || !stage.id || !progress.stages[stage.id]) return;
+        const entry = progress.stages[stage.id];
+        entry.status = 'skipped';
+        entry.skips = (entry.skips || 0) + 1;
+        entry.lastPlayedAt = Date.now();
+        entry.skippedAt = Date.now();
+        saveProgress();
+    }
+
+    function markStageFail(stage) {
+        if (!stage || !stage.id || !progress.stages[stage.id]) return;
+        const entry = progress.stages[stage.id];
+        entry.fails = (entry.fails || 0) + 1;
+        stageFailCount = entry.fails;
+        saveProgress();
+    }
+
+    function canSkipStage() {
+        if (!levelActive || !useLevelData || levels.length === 0) return false;
+        const stage = levels[currentStageIndex];
+        if (!stage || !stage.id) return false;
+        if (coreStageIds.has(stage.id)) return false;
+        const stats = getTierStats(stage.tier || 1);
+        if (stats.skipped >= CHAPTER_SKIP_LIMIT) return false;
+        const timeElapsed = Date.now() - stageStartTime;
+        return stageFailCount >= SKIP_FAIL_THRESHOLD || timeElapsed >= SKIP_TIME_MS;
+    }
+
+    function updateSkipUI() {
+        if (!skipButton) return;
+        const available = canSkipStage();
+        skipButton.style.display = available ? 'inline-block' : 'none';
+        skipButton.disabled = !available;
+    }
+
+    function startSkipTimer() {
+        if (skipInterval) {
+            clearInterval(skipInterval);
+        }
+        skipInterval = setInterval(() => {
+            updateSkipUI();
+        }, 1000);
+    }
+
+    function handleSkip() {
+        if (!canSkipStage()) {
+            addLog("> SKIP NOT AVAILABLE.");
+            return;
+        }
+        const stage = levels[currentStageIndex];
+        levelActive = false;
+        levelResult = 'skip';
+        statusText.innerText = "STAGE SKIPPED";
+        statusText.style.color = "#ff9900";
+        addLog("> STAGE SKIPPED.");
+        markStageSkip(stage);
+        advanceStage();
+    }
+
+    function findRevisitIndex(tier) {
+        const range = tierIndexRanges[tier];
+        if (!range) return null;
+        for (let i = range.start; i <= range.end; i++) {
+            const stage = levels[i];
+            if (!stage || !stage.id) continue;
+            const status = getStageStatus(stage.id);
+            if (status === 'skipped') return i;
+        }
+        for (let i = range.start; i <= range.end; i++) {
+            const stage = levels[i];
+            if (!stage || !stage.id) continue;
+            const status = getStageStatus(stage.id);
+            if (status === 'unplayed') return i;
+        }
+        return range.start;
+    }
+
+    function getNextStageIndex() {
+        let nextIndex = currentStageIndex + 1;
+        if (nextIndex >= levels.length) {
+            nextIndex = 0;
+            addLog("> PROTOCOL LOOP: STAGE RESET.");
+        }
+        const currentStage = levels[currentStageIndex];
+        const nextStage = levels[nextIndex];
+        if (currentStage && nextStage && nextStage.tier > currentStage.tier) {
+            if (!isTierUnlocked(nextStage.tier)) {
+                addLog("> MERGE GATE: CLEAR MORE STAGES.");
+                const revisitIndex = findRevisitIndex(currentStage.tier);
+                if (revisitIndex !== null) {
+                    return revisitIndex;
+                }
+            }
+        }
+        return nextIndex;
+    }
+
+    function stageLabel(stage) {
+        const num = stageNumber(stage);
+        const symbol = stage.element && stage.element.symbol ? stage.element.symbol : '';
+        return symbol ? `S${num} ${symbol}` : `S${num}`;
+    }
+
+    function renderNode(stage, tierUnlocked) {
+        const classes = ['node', 'map-item'];
+        const status = getStageStatus(stage.id);
+        if (status === 'cleared') classes.push('cleared');
+        if (status === 'skipped') {
+            classes.push('skipped');
+            classes.push('branch');
+        }
+        if (!tierUnlocked) classes.push('locked');
+        if (coreStageIds.has(stage.id)) classes.push('core');
+        if (levels[currentStageIndex] && stage.id === levels[currentStageIndex].id) {
+            classes.push('current');
+        }
+        return `<div class="${classes.join(' ')}" data-stage-id="${stage.id}">` +
+            `<span class="node-dot"></span>` +
+            `<span class="node-label">${stageLabel(stage)}</span>` +
+            `</div>`;
+    }
+
+    function renderMap() {
+        if (!mapContent) return;
+        const cleared = levels
+            .filter((stage) => stage && stage.id && isStageVisible(stage))
+            .map((stage) => ({ stage, entry: progress.stages[stage.id] }))
+            .sort((a, b) => {
+                const timeA = a.entry.clearedAt || a.entry.skippedAt || a.entry.lastPlayedAt || 0;
+                const timeB = b.entry.clearedAt || b.entry.skippedAt || b.entry.lastPlayedAt || 0;
+                if (timeA !== timeB) return timeB - timeA;
+                return stageNumber(a.stage) - stageNumber(b.stage);
+            });
+
+        if (cleared.length === 0) {
+            mapContent.innerHTML = `<div class="map-empty">NO HISTORY YET.</div>`;
+            return;
+        }
+
+        let html = `<div class="map-timeline">`;
+        cleared.forEach((item) => {
+            html += renderNode(item.stage, true);
+        });
+        html += `</div>`;
+        mapContent.innerHTML = html;
+    }
+
+    function navigateToStage(stageId) {
+        if (!stageId) return;
+        const stage = stageById.get(stageId);
+        if (!stage) return;
+        const tier = stage.tier || 1;
+        const entry = progress.stages[stage.id];
+        const isAccessible = entry && (entry.status === 'cleared' || entry.status === 'skipped');
+        if (!isAccessible && !isTierUnlocked(tier)) {
+            addLog(`> MAP LOCKED: TIER ${tier}.`);
+            return;
+        }
+        const targetIndex = levels.findIndex((entry) => entry && entry.id === stageId);
+        if (targetIndex < 0) return;
+        currentStageIndex = targetIndex;
+        nextOverlay.style.display = 'none';
+        loadStage(levels[currentStageIndex]);
+        closeMap();
+    }
+
+    function openMap() {
+        if (!mapOverlay) return;
+        renderMap();
+        mapOverlay.classList.add('active');
+    }
+
+    function closeMap() {
+        if (!mapOverlay) return;
+        mapOverlay.classList.remove('active');
+    }
+
+    function toggleMap() {
+        if (!mapOverlay) return;
+        if (mapOverlay.classList.contains('active')) {
+            closeMap();
+        } else {
+            openMap();
         }
     }
 
@@ -413,6 +1078,23 @@
     function hideHint() {
         if (!hintBox) return;
         hintBox.classList.remove('active');
+    }
+
+    function showElementInfo() {
+        if (!elementInfoBox || !elementInfoText) return;
+        elementInfoBox.innerText = elementInfoText;
+        elementInfoBox.classList.add('active');
+        if (elementInfoTimer) {
+            clearTimeout(elementInfoTimer);
+        }
+        elementInfoTimer = setTimeout(() => {
+            hideElementInfo();
+        }, 3000);
+    }
+
+    function hideElementInfo() {
+        if (!elementInfoBox) return;
+        elementInfoBox.classList.remove('active');
     }
 
     function updateMoveLimitUI() {
@@ -451,8 +1133,10 @@
     }
 
     function loadStage(stage) {
-        grid = stage.grid || { w: 5, h: 5 };
-        tileSize = canvas.width / grid.w;
+            grid = stage.grid || { w: 5, h: 5 };
+            tileSize = canvas.width / grid.w;
+            canvas.height = canvas.width;
+        canvas.height = canvas.width;
 
         player = { x: stage.player[0], y: stage.player[1] };
         shadow = { x: stage.shadow[0], y: stage.shadow[1] };
@@ -484,8 +1168,12 @@
             addLog("> GOAL: PLACE BOTH ON TARGET FRAMES.");
             addLog("> CONTROLS: SWIPE OR ARROW KEYS.");
         }
+        if (stage.element) {
+            addLog(`> ELEMENT ${stage.element.number} ${stage.element.symbol} LOADED.`);
+        }
         updateStageMeta(stage);
         updateMoveLimitUI();
+        markStageStart(stage);
         draw();
     }
 
@@ -498,11 +1186,7 @@
             loadStage(levels[currentStageIndex]);
             return;
         }
-        currentStageIndex += 1;
-        if (currentStageIndex >= levels.length) {
-            currentStageIndex = 0;
-            addLog("> PROTOCOL LOOP: STAGE RESET.");
-        }
+        currentStageIndex = getNextStageIndex();
         loadStage(levels[currentStageIndex]);
     }
 
@@ -675,6 +1359,9 @@
             statusText.innerText = "MOVE LIMIT HIT";
             statusText.style.color = "#ff3333";
             addLog("FAIL: MOVE LIMIT EXCEEDED.");
+            stageFailCount += 1;
+            markStageFail(levels[currentStageIndex]);
+            updateSkipUI();
             updateMoveLimitUI();
             return;
         }
@@ -696,6 +1383,8 @@
             statusText.innerText = "SYNC COMPLETE - SWIPE UP";
             statusText.style.color = "#00ff41";
             addLog("SUCCESS: NODES LINKED.");
+            markStageClear(levels[currentStageIndex]);
+            updateSkipUI();
 
             setTimeout(() => {
                 nextOverlay.style.display = 'flex';
@@ -728,6 +1417,15 @@
             currentStageIndex = 0;
             addLog("> LEVEL DATA LOADED.");
             levels = shuffleLevelsByTier(levels);
+            buildStageIndex(levels);
+            loadProgress();
+            initProgress(levels);
+            if (progress.currentStageId) {
+                const savedIndex = levels.findIndex((stage) => stage.id === progress.currentStageId);
+                if (savedIndex >= 0) {
+                    currentStageIndex = savedIndex;
+                }
+            }
             loadStage(levels[currentStageIndex]);
         } catch (err) {
             useLevelData = false;
@@ -765,6 +1463,14 @@
             showHint();
             return;
         }
+        if (e.key === 'm' || e.key === 'M') {
+            toggleMap();
+            return;
+        }
+        if (e.key === 's' || e.key === 'S') {
+            handleSkip();
+            return;
+        }
         if (!levelActive) {
             if (e.key === 'Enter' || e.key === ' ' || e.key === 'ArrowUp') {
                 nextOverlay.style.display = 'none';
@@ -798,6 +1504,56 @@
         statusText.addEventListener('pointerup', cancelHintPress);
         statusText.addEventListener('pointerleave', cancelHintPress);
         statusText.addEventListener('pointercancel', cancelHintPress);
+    }
+
+    if (mapButton) {
+        mapButton.addEventListener('click', () => {
+            toggleMap();
+        });
+    }
+
+    if (elementInfoButton) {
+        elementInfoButton.addEventListener('click', () => {
+            showElementInfo();
+        });
+    }
+
+    if (hintButton) {
+        hintButton.addEventListener('click', () => {
+            showHint();
+        });
+    }
+
+    if (skipButton) {
+        skipButton.addEventListener('click', () => {
+            handleSkip();
+        });
+    }
+
+    if (mapOverlay) {
+        mapOverlay.addEventListener('click', () => {
+            closeMap();
+        });
+    }
+
+    if (mapContent) {
+        mapContent.addEventListener('click', (e) => {
+            const node = e.target.closest('.node');
+            if (!node || !mapContent.contains(node)) return;
+            const stageId = node.getAttribute('data-stage-id');
+            if (!stageId) return;
+            if (node.classList.contains('locked')) {
+                addLog("> MAP LOCKED: CLEAR PREVIOUS TIER.");
+                return;
+            }
+            navigateToStage(stageId);
+        });
+    }
+
+    if (mapPanel) {
+        mapPanel.addEventListener('click', (e) => {
+            e.stopPropagation();
+        });
     }
 
     // Touch Handling (Swipe for Move AND Shorts transition)
